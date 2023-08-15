@@ -10,11 +10,11 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarResponsive">
                   <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                      <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                      <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#services">HOME</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#portfolio">BLOG</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#about">GALLERY</a></li>
+                      <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
+                      <li class="nav-item"><a class="nav-link text-warning" href="#contact">SIGN IN</a></li>
                   </ul>
               </div>
           </div>
@@ -23,9 +23,9 @@
       <!-- Masthead-->
       <header class="masthead">
           <div class="container">
-              <div class="masthead-subheading">Welcome To Our Studio!</div>
+              <div class="masthead-subheading">Welcome To Family Income Expend!</div>
               <div class="masthead-heading text-uppercase">It's Nice To Meet You</div>
-              <a class="btn btn-primary btn-xl text-uppercase" href="#services">Tell Me More</a>
+              <a class="btn btn-outline-dark text-uppercase" href="#services">Tell Me More</a>
           </div>
       </header>
 
