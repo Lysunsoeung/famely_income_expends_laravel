@@ -14,7 +14,7 @@
                       <li class="nav-item"><a class="nav-link" href="#portfolio">BLOG</a></li>
                       <li class="nav-item"><a class="nav-link" href="#about">GALLERY</a></li>
                       <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
-                      <li class="nav-item"><a class="nav-link text-warning fw-bold" href="#">SIGN IN</a></li>
+                      <li class="nav-item"><a class="nav-link text-warning" href="{{ route('login') }}">SIGN IN</a></li>
                   </ul>
               </div>
           </div>
@@ -30,12 +30,20 @@
           </div>
       </header>
 
-      <!-- Blog Grid-->
-      @include('front_layouts.blog')
+      <!-- Services-->
+      @include('front_layouts.services')
 
-      <!-- Our Galler-->
-      @include('front_layouts.gallery')
+      <!-- Portfolio Grid-->
+      @include('front_layouts.portfolio')
 
+      <!-- About-->
+      @include('front_layouts.about')
+
+      <!-- Team-->
+      @include('front_layouts.team')
+
+      <!-- Clients-->
+      @include('front_layouts.client')
       <!-- Contact-->
       @include('front_layouts.contact')
 

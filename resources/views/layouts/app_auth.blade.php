@@ -71,6 +71,11 @@
 			<div class="container">
 				<div class="row align-items-center">
 					<div class="col-md-6 col-lg-7">
+            <div class="float-left">
+              <a class="btn btn-info" href="{{ route('welcome-page') }}">
+                <i class="fa fa-home"></i> Home
+              </a>
+            </div>
 						<img src="{{asset('backend')}}/vendors/images/login-page-img.png" alt="" />
 					</div>
 					<div class="col-md-6 col-lg-5">
