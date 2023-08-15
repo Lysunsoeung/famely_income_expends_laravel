@@ -14,7 +14,7 @@
                       <li class="nav-item"><a class="nav-link" href="#portfolio">BLOG</a></li>
                       <li class="nav-item"><a class="nav-link" href="#about">GALLERY</a></li>
                       <li class="nav-item"><a class="nav-link" href="#contact">CONTACT</a></li>
-                      <li class="nav-item"><a class="nav-link text-warning" href="#contact">SIGN IN</a></li>
+                      <li class="nav-item"><a class="nav-link text-warning" href="{{ route('login') }}">SIGN IN</a></li>
                   </ul>
               </div>
           </div>
