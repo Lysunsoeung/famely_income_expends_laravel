@@ -30,22 +30,19 @@
           </div>
       </header>
 
-      <!-- Services-->
-      @include('front_layouts.services')
+      {{-- <!-- Home Page-->
+      @include('front_layouts.home')
 
-      <!-- Portfolio Grid-->
-      @include('front_layouts.portfolio')
+      <!-- Blog-->
+      @include('front_layouts.blog')
 
-      <!-- About-->
-      @include('front_layouts.about')
+      <!-- Gallery-->
+      @include('front_layouts.gallery')
 
-      <!-- Team-->
-      @include('front_layouts.team')
-
-      <!-- Clients-->
-      @include('front_layouts.client')
       <!-- Contact-->
-      @include('front_layouts.contact')
+      @include('front_layouts.contact') --}}
+
+      
 
       <!-- Footer-->
       <footer class="footer py-4">
