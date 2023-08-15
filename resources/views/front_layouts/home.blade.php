@@ -30,8 +30,9 @@
           </div>
       </header>
 
-      {{-- <!-- Home Page-->
-      @include('front_layouts.home')
+
+      <!-- Home Page-->
+      {{-- @include('front_layouts.home')  --}}
 
       <!-- Blog-->
       @include('front_layouts.blog')
@@ -40,9 +41,9 @@
       @include('front_layouts.gallery')
 
       <!-- Contact-->
-      @include('front_layouts.contact') --}}
+      @include('front_layouts.contact')
 
-      
+
 
       <!-- Footer-->
       <footer class="footer py-4">
