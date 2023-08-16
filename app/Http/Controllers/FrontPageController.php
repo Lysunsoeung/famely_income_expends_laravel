@@ -28,16 +28,21 @@ class FrontPageController extends Controller
         return view('front_layouts.home',$data);
         // return view('front_layouts.home',compact('servcies'));
     }
+
+
     public function contact()
     {
-        $name="Long Dara";
-        $phone="093 77 12 44";
-        //ហៅ View មកបង្ហាញ ឈ្មោះ contact.blade.php
-        return view('contact',compact('name','phone'));
+        return view('contact');
     }
-    public function about()
+
+    public function bog()
     {
-        return view('about');   //ហៅ View មកបង្ហាញ ឈ្មោះ about.blade.php
+        return view('blog');
+    }
+
+    public function gallery()
+    {
+        return view('gallery');
     }
 
 }
