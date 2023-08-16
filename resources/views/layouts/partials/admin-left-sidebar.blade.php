@@ -25,14 +25,13 @@
         <li class="dropdown">
           <a href="javascript:;" class="dropdown-toggle">
             <span class="micon bi bi-textarea-resize"></span
-            ><span class="mtext">Manage Services</span>
+            ><span class="mtext">Manage Users</span>
           </a>
           <ul class="submenu">
-            <li><a href="{{route('admin.services.create')}}">Create Service</a></li>
+            <li><a href="{{route('admin.users.create')}}">Create User</a></li>
             <li>
-              <a href="{{route('admin.services')}}">All Services</a>
+              <a href="{{route('admin.users')}}">All Users</a>
             </li>
-            <li><a href="{{route('admin.services')}}">Deleted Services</a></li>
           </ul>
         </li>
         <li class="dropdown">

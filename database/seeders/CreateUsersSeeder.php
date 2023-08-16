@@ -15,20 +15,20 @@ class CreateUsersSeeder extends Seeder
     {
       $users = [
         [
-           'name'=>'Admin User',
+           'name'=>'Admin',
            'email'=>'admin@gmail.com',
            'type'=>1,
            'password'=> bcrypt('12345678'),
         ],
         [
-           'name'=>'Manager User',
-           'email'=>'manager@gmail.com',
+           'name'=>'Parent',
+           'email'=>'parent@gmail.com',
            'type'=> 2,
            'password'=> bcrypt('12345678'),
         ],
         [
-           'name'=>'User',
-           'email'=>'user@gmail.com',
+           'name'=>'Child',
+           'email'=>'child@gmail.com',
            'type'=>0,
            'password'=> bcrypt('12345678'),
         ],

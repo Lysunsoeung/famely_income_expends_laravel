@@ -9,9 +9,11 @@
 
                 <div class="card-body">
                     @if(auth()->user()->is_admin == 1)
-                    <a href="{{url('admin/routes')}}">Admin</a>
+                      <a href="{{url('admin/routes')}}">Admin</a>
+                    @elseif(auth()->user()->is_admin == 2)
+                      <a href="{{url('parent/routes')}}">Parent</a>
                     @else
-                    <div class=”panel-heading”>Normal User</div>
+                      <a href="{{url('child/routes')}}">Child</a>
                     @endif
                 </div>
             </div>
