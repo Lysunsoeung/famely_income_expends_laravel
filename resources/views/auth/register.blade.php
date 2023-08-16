@@ -18,12 +18,32 @@
         type="text"
         class="form-control form-control-lg"
         placeholder="Username"
-        name="email" value="{{ old('email') }}" required
+        name="name" value="{{ old('name') }}" required
       />
       <div class="input-group-append custom">
         <span class="input-group-text"
           ><i class="icon-copy dw dw-user1"></i
         ></span>
+      </div>
+
+      @error('name')
+          <span class="invalid-feedback" role="alert">
+              <strong>{{ $message }}</strong>
+          </span>
+      @enderror
+    </div>
+
+    <div class="input-group custom">
+      <input
+        type="email"
+        class="form-control form-control-lg"
+        placeholder="Email Address"
+        name="email" value="{{ old('email') }}" required
+      />
+      <div class="input-group-append custom">
+        <span class="input-group-text"
+          ><i class="icon-copy dw dw-user1"></i>
+      </span>
       </div>
 
       @error('email')
@@ -33,11 +53,12 @@
       @enderror
     </div>
 
+
     <div class="input-group custom">
       <input
         type="password"
         class="form-control form-control-lg"
-        placeholder="**********"
+        placeholder="Password "
         name="password" required
       />
       <div class="input-group-append custom">
@@ -56,7 +77,7 @@
       <input
         type="password"
         class="form-control form-control-lg"
-        placeholder="**********"
+        placeholder="Confirm Password"
         name="password_confirmation" required
       />
       <div class="input-group-append custom">
@@ -77,11 +98,6 @@
         <div class="input-group mb-0">
           <input class="btn btn-primary btn-lg btn-block" type="submit" value="Register">
 
-          {{-- <a
-            class="btn btn-primary btn-lg btn-block"
-            href="index.html"
-            >Sign In</a
-          > --}}
         </div>
         <div
           class="font-16 weight-600 pt-10 pb-10 text-center"
