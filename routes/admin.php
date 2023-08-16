@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\UsersController;
 use App\Models\Service;
 
 Auth::routes();
@@ -12,9 +13,9 @@ Auth::routes();
 All Normal Users Routes List
 --------------------------------------------
 --------------------------------------------*/
-Route::middleware(['auth', 'user-access:user'])->group(function () {
+Route::middleware(['auth', 'user-access:child'])->group(function () {
 
-    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::get('/child/home', [HomeController::class, 'index'])->name('child.home');
 });
 
 /*------------------------------------------
@@ -27,8 +28,8 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
     Route::get('/admin/home', [HomeController::class, 'adminHome'])->name('admin.home');
 
     //Manage Services
-    Route::get('/admin/services', [ServiceController::class, 'index'])->name('admin.services');
-    Route::get('/admin/services/create', [ServiceController::class, 'create'])->name('admin.services.create');
+    Route::get('/admin/users', [UsersController::class, 'index'])->name('admin.users');
+    Route::get('/admin/users/create', [UsersController::class, 'create'])->name('admin.users.create');
 
 
   });
@@ -38,7 +39,7 @@ Route::middleware(['auth', 'user-access:admin'])->group(function () {
 All Admin Routes List
 --------------------------------------------
 --------------------------------------------*/
-Route::middleware(['auth', 'user-access:manager'])->group(function () {
+Route::middleware(['auth', 'user-access:parent'])->group(function () {
 
-    Route::get('/manager/home', [HomeController::class, 'managerHome'])->name('manager.home');
+    Route::get('/parent/home', [HomeController::class, 'parentHome'])->name('parent.home');
 });

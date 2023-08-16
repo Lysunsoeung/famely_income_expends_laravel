@@ -14,7 +14,8 @@
 @endpush
 @section('content')
 
-  @include('admin.services.list_services')
+  @include('admin.users.list_users')
+  
 @endsection
 @push('scripts')
 
