@@ -160,6 +160,9 @@ return [
          * Package Service Providers...
          */
 
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+
+
         /*
          * Application Service Providers...
          */
@@ -183,6 +186,11 @@ return [
 
     'aliases' => Facade::defaultAliases()->merge([
         // 'Example' => App\Facades\Example::class,
+        'Qs' => App\Helpers\Qs::class,
+        'File' => Illuminate\Support\Facades\File::class,
+        'Route' => Illuminate\Support\Facades\Route::class,
+        'Storage' => Illuminate\Support\Facades\Storage::class,
+
     ])->toArray(),
 
 ];

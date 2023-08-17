@@ -5,7 +5,8 @@ namespace App\Models;
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Laravel\Sanctum\HasApiTokens;
 use Illuminate\Notifications\Notifiable;
-use Illuminate\Database\Eloquent\Casts\Attribute;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -21,9 +22,16 @@ class User extends Authenticatable
     protected $fillable = [
         'name',
         'email',
+        'code',
         'password',
-        'type',
-        'avatar',
+        'username',
+        'phone',
+        'phone2',
+        'dob',
+        'user_type',
+        'gender',
+        'photo',
+        'address',
     ];
 
     /**
@@ -36,6 +44,46 @@ class User extends Authenticatable
         'remember_token',
     ];
 
+    public function child_record()
+    {
+        return $this->hasOne(ChildRecord::class);
+    }
+    // Relationship to parent user for the child user
+    public function children()
+    {
+        return $this->hasMany(ChildRecord::class, 'my_parent_id');
+    }
+
+    public function staff()
+    {
+        return $this->hasOne(StaffRecord::class);
+    }
+
+    public function findByEmail($query, $email)
+    {
+        return $query->where('email', $email)->first();
+    }
+
+
+    // Income Category
+    public function incomeCategories()
+    {
+        return $this->hasMany(IncomeCategory::class, 'created_by_id');
+    }
+
+     // Income
+     public function incomes()
+     {
+         return $this->hasMany(Income::class, 'created_by_id');
+     }
+
+    // Expense Category
+    public function expenseCategories()
+    {
+        return $this->hasMany(ExpenseCategory::class, 'created_by_id');
+    }
+
+
     /**
      * The attributes that should be cast.
      *
@@ -45,12 +93,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-
-    protected function type(): Attribute
-    {
-        return new Attribute(
-            get: fn ($value) =>  ["child", "admin", "parent"][$value],
-        );
-    }
 }
