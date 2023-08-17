@@ -11,6 +11,11 @@ Child Dashboard
 <link  rel="stylesheet"  type="text/css" href="{{asset('backend')}}/src/plugins/datatables/css/dataTables.bootstrap4.min.css"/>
 <link  rel="stylesheet"  type="text/css" href="{{asset('backend')}}/src/plugins/datatables/css/responsive.bootstrap4.min.css"/>
 <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/vendors/styles/style.css" />
+
+
+<!-- toastr -->
+    <link rel="stylesheet" href="{{asset('backend')}}/src/plugins/toastr/toastr.min.css">
+
 @endpush
 
 @section('content')
@@ -107,5 +112,32 @@ Child Dashboard
 <script src="{{asset('backend')}}/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
 <script src="{{asset('backend')}}/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
 <script src="{{asset('backend')}}/vendors/scripts/dashboard3.js"></script>
+
+<!-- toastr -->
+<script src="{{asset('backend')}}/src/plugins/toastr/toastr.min.js"></script>
+<script>
+
+
+  @if (Session::has('message'))
+      var type = "{{ Session::get('alert-type','info') }}"
+      switch(type){
+          case 'info':
+              toastr.info(" {{ Session::get('message') }} ");
+              break;
+          case 'success':
+              toastr.success(" {{ Session::get('message') }} ");
+              break;
+          case 'warning':
+              toastr.warning(" {{ Session::get('message') }} ");
+              break;
+          case 'error':
+              toastr.error(" {{ Session::get('message') }} ");
+              break;
+      }
+
+  @endif
+
+
+  </script>
 
 @endpush

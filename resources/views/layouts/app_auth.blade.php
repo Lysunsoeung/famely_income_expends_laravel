@@ -45,6 +45,15 @@
 			href="{{asset('backend')}}/vendors/styles/icon-font.min.css"
 		/>
 		<link rel="stylesheet" type="text/css" href="{{asset('backend')}}/vendors/styles/style.css" />
+    <link
+			rel="stylesheet"
+			type="text/css"
+			href="{{asset('backend')}}/src/plugins/sweetalert2/sweetalert2.css"
+		/>
+
+    <!-- toastr -->
+    {{-- <link rel="stylesheet" href="{{asset('backend')}}/src/plugins/toastr/toastr.min.css"> --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css">
 
 
 	</head>
@@ -82,16 +91,52 @@
 
               @yield('content')
 
+
 					</div>
 				</div>
 			</div>
 		</div>
+
 
 		<!-- js -->
 		<script src="{{asset('backend')}}/vendors/scripts/core.js"></script>
 		<script src="{{asset('backend')}}/vendors/scripts/script.min.js"></script>
 		<script src="{{asset('backend')}}/vendors/scripts/process.js"></script>
 		<script src="{{asset('backend')}}/vendors/scripts/layout-settings.js"></script>
+
+    <!-- add sweet alert js & css in footer -->
+		<script src="{{asset('backend')}}/src/plugins/sweetalert2/sweetalert2.all.js"></script>
+		<script src="{{asset('backend')}}/src/plugins/sweetalert2/sweet-alert.init.js"></script>
+
+
+    <!-- toastr -->
+		{{-- <script src="{{asset('backend')}}/src/plugins/toastr/toastr.min.js"></script> --}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
+
+    <script>
+
+
+      @if (Session::has('message'))
+          var type = "{{ Session::get('alert-type','info') }}"
+          switch(type){
+              case 'info':
+                  toastr.info(" {{ Session::get('message') }} ");
+                  break;
+              case 'success':
+                  toastr.success(" {{ Session::get('message') }} ");
+                  break;
+              case 'warning':
+                  toastr.warning(" {{ Session::get('message') }} ");
+                  break;
+              case 'error':
+                  toastr.error(" {{ Session::get('message') }} ");
+                  break;
+          }
+
+      @endif
+
+
+      </script>
 
 	</body>
 </html>
