@@ -50,16 +50,27 @@ class LoginController extends Controller
 
         if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password'])))
         {
+            $notification = array(
+                'message' => 'You Login Successfully.',
+                'alert-type' => 'success'
+            );
+
             if (auth()->user()->type == 'admin') {
-                return redirect()->route('admin.home');
+
+                return redirect()->route('admin.home')->with($notification);
             }else if (auth()->user()->type == 'parent') {
-                return redirect()->route('parent.home');
+
+                return redirect()->route('parent.home')->with($notification);
             }else{
-                return redirect()->route('child.home');
+                return redirect()->route('child.home')->with($notification);
             }
         }else{
-            return redirect()->route('login')
-                ->with('error','Email-Address And Password Are Wrong.');
+            $notification = array(
+                'message' => 'Email-Address And Password Are Wrong.',
+                'alert-type' => 'error'
+            );
+            return redirect()->route('login')->withInput()
+                ->with($notification);
         }
 
     }

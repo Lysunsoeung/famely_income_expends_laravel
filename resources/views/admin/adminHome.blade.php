@@ -10,6 +10,16 @@ Admin Dashboard
 <link  rel="stylesheet"  type="text/css" href="{{asset('backend')}}/src/plugins/datatables/css/dataTables.bootstrap4.min.css"/>
 <link  rel="stylesheet"  type="text/css" href="{{asset('backend')}}/src/plugins/datatables/css/responsive.bootstrap4.min.css"/>
 <link rel="stylesheet" type="text/css" href="{{asset('backend')}}/vendors/styles/style.css" />
+
+ <link
+			rel="stylesheet"
+			type="text/css"
+			href="{{asset('backend')}}/src/plugins/sweetalert2/sweetalert2.css"
+		/>
+<!-- toastr -->
+    <link rel="stylesheet" href="{{asset('backend')}}/src/plugins/toastr/toastr.min.css">
+{{-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css"> --}}
+
 @endpush
 
 @section('content')
@@ -88,6 +98,9 @@ Admin Dashboard
 
 </div>
 
+{{-- @include('layouts.partials.js.custom_sweetalert_message') --}}
+
+
 @endsection
 
 
@@ -104,5 +117,40 @@ Admin Dashboard
 <script src="{{asset('backend')}}/src/plugins/datatables/js/dataTables.responsive.min.js"></script>
 <script src="{{asset('backend')}}/src/plugins/datatables/js/responsive.bootstrap4.min.js"></script>
 <script src="{{asset('backend')}}/vendors/scripts/dashboard3.js"></script>
+
+<!-- add sweet alert js & css in footer -->
+<script src="{{asset('backend')}}/src/plugins/sweetalert2/sweetalert2.all.js"></script>
+<script src="{{asset('backend')}}/src/plugins/sweetalert2/sweet-alert.init.js"></script>
+
+<!-- toastr -->
+<script src="{{asset('backend')}}/src/plugins/toastr/toastr.min.js"></script>
+{{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> --}}
+
+
+
+<script>
+
+
+  @if (Session::has('message'))
+      var type = "{{ Session::get('alert-type','info') }}"
+      switch(type){
+          case 'info':
+              toastr.info(" {{ Session::get('message') }} ");
+              break;
+          case 'success':
+              toastr.success(" {{ Session::get('message') }} ");
+              break;
+          case 'warning':
+              toastr.warning(" {{ Session::get('message') }} ");
+              break;
+          case 'error':
+              toastr.error(" {{ Session::get('message') }} ");
+              break;
+      }
+
+  @endif
+
+
+  </script>
 
 @endpush
