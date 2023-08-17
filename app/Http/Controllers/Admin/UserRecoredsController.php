@@ -255,17 +255,15 @@ class UserRecoredsController extends Controller
         // }
 
         if($user_is_staff && !$user_is_teamPA){
-        $data['username'] = $uname = ($user_is_teamPA) ? $user->username : $user->username;
 
-            // $data['username'] = Qs::getAppCode().'/STAFF/'.date('Y/m', strtotime($req->emp_date)).'/'.mt_rand(1000, 9999);
-            // $data['username'] = Qs::getAppCode();
+            $uname = ($user_is_teamPA) ? $user->username : $user->username;
+            $data['username'] = $uname;
 
         }
         else {
             // $data['username'] = $user->username;
             if (!$user) {
-                // $data['username'] = $user->username; // Retain the old username value
-            $data['username'] = $uname = ($user_is_teamPA) ? $user->username : $user->username;
+                $data['username'] = $uname = ($user_is_teamPA) ? $user->username : $user->username;
 
             }
         }
