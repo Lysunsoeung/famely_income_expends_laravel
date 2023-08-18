@@ -119,6 +119,22 @@
                 </div>
               </div>
             </div>
+
+            <!-- ./col -->
+            <div class="col-lg-3 col-6">
+                <!-- small box -->
+                <div class="small-box bg-warning">
+                  <div class="inner">
+                    <h3>@if(!$expenseCategories) {{0}} @else {{ $expenseCategories->count() }} @endif</h3>
+  
+                    <p>Total Expense Category</p>
+                  </div>
+                  <div class="icon">
+                    <i class="ion ion-person"></i>
+                  </div>
+                </div>
+            </div>
+
             <!-- ./col -->
             {{-- <div class="col-lg-3 col-6">
               <!-- small box -->
@@ -132,7 +148,7 @@
                   <i class="ion ion-person"></i>
                 </div>
               </div>
-            </div> --}}
+            </div>
 
              <!-- ./col -->
              {{-- <div class="col-lg-3 col-6">

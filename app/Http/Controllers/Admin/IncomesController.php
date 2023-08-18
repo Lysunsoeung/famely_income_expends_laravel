@@ -30,7 +30,7 @@ class IncomesController extends Controller
             // But if parent and child user then they can see only they incomes
             $data['incomes'] = auth()->user()->incomes;
         }
-        
+
 
         // foreach($incomes as $income){
         //     // Dump the category object for each income
@@ -60,7 +60,7 @@ class IncomesController extends Controller
         $income->amount = $req->input('amount');
         $income->description = $req->input('description');
         $income->income_category_id = $req->input('income_category_id');
-        
+
         // Assign the id of the authentication user
         $income->created_by_id = Auth::id();
 
@@ -126,8 +126,8 @@ class IncomesController extends Controller
                 'message' => 'Income Delete Successfully',
                 'alert-type' => 'success'
             );
-    
-    
+
+
             return redirect()->route('incomes.index')->with($notification);
         } else{
             abort(404, 'Unauthorized');

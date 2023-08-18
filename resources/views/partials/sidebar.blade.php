@@ -198,7 +198,7 @@ userIsChild --}}
                 <p>Create Income</p>
               </a>
             </li>
-           
+
 
           </ul>
         </li>
@@ -214,23 +214,23 @@ userIsChild --}}
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('income_view')}}" class="nav-link">
+                <a href="{{route('expense.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Expense</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
+                <a href="{{route('expense.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Create Expense</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="pages/charts/inline.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Add Expense Category</p>
                 </a>
-              </li>
+              </li> --}}
 
             </ul>
         </li>
@@ -284,7 +284,7 @@ userIsChild --}}
                   <p>Create Category</p>
                 </a>
               </li>
-             
+
 
             </ul>
         </li>
@@ -352,7 +352,7 @@ userIsChild --}}
 
         </li>
 
-      
+
 
       </ul>
     </nav>

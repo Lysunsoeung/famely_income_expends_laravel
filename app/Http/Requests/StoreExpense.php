@@ -2,9 +2,10 @@
 
 namespace App\Http\Requests;
 
+use App\Http\Requests\StoreExpense;
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreIncomes extends FormRequest
+class StoreExpense extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,7 +26,7 @@ class StoreIncomes extends FormRequest
             'entry_date' => 'nullable|date',
             'amount' => 'required|string',
             'description' => 'required|string',
-            'income_category_id' => 'required|exists:income_categories,id',
+            'expense_category_id' => 'required|exists:expense_categories,id',
         ];
     }
 }
