@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Admin\ExpenseController;
 use App\Http\Controllers\Admin\UserRecoredsController;
 
 /*
@@ -190,7 +191,21 @@ Route::group(['middleware' => 'auth'], function () {
          Route::put('/update/expense_category/{category_id}', [App\Http\Controllers\Admin\ExpenseCategoryController::class, 'update'])->name('ex_category.update');
 
          Route::get('/destroy/expense_category/{category_id}', [App\Http\Controllers\Admin\ExpenseCategoryController::class, 'destroy'])->name('ex_category.destroy');
-         
+
+
+
+         // Expense  route
+
+         Route::get('/view/expense', [App\Http\Controllers\Admin\ExpenseController::class, 'index'])->name('expense.index');
+
+         Route::get('/create/expense', [App\Http\Controllers\Admin\ExpenseController::class, 'create'])->name('expense.create');
+         Route::post('/store/expense', [App\Http\Controllers\Admin\ExpenseController::class, 'store'])->name('expense.store');
+
+         Route::get('/edit/expense/{category}', [ExpenseController::class, 'edit'])->name('expense.edit');
+         Route::put('/update/expense/{category_id}', [App\Http\Controllers\Admin\ExpenseController::class, 'update'])->name('expense.update');
+
+         Route::get('/destroy/expense/{category_id}', [App\Http\Controllers\Admin\ExpenseController::class, 'destroy'])->name('expense.destroy');
+
 
 
     });
