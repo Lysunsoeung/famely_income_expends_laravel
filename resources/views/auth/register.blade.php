@@ -6,28 +6,29 @@
       <div class="row m-0">
         <div class="col-12 p-0">
           <div class="login-card">
+           
             <form method="POST" action="{{ route('register') }}" class="theme-form login-form">
                 @csrf
+
               <h4>Create your account</h4>
               <h6>Enter your personal details to create account</h6>
+
               <div class="form-group">
                 <label>Your Name</label>
                 <div class="small-group">
                   <div class="input-group"><span class="input-group-text"><i class="icon-user"></i></span>
-                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus placeholder="Fist Name">
+                        <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus  placeholder="Fist Name">
 
-                    @error('name')
-                        <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
-                        </span>
-                    @enderror
-                    {{-- <input class="form-control" type="text" required="" placeholder="Fist Name"> --}}
+                        @error('name')
+                            <span class="invalid-feedback" role="alert">
+                                <strong>{{ $message }}</strong>
+                            </span>
+                        @enderror
+
                   </div>
-                  {{-- <div class="input-group"><span class="input-group-text"><i class="icon-user"></i></span>
-                    <input class="form-control" type="email" required="" placeholder="Last Name">
-                  </div> --}}
                 </div>
               </div>
+
               <div class="form-group">
                 <label>Email Address</label>
                 <div class="input-group"><span class="input-group-text"><i class="icon-email"></i></span>
@@ -41,20 +42,38 @@
                   {{-- <input class="form-control" type="email" required="" placeholder="Test@gmail.com"> --}}
                 </div>
               </div>
+
               <div class="form-group">
                 <label>Password</label>
                 <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
                     <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="*********">
 
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
                   {{-- <input class="form-control" type="password" name="login[password]" required="" placeholder="*********"> --}}
                   <div class="show-hide"><span class="show">                         </span></div>
                 </div>
               </div>
+
+              <div class="form-group">
+                <label>Confirm-Password</label>
+                <div class="input-group"><span class="input-group-text"><i class="icon-lock"></i></span>
+                    {{-- <input id="password"         type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="*********"> --}}
+                    <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="*********">
+                    @error('password')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{ $message }}</strong>
+                        </span>
+                    @enderror
+
+                  {{-- <input class="form-control" type="password" name="login[password]" required="" placeholder="*********"> --}}
+                  <div class="show-hide"><span class="show">                         </span></div>
+                </div>
+              </div>
+
               <div class="form-group">
                 {{-- <div class="checkbox">
                   <input id="checkbox1" type="checkbox">
@@ -77,6 +96,7 @@
               </div>
               <p>Already have an account?<a class="ms-2" href="{{route('login')}}">Sign in</a></p>
             </form>
+
           </div>
         </div>
       </div>
