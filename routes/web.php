@@ -17,18 +17,22 @@ use App\Http\Controllers\Admin\UserRecoredsController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('front_page.layout.master_frontpage');
 });
 
 // This route is redirect to login page when seit is load
-Route::redirect('/', '/login');
+// Route::redirect('/', '/login');
 
 Auth::routes();
+
+Route::group(['prefix' => 'frontpage'], function(){
+    Route::get('/', [App\Http\Controllers\Frontpage\FrontPageController::class, 'index'])->name('frontpage');
+});
 
 Route::group(['middleware' => 'auth'], function () {
 
     // Home route
-    Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    // Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
     // Admin dashboard route
     // Route::get('/admin/dashboard', [App\Http\Controllers\HomeController::class, 'dashboard'])->name('dashboard');
