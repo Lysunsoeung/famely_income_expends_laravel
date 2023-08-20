@@ -52,7 +52,7 @@
                                     @enderror
                                 </div>
                             </div>
-
+                            
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="expense_category_id">Expense Category:  <span class="text-danger">*</span></label>

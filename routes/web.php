@@ -22,7 +22,7 @@ Route::get('/', function () {
 
 // This route is redirect to login page when seit is load
 Route::redirect('/', '/login');
-
+    	    
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
