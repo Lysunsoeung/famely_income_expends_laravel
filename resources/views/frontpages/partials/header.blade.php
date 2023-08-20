@@ -28,7 +28,9 @@
               <li><a href="#">Drop Down 4</a></li>
             </ul>
           </li> --}}
-          <li><a href="{{ route('frontpage.contact') }}">Contact</a></li>
+          <li><a href="{{ route('frontpage.contact') }}" ckass*()>Contact</a></li>
+
+          <li><a href="{{ route('login') }}">Sing In</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

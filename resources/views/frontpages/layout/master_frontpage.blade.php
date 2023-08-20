@@ -32,7 +32,7 @@
 <body>
 
   <!-- ======= Header ======= -->
-  @include('frontpags.partials.header')
+  @include('frontpages.partials.header')
   <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
