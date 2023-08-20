@@ -59,7 +59,7 @@
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="income_category_id">Income Category:  <span class="text-danger">*</span></label>
-                                    <select class="select form-control" id="income_category_id" name="income_category_id"  data-fouc data-placeholder="Choose..">
+                                    <select class="select form-control select2" id="income_category_id" name="income_category_id"  data-fouc data-placeholder="Choose..">
                                         @foreach($categories as $category)
                                             <option value="{{ $category->id }}">{{ $category->name }}</option>
                                         @endforeach

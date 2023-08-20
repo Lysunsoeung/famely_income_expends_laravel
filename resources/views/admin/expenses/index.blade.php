@@ -4,10 +4,10 @@
 
 <div class="content-wrapper">
     <div class="content-header">
-        
+
         <div class="container-fluid">
 
-           
+
 
     <div class="card">
         <div class="card-header">
@@ -16,7 +16,7 @@
         <!-- /.card-header -->
         <div class="card-body">
             @if(count($expenses) > 0)
-           
+
                 <table class="table table-bordered">
                     <thead>
                     <tr>
@@ -24,7 +24,7 @@
                         <th>Income Name</th>
                         <th>Amount</th>
                         <th>Description</th>
-                        <th>Date</th>                                        
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -40,12 +40,13 @@
                                 <div class="list-icons">
                                     <div class="dropdown">
 
-                                            {{-- <a href="{{ route('incomes.show', [$income->id]) }}" class="fas fa-view "><i class="fa-eye"></i></a> --}}
-                                            <a href="{{ route('expense.edit', [$expense->id]) }}" class="fas fa-edit "><i class="icon-pencil"></i></a>
+                                        <a href="{{ route('expenses.edit', [$expense->id]) }}"
+                                           class="fas fa-edit "><i class="icon-pencil"></i></a>
 
-                                            <a id="delete" onclick="confirmDelete(this.id)" href="{{ route('users.destroy', [$expense->id]) }}" class="fas fa-delete "><i class="fa-trash"></i></a>
-                                            {{-- <form method="post" id="item-delete-{{ $income->id }}" action="{{ route('users.destroy', [$income->id]) }}" class="hidden">@csrf @method('delete')</form> --}}
-
+                                        <a id="delete" onclick="confirmDelete(this.id)"
+                                           href="{{ route('expenses.destroy', [$expense->id]) }}"
+                                           class="fas fa-delete "><i class="fa-trash"></i></a>
+                                           
                                     </div>
                                 </div>
                             </td>
@@ -53,7 +54,7 @@
                         @endforeach
 
                     </tbody>
-                </table>   
+                </table>
             @else
                 <table class="table table-bordered">
                     <thead>
@@ -62,7 +63,7 @@
                         <th>Expense Name</th>
                         <th>Amount</th>
                         <th>Description</th>
-                        <th>Date</th>                                        
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -77,7 +78,7 @@
       </div>
 
         </div>
-            
+
         </div>
     </div>
 

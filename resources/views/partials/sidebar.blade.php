@@ -214,13 +214,13 @@ userIsChild --}}
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{route('expense.index')}}" class="nav-link">
+                <a href="{{route('expenses.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Expense</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{route('expense.create')}}" class="nav-link">
+                <a href="{{route('expenses.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Create Expense</p>
                 </a>
