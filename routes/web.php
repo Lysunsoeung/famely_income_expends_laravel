@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ExpenseController;
 use App\Http\Controllers\Admin\UserRecoredsController;
+use App\Http\Controllers\Frontpage\FrontPageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,12 +23,27 @@ Route::get('/', function () {
 
 // This route is redirect to login page when seit is load
 Route::redirect('/', '/login');
-    	    
+
 Auth::routes();
 
+// ==========================//
+// FRONTEND FOR FAMILY PAGE //
+// =========================//
 Route::group(['prefix' => 'frontpage'], function(){
-    Route::get('/', [App\Http\Controllers\Frontpage\FrontPageController::class, 'index'])->name('frontpage');
+
+    Route::get('/', [App\Http\Controllers\Frontpage\FrontPageController::class, 'index'])->name('frontpage.index');
+
+    Route::get('/out-story',[FrontPageController::class,'our_story'])->name('frontpage.out_story');
+
+    Route::get('/events',[FrontPageController::class,'event'])->name('frontpage.events');
+
+    Route::get('/gallery',[FrontPageController::class,'gallery'])->name('frontpage.gallery');
+
+    Route::get('/contact',[FrontPageController::class,'contact'])->name('frontpage.contact');
+
 });
+
+
 
 Route::group(['middleware' => 'auth'], function () {
 
