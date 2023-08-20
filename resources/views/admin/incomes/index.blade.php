@@ -43,7 +43,7 @@
                                             {{-- <a href="{{ route('incomes.show', [$income->id]) }}" class="fas fa-view "><i class="fa-eye"></i></a> --}}
                                             <a href="{{ route('incomes.edit', [$income->id]) }}" class="fas fa-edit "><i class="icon-pencil"></i></a>
 
-                                            <a id="delete" onclick="confirmDelete(this.id)" href="{{ route('users.destroy', [$income->id]) }}" class="fas fa-delete "><i class="fa-trash"></i></a>
+                                            <a id="delete" onclick="confirmDelete(this.id)" href="{{ route('incomes.destroy', [$income->id]) }}" class="fas fa-delete "><i class="fa-trash"></i></a>
                                             {{-- <form method="post" id="item-delete-{{ $income->id }}" action="{{ route('users.destroy', [$income->id]) }}" class="hidden">@csrf @method('delete')</form> --}}
 
                                     </div>

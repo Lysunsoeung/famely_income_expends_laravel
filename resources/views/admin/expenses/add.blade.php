@@ -20,7 +20,7 @@
                 <div class="card-body">
                     <div class="tab-content">
 
-                        <form action="{{ route('expense.store') }}" method="POST">
+                        <form action="{{ route('expenses.store') }}" method="POST">
                             @csrf
 
                             <div class="col-md-4">
@@ -50,14 +50,13 @@
                                     @error('description')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
-                                  </div>
-
+                                </div>
                             </div>
 
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="expense_category_id">Expense Category:  <span class="text-danger">*</span></label>
-                                    <select class="select form-control" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
+                                    <select class="select form-control select2" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
                                         @foreach($expenses as $expense)
                                             <option value="{{ $expense->id }}">{{ $expense->name }}</option>
                                         @endforeach
@@ -74,7 +73,6 @@
                     </div>
 
                 </div>
-
 
             </div>
 

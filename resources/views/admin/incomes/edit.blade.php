@@ -53,9 +53,9 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                   </div>
-                               
+
                             </div>
-                            
+
                             <div class="col-md-6">
                                 <div class="form-group">
                                     <label for="income_category_id">Income Category: <span class="text-danger">*</span></label>
@@ -71,7 +71,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
-                               
+
                             </div>
                             <button type="submit" class="btn btn-primary">Update</button>
                         </form>
@@ -82,7 +82,7 @@
 
             </div>
 
-            
+
 
         </div>
     </div>
@@ -92,6 +92,6 @@
 
 
 
-    
+
 
 @endsection

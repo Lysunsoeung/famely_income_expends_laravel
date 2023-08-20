@@ -196,15 +196,16 @@ Route::group(['middleware' => 'auth'], function () {
 
          // Expense  route
 
-         Route::get('/view/expense', [App\Http\Controllers\Admin\ExpenseController::class, 'index'])->name('expense.index');
+         Route::get('/view/expenses', [App\Http\Controllers\Admin\ExpenseController::class, 'index'])->name('expenses.index');
 
-         Route::get('/create/expense', [App\Http\Controllers\Admin\ExpenseController::class, 'create'])->name('expense.create');
-         Route::post('/store/expense', [App\Http\Controllers\Admin\ExpenseController::class, 'store'])->name('expense.store');
+         Route::get('/create/expenses', [App\Http\Controllers\Admin\ExpenseController::class, 'create'])->name('expenses.create');
+         Route::post('/store/expenses', [App\Http\Controllers\Admin\ExpenseController::class, 'store'])->name('expenses.store');
 
-         Route::get('/edit/expense/{category}', [ExpenseController::class, 'edit'])->name('expense.edit');
-         Route::put('/update/expense/{category_id}', [App\Http\Controllers\Admin\ExpenseController::class, 'update'])->name('expense.update');
+         Route::get('/edit/expenses/{expense}', [App\Http\Controllers\Admin\ExpenseController::class, 'edit'])->name('expenses.edit');
+         Route::put('/update/expenses/{expense}', [App\Http\Controllers\Admin\ExpenseController::class, 'update'])->name('expenses.update');
 
-         Route::get('/destroy/expense/{category_id}', [App\Http\Controllers\Admin\ExpenseController::class, 'destroy'])->name('expense.destroy');
+                                    // បោះ id expense table ទៅចូល controller to delete.
+         Route::get('/destroy/expenses/{expense}', [App\Http\Controllers\Admin\ExpenseController::class, 'destroy'])->name('expenses.destroy');
 
 
 

@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('page_title', 'Edit Expense Category')
+@section('page_title', 'Edit Expenses')
 @section('content')
 
 <div class="content-wrapper">
@@ -12,39 +12,68 @@
 
             <div class="card">
                 <div class="card-header header-elements-inline">
-                    <h6 class="card-title">Manage Category Income</h6>
-                    <a href="{{route('ex_category.index')}}" class="btn btn-info float-right">View Your Category</a>
+                    <h6 class="card-title">Edit Expenses</h6>
+                    <a href="{{route('expenses.index')}}" class="btn btn-info float-right">View Your Expenses</a>
 
                 </div>
 
-
                 <div class="card-body">
-                    
 
                     <div class="tab-content">
 
-                        <form method="post" class="wizard-form steps-validation ajax-update" action="{{ route('ex_category.update', ['category_id' => Qs::hash($category->id)]) }}" data-fouc>
-                            @csrf 
-                            @method('PUT')
-                                <div class="row">
+                        <form action="{{ route('expenses.update',$expense->id) }}" method="POST">
+                            @csrf @method('PUT')
 
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Category Name: <span class="text-danger">*</span></label>
-                                            <input value="{{ $category->name }}" required type="text" name="name" placeholder="Category Name" class="form-control">
-                                            @error('name')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="entry_date">Entry Date</label>
+                                    <input value="{{ $expense->entry_date }}" type="date" name="entry_date" class="form-control">
+                                    @error('entry_date')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
                                 </div>
-                                <button type="submit" class="btn btn-info">Update</button>
+                            </div>
 
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="amount">Amount</label>
+                                    <input value="{{ $expense->amount }}" type="number" name="amount" class="form-control" >
+                                    @error('amount')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea value="{{ $expense->description }}" name="description" class="form-control" rows="3" placeholder="Enter ...">{{ $expense->description }}</textarea>
+                                    @error('description')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                  </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="income_category_id">Expense Category: <span class="text-danger">*</span></label>
+                                    <select class="select form-control" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
+                                        @foreach($categories as $category)
+                                            <option value="{{ $category->id }}" {{ $category->id === $expense->expense_category_id ? 'selected' : '' }} >{{ $category->name }}</option>
+                                                {{ $category->name }}
+                                            </option>
+
+                                        @endforeach
+                                    </select>
+                                    @error('expense_category_id')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                            </div>
+                            <button type="submit" class="btn btn-primary">Update</button>
                         </form>
-
-
 
                     </div>
 
@@ -52,11 +81,16 @@
 
             </div>
 
+
+
         </div>
     </div>
 
 </div>
 
-    {{--Student List Ends--}}
+
+
+
+
 
 @endsection
