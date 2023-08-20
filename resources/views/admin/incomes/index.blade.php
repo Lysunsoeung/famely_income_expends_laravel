@@ -4,10 +4,10 @@
 
 <div class="content-wrapper">
     <div class="content-header">
-        
+
         <div class="container-fluid">
 
-           
+
 
     <div class="card">
         <div class="card-header">
@@ -16,7 +16,7 @@
         <!-- /.card-header -->
         <div class="card-body">
             @if(count($incomes) > 0)
-           
+
                 <table class="table table-bordered">
                     <thead>
                     <tr>
@@ -24,7 +24,7 @@
                         <th>Income Name</th>
                         <th>Amount</th>
                         <th>Description</th>
-                        <th>Date</th>                                        
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -53,7 +53,7 @@
                         @endforeach
 
                     </tbody>
-                </table>   
+                </table>
             @else
                 <table class="table table-bordered">
                     <thead>
@@ -62,7 +62,7 @@
                         <th>Income Name</th>
                         <th>Amount</th>
                         <th>Description</th>
-                        <th>Date</th>                                        
+                        <th>Date</th>
                         <th>Action</th>
                     </tr>
                     </thead>
@@ -86,7 +86,7 @@
       </div>
 
         </div>
-            
+
         </div>
     </div>
 

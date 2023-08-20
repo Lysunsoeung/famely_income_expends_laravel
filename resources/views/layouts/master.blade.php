@@ -47,7 +47,7 @@
 
 
   <footer class="main-footer">
-    <strong>Copyright &copy; 2023 <a href="https://github.com/thasocheat">Tha Socheat</a>.</strong>
+    <strong>Copyright &copy; 2023 <a href="https://github.com/Lysunsoeung/famely_income_expends_laravel">Team: 01 Laravel Project.</a>.</strong>
     All rights reserved.
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> Testing
