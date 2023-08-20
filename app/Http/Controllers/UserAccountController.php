@@ -46,15 +46,25 @@ class UserAccountController extends Controller
         $old_pass = $req->current_passwrod;
         $new_pass = $req->password;
 
-        // Check if the password
+        // Check if the password if correct than return the success, if not error
         if(password_verify($old_pass, $my_pass)){
             //
             $data['password'] = Hash::make($new_pass);
             $this->user->update($user_id, $data);
 
-            return back()->with('pop_success',__('msg.p_reset'));
+            $notification = array(
+                'message' => 'Password changed successfully.',
+                'alert-type' => 'success'
+            );
+
+            return back()->with($notification);
         }
-        return back()->with('pop_error',__('msg.p_reset_fail'));
+
+        $notificationrest = array(
+            'message' => 'You have fail to change the password!',
+            'alert-type' => 'error'
+        );
+        return back()->with($notificationrest);
 
 
     }
