@@ -18,7 +18,7 @@ use App\Http\Controllers\Frontpage\FrontPageController;
 */
 
 Route::get('/', function () {
-    return view('front_page.layout.master_frontpage');
+    return view('frontpages.layout.master_frontpage');
 });
 
 // This route is redirect to login page when seit is load
