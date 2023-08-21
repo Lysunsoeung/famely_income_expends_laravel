@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>MeFamily Bootstrap Template - Index</title>
+  <title>Family Income | Home</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -78,7 +78,7 @@
 
 
 
-    
+
     <!-- ======= My & Family Section ======= -->
     <section id="about" class="about">
       <div class="container">
