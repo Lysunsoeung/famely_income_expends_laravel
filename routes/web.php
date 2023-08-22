@@ -33,11 +33,11 @@ Route::group(['prefix' => 'frontpage'], function(){
 
     Route::get('/', [App\Http\Controllers\Frontpage\FrontPageController::class, 'index'])->name('frontpage.index');
 
-    Route::get('/out-story',[FrontPageController::class,'our_story'])->name('frontpage.out_story');
+    // Route::get('/out-story',[FrontPageController::class,'our_story'])->name('frontpage.out_story');
 
-    Route::get('/events',[FrontPageController::class,'event'])->name('frontpage.events');
+    // Route::get('/events',[FrontPageController::class,'event'])->name('frontpage.events');
 
-    Route::get('/gallery',[FrontPageController::class,'gallery'])->name('frontpage.gallery');
+    Route::get('/about',[FrontPageController::class,'about'])->name('frontpage.about');
 
     Route::get('/contact',[FrontPageController::class,'contact'])->name('frontpage.contact');
 

@@ -12,16 +12,8 @@ class FrontPageController extends Controller
         return view('frontpages.layout.master_frontpage');
     }
 
-    public function our_story(){
-        return view('frontpages.layout.our-story');
-    }
-
-    public function event(){
-        return view('frontpages.layout.events');
-    }
-
-    public function gallery(){
-        return view('frontpages.layout.gallery');
+    public function about(){
+        return view('frontpages.layout.about');
     }
 
     public function contact(){
