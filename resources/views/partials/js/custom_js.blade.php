@@ -63,7 +63,7 @@
             title: data.title ? data.title : 'Oops...',
             text: data.msg,
             icon: data.type,
-            
+
         });
         // swal({
         //     title: data.title ? data.title : 'Oops...',
@@ -147,7 +147,7 @@
 
     $('form#ajax-reg').on('submit', function(ev){
         ev.preventDefault();
-        submitForm($(this), 'store');        
+        submitForm($(this), 'store');
         // var div = $(this).data('reload');
         // div ? reloadDiv(div) : '';
 

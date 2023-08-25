@@ -17,6 +17,7 @@
 - php artisan key:generate
 - php artisan migrate:fresh --seed
 - php artisan storage:link
+- composer require hashids/hashids
 - php artisan serve
 - for the user you can look at the seed file.
 

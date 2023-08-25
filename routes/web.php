@@ -23,7 +23,7 @@ Route::get('/', function () {
 
 // This route is redirect to login page when seit is load
 // Route::redirect('/', '/login');
-    	    
+
 Auth::routes();
 
 // ==========================//
@@ -226,6 +226,22 @@ Route::group(['middleware' => 'auth'], function () {
 
                                     // បោះ id expense table ទៅចូល controller to delete.
          Route::get('/destroy/expenses/{expense}', [App\Http\Controllers\Admin\ExpenseController::class, 'destroy'])->name('expenses.destroy');
+
+
+
+
+
+
+        // Report route
+        Route::get('/view/weekly/report', [App\Http\Controllers\Admin\ReportsController::class, 'weekly_index'])->name('view.weekly');
+
+        // Monthly report
+        Route::get('/get/monthly/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_monthly'])->name('view.monthly');
+
+        // Yearly report
+        Route::get('/get/yearly/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_yearly'])->name('view.yearly');
+        
+
 
 
 
