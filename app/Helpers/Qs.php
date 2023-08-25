@@ -62,7 +62,23 @@ class Qs
     //     return in_array(IncomeCategory::all());
     // }
 
+    public static function months(){
+        return[
+            1 => 'January',
+            2 => 'Feb',
+            3 => 'Mar',
+            4 => 'Apr',
+            5 => 'May',
+            6 => 'Jun',
+            7 => 'Jul',
+            8 => 'August',
+            9 => 'Sep',
+            10 => 'Oct',
+            11 => 'Nov',
+            12 => 'Des',
 
+        ];
+    }
 
 
 
@@ -141,7 +157,7 @@ class Qs
     public static function getTeamPA()
     {
         // return ['admin'];
-        return ['admin','parent'];
+        return ['parent'];
 
     }
     public static function getTeamPAT()

@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Expense extends Model
 {
     use HasFactory;
+    protected $table = 'expenses';
 
     protected $fillable = ['entry_date', 'amount', 'expense_category_id', 'created_by_id'];
 

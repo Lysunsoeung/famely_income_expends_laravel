@@ -135,6 +135,36 @@ userIsChild --}}
         </li>
         @endif
 
+        @if(Qs::userIsTeamPAT())
+
+            <li class="nav-item">
+
+
+                {{-- <a href="{{ route('childs.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['childs.create', 'childs.show', 'childs.edit']) ? 'active' : '' }}"> --}}
+                <a href="#" class="nav-link">
+
+                    <i class="nav-icon fas fa-copy"></i>
+                    <p>
+                    Child
+
+                    <i class="right fas fa-angle-left"></i>
+                    </p>
+                </a>
+                <ul class="nav nav-treeview">
+                    <li class="nav-item">
+                    <a href="{{ route('childs.create') }}" class="nav-link {{ (Route::is('childs.create')) ? 'active' : '' }}">
+                        <i class="far fa-circle nav-icon"></i>
+                        <p>Create Child</p>
+                    </a>
+                    </li>
+
+
+                </ul>
+
+            </li>
+
+        @endif
+
         {{-- Child --}}
         @if(Qs::userIsTeamPA())
 
@@ -295,57 +325,27 @@ userIsChild --}}
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tree"></i>
             <p>
-              Report
+              Reports
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="pages/UI/general.html" class="nav-link">
+              <a href="{{ route('view.weekly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>General</p>
+                <p>Weekly Report</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/icons.html" class="nav-link">
+              <a href="{{ route('view.monthly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Icons</p>
+                <p>Monthly Report</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="pages/UI/buttons.html" class="nav-link">
+              <a href="{{ route('view.yearly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Buttons</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/UI/sliders.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Sliders</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/UI/modals.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Modals & Alerts</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/UI/navbar.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Navbar & Tabs</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/UI/timeline.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Timeline</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="pages/UI/ribbons.html" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Ribbons</p>
+                <p>Yearly Report</p>
               </a>
             </li>
           </ul>
