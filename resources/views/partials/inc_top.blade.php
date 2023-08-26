@@ -4,6 +4,10 @@
 <link rel="stylesheet" href="{{asset('backends/plugins/fontawesome-free/css/all.min.css')}}">
 <!-- Ionicons -->
 <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+ <!-- flag-icon-css -->
+ <link rel="stylesheet" href="{{asset('backends')}}/plugins/flag-icon-css/css/flag-icon.min.css">
+
 <!-- Tempusdominus Bootstrap 4 -->
 <link rel="stylesheet" href="{{asset('backends/plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css')}}">
 <!-- iCheck -->

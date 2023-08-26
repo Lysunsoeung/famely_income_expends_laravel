@@ -14,7 +14,7 @@
                 {{ session('status') }}
             </div>
             @endif --}}
-            <h1 class="m-0">Dashboard</h1>
+            <h1 class="m-0">{{ trans('english.Dashboard') }}</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">

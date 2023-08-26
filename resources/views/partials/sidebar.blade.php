@@ -66,7 +66,7 @@ userIsChild --}}
                 <a href="{{ route('dashboard') }}" class="nav-link {{ (Route::is('dashboard')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Dashboard
+                    {{ trans('english.Dashboard') }}
                 </p>
                 </a>
             </li>
@@ -75,7 +75,7 @@ userIsChild --}}
                 <a href="{{ route('parent_dashboard') }}" class="nav-link {{ (Route::is('parent_dashboard')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Dashboard
+                    {{ trans('english.Dashboard') }}
                 </p>
                 </a>
             </li>
@@ -84,7 +84,7 @@ userIsChild --}}
                 <a href="{{ route('child_dashboard') }}" class="nav-link {{ (Route::is('child_dashboard')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    Dashboard
+                    {{ trans('english.Dashboard') }}
                 </p>
                 </a>
             </li>
