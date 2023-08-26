@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\Session;
 use App\Http\Controllers\Admin\ExpenseController;
 use App\Http\Controllers\Admin\UserRecoredsController;
 use App\Http\Controllers\Frontpage\FrontPageController;
@@ -25,6 +26,13 @@ Route::get('/', function () {
 // Route::redirect('/', '/login');
 
 Auth::routes();
+
+// Backend language switch route
+//for switching language route
+Route::get('/lang/{locale}', function ($locale) {
+	Session::put('locale', $locale);
+	return redirect()->back();
+});
 
 // ==========================//
 // FRONTEND FOR FAMILY PAGE //
@@ -240,7 +248,7 @@ Route::group(['middleware' => 'auth'], function () {
 
         // Yearly report
         Route::get('/get/yearly/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_yearly'])->name('view.yearly');
-        
+
 
 
 
