@@ -55,6 +55,8 @@
   - `php artisan serve`
 
 ## 8- Login ជាមួយ User ខាងក្រោម
-  ដោយសារយើងមាន user Supper Admin ដែលយើងបាន Seed ខាងលើ យើងអាច Login បានដោយ៖
-  - Username : `admin@admin.com`
+  ដោយសារយើងមាន User Admin ដែលយើងបាន Seed ខាងលើ យើងអាច Login បានដោយ៖
+  - Admin : `admin@admin.com`
+  - Parent : `parent@parent.com`
+  - Child : `child@child.com`
   - Password : `123`
