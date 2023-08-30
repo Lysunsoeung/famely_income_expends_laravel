@@ -50,7 +50,11 @@
   ដោយសារយើងបានបង្កើត Record Users រួចហើយយើងអាចបង្កើត ទាំងអស់ហ្នឹងដោយ ប្រើ command ខាងក្រោម៖
   - `php artisan migrate:fresh --seed`
 
-## 7- Login ជាមួយ User ខាងក្រោម
+## 7- Run Server
+  ដោយ ប្រើ command ខាងក្រោម៖
+  - `php artisan serve`
+
+## 8- Login ជាមួយ User ខាងក្រោម
   ដោយសារយើងមាន user Supper Admin ដែលយើងបាន Seed ខាងលើ យើងអាច Login បានដោយ៖
   - Username : `admin@admin.com`
   - Password : `123`
