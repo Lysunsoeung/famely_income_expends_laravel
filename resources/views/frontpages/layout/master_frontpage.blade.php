@@ -63,7 +63,7 @@
         <div class="block text-center text-lg-start pe-0 pe-xl-5">
           <h1 style="font-weight: 500" class="text-center mb-4"> <span class="text-success">{{trans('test.SW')}}</span><br/> {{trans('test.TM')}} <span class="text-success">{{trans('test.PF')}}</span></h1>
           <div class="text-center">
-            {{-- <a type="button"
+{{-- <a type="button"
             class=" btn btn-outline-primary"
             href="#" data-bs-toggle="modal"
             data-bs-target="#applyLoan"> Try on browser<span style="font-size: 14px;"></span></a>
@@ -131,10 +131,10 @@
             <h3 class="mb-3 service-title fw-normal fs-4">App of the day</h3>
           </div>
         </a>
-      </div>
+    </div>
 
 </div>
-  {{-- <div class="has-shapes">
+{{-- <div class="has-shapes">
     <svg class="shape shape-left text-light" viewBox="0 0 192 752" fill="none" xmlns="http://www.w3.org/2000/svg">
       <path
         d="M-30.883 0C-41.3436 36.4248 -22.7145 75.8085 4.29154 102.398C31.2976 128.987 65.8677 146.199 97.6457 166.87C129.424 187.542 160.139 213.902 172.162 249.847C193.542 313.799 149.886 378.897 129.069 443.036C97.5623 540.079 122.109 653.229 191 728.495"
@@ -613,38 +613,38 @@
         </div>
       </div>
     </div>
-    <div class="row position-relative">
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
+<div class="row position-relative">
+          <div class="col-lg-4 col-md-6 pt-1">
+            <div class="shadow rounded bg-white p-4 mt-4">
+              <div class="d-block d-sm-flex align-items-center mb-3">
             <img loading="lazy" decoding="async"
               src="{{asset('frontend')}}/images/testimonials/01.jpg"
               alt="Leslie Alexander" class="img-fluid" width="65" height="66">
             <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
-              <h4 class="h5 mb-1">Leslie Alexander</h4>
+                <h4 class="h5 mb-1">Leslie Alexander</h4>
               <p class="mb-0">Web Designer</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
+              </div>
+                      </div>
+<div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
             felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
-        <div class="shadow rounded bg-white p-4 mt-4">
-          <div class="d-block d-sm-flex align-items-center mb-3">
+              </div>
+                      </div>
+<div class="col-lg-4 col-md-6 pt-1">
+            <div class="shadow rounded bg-white p-4 mt-4">
+              <div class="d-block d-sm-flex align-items-center mb-3">
             <img loading="lazy" decoding="async"
               src="{{asset('frontend')}}/images/testimonials/02.jpg"
               alt="Arlene McCoy" class="img-fluid" width="65" height="66">
-            <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
+                <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
               <h4 class="h5 mb-1">Arlene McCoy</h4>
               <p class="mb-0">Content Strategist</p>
-            </div>
-          </div>
-          <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
+              </div>
+                      </div>
+<div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
             felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
+              </div>
+                      </div>
+<div class="col-lg-4 col-md-6 pt-1">
         <div class="shadow rounded bg-white p-4 mt-4">
           <div class="d-block d-sm-flex align-items-center mb-3">
             <img loading="lazy" decoding="async"
@@ -653,13 +653,13 @@
             <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
               <h4 class="h5 mb-1">Marvin McKinney</h4>
               <p class="mb-0">Video Game Writer</p>
+    </div>
             </div>
-          </div>
           <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
             felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
+            </div>
+          <div class="col-lg-4 col-md-6 pt-1">
         <div class="shadow rounded bg-white p-4 mt-4">
           <div class="d-block d-sm-flex align-items-center mb-3">
             <img loading="lazy" decoding="async"
@@ -668,13 +668,22 @@
             <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
               <h4 class="h5 mb-1">Devon Lane</h4>
               <p class="mb-0">Nursing Assistant</p>
+        </div>
             </div>
-          </div>
           <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
             felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
         </div>
-      </div>
-      <div class="col-lg-4 col-md-6 pt-1">
+
+        <div class="col-lg-3 col-md-6 service-item">
+          <a class="text-black" href="#">
+            <div class="block"> <span class="colored-box text-center h3 mb-4">
+
+              <img src="#" />
+
+              </span>
+              <h3 class="mb-3 service-title  fw-normal fs-4">100K+ 5-star Reviews</h3>
+            </div>
+          <div class="col-lg-4 col-md-6 pt-1">
         <div class="shadow rounded bg-white p-4 mt-4">
           <div class="d-block d-sm-flex align-items-center mb-3">
             <img loading="lazy" decoding="async"
@@ -683,8 +692,8 @@
             <div class="mt-3 mt-sm-0 ms-0 ms-sm-3">
               <h4 class="h5 mb-1">Bessie Cooper</h4>
               <p class="mb-0">Video Game Writer</p>
-            </div>
-          </div>
+        </div>
+</div>
           <div class="content">Lorem ipsum dolor <a href="http://google.com">@reamansimond</a> demina egestas sit purus
             felis arcu. Vitae, turpisds tortr etiam faucibus ac suspendisse.</div>
         </div>
@@ -750,8 +759,8 @@
         <div class="section-title text-center mb-5 pb-2">
           <p class="text-primary text-uppercase fw-bold mb-3">Questions You Have</p>
           <h1>Frequently Asked Questions</h1>
-        </div>
-      </div>
+  </div>
+</div>
       <div class="col-lg-6">
         <div class="accordion shadow rounded py-5 px-0 px-lg-4 bg-white position-relative" id="accordionFAQ">
           <div class="accordion-item p-1 mb-2">
@@ -863,7 +872,7 @@
 
 <footer class="section-sm bg-tertiary">
 	<div class="container">
-		<div class="row justify-content-between">
+<div class="row justify-content-between">
 			<div class="col-lg-2 col-md-4 col-6 mb-4">
 				<div class="footer-widget">
 					<h5 class="mb-4 text-primary font-secondary">Service</h5>
@@ -930,7 +939,7 @@
 		<div class="row align-items-center mt-5 text-center text-md-start">
 			<div class="col-lg-4">
         <a href="index.html">
-          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('frontend')}}/images/logo.png" alt="Wallet">
+          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('frontend')}}/images/logo." alt="logo">
         </a>
 			</div>
 			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
@@ -941,7 +950,7 @@
 					</li>
 				</ul>
 			</div>
-			<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
+<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
 				<ul class="list-unstyled list-inline mb-0 social-icons">
 					<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
 					</li>
