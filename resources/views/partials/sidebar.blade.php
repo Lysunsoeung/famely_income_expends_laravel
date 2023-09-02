@@ -12,7 +12,7 @@
     <!-- SidebarSearch Form -->
     <div class="form-inline">
       <div class="input-group" data-widget="sidebar-search">
-        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="{{trans('test.Search')}}" aria-label="Search">
         <div class="input-group-append">
           <button class="btn btn-sidebar">
             <i class="fas fa-search fa-fw"></i>
@@ -26,9 +26,9 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-{{-- userIsAdmin
-userIsParent
-userIsChild --}}
+            {{-- userIsAdmin
+            userIsParent
+            userIsChild --}}
         {{-- @if(Qs::userIsAdmin())
             <li class="nav-item menu-open">
                 <a href="{{ route('dashboard') }}" class="nav-link {{ (Route::is('dashboard')) ? 'active' : '' }}">
@@ -66,7 +66,7 @@ userIsChild --}}
                 <a href="{{ route('dashboard') }}" class="nav-link {{ (Route::is('dashboard')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    {{ trans('english.Dashboard') }}
+                    {{ trans('test.Dashboard') }}
                 </p>
                 </a>
             </li>
@@ -75,7 +75,7 @@ userIsChild --}}
                 <a href="{{ route('parent_dashboard') }}" class="nav-link {{ (Route::is('parent_dashboard')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    {{ trans('english.Dashboard') }}
+                    {{ trans('test.Dashboard') }}
                 </p>
                 </a>
             </li>
@@ -84,7 +84,7 @@ userIsChild --}}
                 <a href="{{ route('child_dashboard') }}" class="nav-link {{ (Route::is('child_dashboard')) ? 'active' : '' }}">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                    {{ trans('english.Dashboard') }}
+                    {{ trans('test.Dashboard') }}
                 </p>
                 </a>
             </li>
@@ -96,7 +96,7 @@ userIsChild --}}
           <a href="{{ route('account_user') }}" class="nav-link {{ (Route::is('account_user')) ? 'active' : '' }}">
             <i class="nav-icon fas fa-th"></i>
             <p>
-              Profile
+                {{trans('test.Profile')}}
             </p>
           </a>
         </li>
@@ -113,7 +113,8 @@ userIsChild --}}
 
             <i class="nav-icon fas fa-copy"></i>
             <p>
-              Users
+                {{trans('test.Users')}}
+
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>
@@ -121,13 +122,13 @@ userIsChild --}}
             <li class="nav-item">
               <a href="{{ route('users.index') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>View User</p>
+                <p>{{ trans('test.View User') }}</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('users.create') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Create User</p>
+                <p>{{ trans('test.Create User') }}</p>
               </a>
             </li>
 
@@ -145,7 +146,8 @@ userIsChild --}}
 
                     <i class="nav-icon fas fa-copy"></i>
                     <p>
-                    Child
+                        {{trans('test.Child')}}
+
 
                     <i class="right fas fa-angle-left"></i>
                     </p>
@@ -154,7 +156,7 @@ userIsChild --}}
                     <li class="nav-item">
                     <a href="{{ route('childs.create') }}" class="nav-link {{ (Route::is('childs.create')) ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Create Child</p>
+                        <p>{{ trans('test.Create Child') }}</p>
                     </a>
                     </li>
 
@@ -176,7 +178,8 @@ userIsChild --}}
 
                     <i class="nav-icon fas fa-copy"></i>
                     <p>
-                    Child
+                        {{trans('test.Child')}}
+
 
                     <i class="right fas fa-angle-left"></i>
                     </p>
@@ -185,7 +188,7 @@ userIsChild --}}
                     <li class="nav-item">
                     <a href="{{ route('childs.create') }}" class="nav-link {{ (Route::is('childs.create')) ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>Create Child</p>
+                        <p>{{ trans('test.Create Child') }}</p>
                     </a>
                     </li>
                     <li class="nav-item">
@@ -193,7 +196,7 @@ userIsChild --}}
 
                     <a href="{{ route('my_children') }}" class="nav-link {{ (Route::is('my_children')) ? 'active' : '' }}">
                         <i class="far fa-circle nav-icon"></i>
-                        <p>View My Child</p>
+                        <p>{{ trans('test.View My Child') }}</p>
                     </a>
 
                     </li>
@@ -211,7 +214,8 @@ userIsChild --}}
           <a href="#" class="nav-link {{ in_array(Route::currentRouteName(), ['incomes.index','incomes.create']) ? 'active' : '' }}">
             <i class="nav-icon fas fa-chart-pie"></i>
             <p>
-              Income
+                {{trans('test.Income')}}
+
               <i class="right fas fa-angle-left"></i>
             </p>
           </a>
@@ -219,13 +223,13 @@ userIsChild --}}
             <li class="nav-item">
               <a href="{{route('incomes.index')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>View Income</p>
+                <p>{{ trans('test.View Income') }}</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{route('incomes.create')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Create Income</p>
+                <p>{{ trans('test.Create Income') }}</p>
               </a>
             </li>
 
@@ -238,7 +242,8 @@ userIsChild --}}
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Expense
+                {{trans('test.Expense')}}
+
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -246,13 +251,13 @@ userIsChild --}}
               <li class="nav-item">
                 <a href="{{route('expenses.index')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>View Expense</p>
+                  <p>{{ trans('test.View Expense') }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('expenses.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Create Expense</p>
+                  <p>{{ trans('test.Create Expense') }}</p>
                 </a>
               </li>
               {{-- <li class="nav-item">
@@ -270,7 +275,8 @@ userIsChild --}}
             <a href="{{ route('in_category.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['in_category.index','in_category.create']) ? 'active' : '' }}" class="nav-link">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Income Category
+                {{trans('test.Income Category')}}
+
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -278,13 +284,13 @@ userIsChild --}}
               <li class="nav-item">
                 <a href="{{route('in_category.index')}}" class="nav-link {{ (Route::is('in_category.index')) ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>View Category</p>
+                  <p>{{ trans('test.View Category') }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{route('in_category.create')}}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Create Category</p>
+                  <p>{{ trans('test.Create Category') }}</p>
                 </a>
               </li>
 
@@ -297,7 +303,8 @@ userIsChild --}}
             <a href="{{ route('ex_category.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['ex_category.index','ex_category.create']) ? 'active' : '' }}">
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
-                Expense Category
+                {{trans('test.Expense Category')}}
+
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -305,13 +312,13 @@ userIsChild --}}
               <li class="nav-item">
                 <a href="{{ route('ex_category.index') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>View Category</p>
+                  <p>{{ trans('test.View Category') }}</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ route('ex_category.create') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Create Category</p>
+                  <p>{{ trans('test.Create Category') }}</p>
                 </a>
               </li>
 
@@ -325,7 +332,8 @@ userIsChild --}}
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tree"></i>
             <p>
-              Reports
+                {{trans('test.Reports')}}
+
               <i class="fas fa-angle-left right"></i>
             </p>
           </a>
@@ -333,19 +341,19 @@ userIsChild --}}
             <li class="nav-item">
               <a href="{{ route('view.weekly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Weekly Report</p>
+                <p>{{ trans('test.Weekly Report') }}</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('view.monthly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Monthly Report</p>
+                <p>{{ trans('test.Monthly Report') }}</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('view.yearly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Yearly Report</p>
+                <p>{{ trans('test.Yearly Report') }}</p>
               </a>
             </li>
           </ul>
