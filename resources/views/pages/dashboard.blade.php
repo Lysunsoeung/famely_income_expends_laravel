@@ -14,12 +14,12 @@
                 {{ session('status') }}
             </div>
             @endif --}}
-            <h1 class="m-0">{{ trans('english.Dashboard') }}</h1>
+            <h1 class="m-0">{{ trans('test.Dashboard') }}</h1>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard</li>
+              <li class="breadcrumb-item"><a href="#">{{ trans('test.Home') }}</a></li>
+              <li class="breadcrumb-item active">{{ trans('test.Dashboard') }}</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -38,7 +38,7 @@
               <div class="inner">
                 <h3>{{ $users->where('user_type','admin')->count() }}</h3>
 
-                <p>Total Admin</p>
+                <p>{{ trans('test.Total Admin') }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -52,7 +52,7 @@
               <div class="inner">
                 <h3>@if(!$users) {{0}} @else {{ $users->count() }} @endif</h3>
 
-                <p>Total Users</p>
+                <p>{{ trans('test.Total Users') }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -66,7 +66,7 @@
               <div class="inner">
                 <h3>{{ $users->where('user_type','parent')->count() }}</h3>
 
-                <p>Total Parent</p>
+                <p>{{ trans('test.Total Parent') }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -81,7 +81,7 @@
               <div class="inner">
                 <h3>{{ $users->where('user_type','child')->count() }}</h3>
 
-                <p>Total Child</p>
+                <p>{{ trans('test.Total Child') }}</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -98,7 +98,7 @@
                 <div class="inner">
                   <h3>@if(!$incomeCategories) {{0}} @else {{ $incomeCategories->count() }} @endif</h3>
 
-                  <p>Total Income Category</p>
+                  <p>{{ trans('test.Total Income Category') }}</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person"></i>
@@ -112,7 +112,7 @@
                 <div class="inner">
                   <h3>@if(!$expenseCategories) {{0}} @else {{ $expenseCategories->count() }} @endif</h3>
 
-                  <p>Total Expense Category</p>
+                  <p>{{ trans('test.Total Expense Category') }}</p>
                 </div>
                 <div class="icon">
                   <i class="ion ion-person"></i>
@@ -126,8 +126,8 @@
                 <div class="small-box bg-warning">
                   <div class="inner">
                     <h3>@if(!$expenseCategories) {{0}} @else {{ $expenseCategories->count() }} @endif</h3>
-  
-                    <p>Total Expense Category</p>
+
+                    <p>{{ trans('test.Total Expense Category') }}</p>
                   </div>
                   <div class="icon">
                     <i class="ion ion-person"></i>

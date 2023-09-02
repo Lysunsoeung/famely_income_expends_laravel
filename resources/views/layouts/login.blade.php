@@ -10,11 +10,22 @@
     <meta name="author" content="pixelstrap">
     <link rel="icon" href="../assets/images/favicon.png" type="image/x-icon">
     <link rel="shortcut icon" href="../assets/images/favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&family=Chenla&family=Hanuman:wght@300;400&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 
     <title>Log In Page</title>
 
 
     @include('partials.inc_log_top')
+    <style>
+        body{
+            font-family: 'Battambang', cursive;
+            font-family: 'Chenla', cursive;
+            font-family: 'Hanuman', serif;
+            /* font-family: 'Kdam Thmor Pro', sans-serif; */
+        }
+      </style>
 
   </head>
   <body>

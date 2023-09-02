@@ -40,7 +40,8 @@
 					</span>
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-						<input class="input100"
+						<input class="input100 @error('email')
+                        is-invalid @enderror"
                             name="email"
                             type="email"
                             required=""
@@ -53,16 +54,17 @@
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 
-                        @error('email')
+
+
+					</div>
+                     @error('email')
                           <span class="invalid-feedback" role="alert">
                               <strong>{{ $message }}</strong>
                           </span>
                         @enderror
 
-					</div>
-
-					<div class="wrap-input100 validate-input @error('password') is-invalid @enderror" data-validate = "Password is required">
-						<input class="input100"
+					<div class="wrap-input100 validate-input " data-validate = "Password is required">
+						<input class="input100 @error('password') is-invalid @enderror"
                             placeholder="Password"
                             type="password"
                             name="password"
@@ -72,17 +74,16 @@
 							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
 
-                        @error('password')
-                            <span class="invalid-feedback" role="alert">
-                                <strong>{{ $message }}</strong>
-                            </span>
-                        @enderror
-
 					</div>
+                    @error('password')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
 
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn">
-							Sign In
+							{{trans('test.Sign in')}}
 						</button>
 					</div>
 
@@ -118,6 +119,8 @@
 
 <!--===============================================================================================-->
 	<script src="{{asset('login/vendor/jquery/jquery-3.2.1.min.js')}}"></script>
+ <script src="{{asset('backends/js/jquery-3.5.1.min.js')}}"></script>
+
 <!--===============================================================================================-->
 	<script src="{{asset('login/vendor/bootstrap/js/popper.js')}}"></script>
 	<script src="{{asset('login/vendor/bootstrap/js/bootstrap.min.js')}}"></script>
@@ -125,6 +128,7 @@
 	<script src="{{asset('login/vendor/select2/select2.min.js')}}"></script>
 <!--===============================================================================================-->
 	<script src="{{asset('login/vendor/tilt/tilt.jquery.min.js')}}"></script>
+
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1

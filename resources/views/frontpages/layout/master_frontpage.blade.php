@@ -61,7 +61,7 @@
     <div class="row align-items-center justify-content-center">
       <div class="col-lg-12 mb-5 mb-lg-0">
         <div class="block text-center text-lg-start pe-0 pe-xl-5">
-          <h1 style="font-weight: 500" class="text-center mb-4"> <span class="text-success">Simple way </span><br/> to manage <span class="text-success">personal finances</span></h1>
+          <h1 style="font-weight: 500" class="text-center mb-4"> <span class="text-success">{{trans('test.SW')}}</span><br/> {{trans('test.TM')}} <span class="text-success">{{trans('test.PF')}}</span></h1>
           <div class="text-center">
             {{-- <a type="button"
             class=" btn btn-outline-primary"
@@ -183,7 +183,7 @@
 
 
 <section class="about-section section bg-tertiary position-relative overflow-hidden">
-    
+
   <div class="container" style="margin-bottom:100px">
     <div class="row align-items-center" style="justify-content: center;">
       <div class="col-lg-5 ">
@@ -195,7 +195,7 @@
                     <div class="bg-white">LAST MONTH</div>
                     <div class="bg-white text-dark fw-bold">THIS MONTH</div>
                     <div class="bg-white">FUTURE</div>
-                    
+
                   </div><hr>
 
                   <div class="d-flex justify-content-between">
@@ -246,7 +246,7 @@
                     <div class="bg-white">LAST MONTH</div>
                     <div class="bg-white text-dark fw-bold">THIS MONTH</div>
                     <div class="bg-white">FUTURE</div>
-                    
+
                   </div><hr>
 
                   <div class="d-flex justify-content-between">
@@ -282,7 +282,7 @@
                     <div class="bg-white">LAST MONTH</div>
                     <div class="bg-white text-dark fw-bold">THIS MONTH</div>
                     <div class="bg-white">FUTURE</div>
-                    
+
                   </div><hr>
 
                   <div class="d-flex justify-content-between">
@@ -330,16 +330,16 @@
 
         <div class="col-lg-5 ">
           <div class="section-title">
-  
+
               <div class="col-lg-10 col-md-6 pt-1">
                   <div class="shadow rounded bg-white p-4 mt-4" style="font-seze:12px">
                     <div class="d-flex justify-content-between">
                       <div class="bg-white">LAST MONTH</div>
                       <div class="bg-white text-dark fw-bold">THIS MONTH</div>
                       <div class="bg-white">FUTURE</div>
-                      
+
                     </div><hr>
-  
+
                     <div class="d-flex justify-content-between">
                       <div class="bg-white">Food</div>
                       <div class="bg-white">50,000</div>
@@ -351,35 +351,35 @@
                       <div class="bg-white">Food</div>
                       <div class="bg-white">50,000</div>
                     </div>
-  
+
                   </div>
                 </div>
-  
+
           </div>
         </div>
-  
+
 
       </div>
     </div>
-  
+
 </section> --}}
 
-{{-- 
+{{--
 <section class="about-section section bg-tertiary position-relative overflow-hidden">
     <div class="container">
       <div class="row align-items-center" style="justify-content: center;">
         <div class="col-lg-5 ">
           <div class="section-title">
-  
+
               <div class="col-lg-10 col-md-6 pt-1">
                   <div class="shadow rounded bg-white p-4 mt-4" style="font-seze:12px">
                     <div class="d-flex justify-content-between">
                       <div class="bg-white">LAST MONTH</div>
                       <div class="bg-white text-dark fw-bold">THIS MONTH</div>
                       <div class="bg-white">FUTURE</div>
-                      
+
                     </div><hr>
-  
+
                     <div class="d-flex justify-content-between">
                       <div class="bg-white">Food</div>
                       <div class="bg-white">50,000</div>
@@ -391,13 +391,13 @@
                       <div class="bg-white">Food</div>
                       <div class="bg-white">50,000</div>
                     </div>
-  
+
                   </div>
                 </div>
-  
+
           </div>
         </div>
-  
+
         <div class="col-lg-5 text-center text-lg-end">
           <div class="section-title">
               <h1 style="text-align:left" class="fw-normal">Simple money tracker</h1>
@@ -407,10 +407,10 @@
         </div>
       </div>
     </div>
-  
+
 </section> --}}
 
-{{-- 
+{{--
 <section class="section">
   <div class="container">
     <div class="row align-items-center justify-content-between">

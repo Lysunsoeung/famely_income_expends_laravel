@@ -34,7 +34,7 @@
                     @csrf
 
 					<span class="login100-form-title">
-						Register
+						{{trans('test.Register')}}
 					</span>
 
                     {{--  name--}}
@@ -106,7 +106,7 @@
                     {{-- sign in btn --}}
 					<div class="container-login100-form-btn">
 						<button class="login100-form-btn" type="submit">
-							Sign Up
+							{{trans('test.Sign up')}}
 						</button>
 					</div>
 

@@ -15,6 +15,9 @@
   <meta name="theme-name" content="wallet" />
 
 	<!-- # Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Battambang&family=Chenla&family=Hanuman:wght@300;400&family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
@@ -27,6 +30,14 @@
 
 	<!-- # Main Style Sheet -->
 	<link rel="stylesheet" href="{{asset('frontend')}}/css/style.css">
+    <style>
+        body{
+            font-family: 'Battambang', cursive;
+            font-family: 'Chenla', cursive;
+            font-family: 'Hanuman', serif;
+            /* font-family: 'Kdam Thmor Pro', sans-serif; */
+        }
+      </style>
 </head>
 
 <body>

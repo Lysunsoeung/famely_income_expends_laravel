@@ -92,19 +92,19 @@
 
 
                 Swal.fire({
-                    title: 'Are you sure?',
-                    text: "Delete This Data?",
+                    title: "{{ trans('test.Are you sure?') }}",
+                    text: "{{ trans('test.Delete This Data?') }}",
                     icon: 'warning',
                     showCancelButton: true,
                     confirmButtonColor: '#3085d6',
                     cancelButtonColor: '#d33',
-                    confirmButtonText: 'Yes, delete it!'
+                    confirmButtonText: "{{ trans('test.Yes, delete it!') }}",
                 }).then((result) => {
                     if(result.isConfirmed){
                         window.location.href = link
                         Swal.fire(
-                            'Deleted!',
-                            'Your data has been deleted.',
+                            "{{ trans('test.Deleted!') }}",
+                            "{{ trans('test.Your data has been deleted.') }}",
                             'success'
                         )
                     }
