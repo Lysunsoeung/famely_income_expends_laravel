@@ -67,4 +67,16 @@ return [
     'Your data has been deleted.' => 'ទិន្នន័យរបស់អ្នកត្រូវបានលុប ។',
 
 
+
+    // Onuser chnage profile page
+    'My Account' => 'គណនីរបស់ខ្ញុំ',
+    'Name' => 'ឈ្មោះរបស់អ្នក',
+    'Username' => 'នាមត្រកូល',
+    'Gender' => 'ភេទ',
+    'Email' => 'អ៊ីម៉ែល',
+    'Phone' => 'លេខទូរស័ព្ទ',
+    'Telephone' => 'លេខទូរស័ព្ទ',
+    'Address' => 'អាសយដ្ឋាន',
+    'Change Photo' => 'ផ្លាស់ប្តូររូបភាព',
+
 ];
