@@ -45,11 +45,11 @@
               &nbsp;{{ strtoupper($flag) }}
         </a>
         <div class="dropdown-menu dropdown-menu-right p-0" style="left: inherit; right: 0px;">
-          <a href="{{url('lang/en')}}" class="dropdown-item active">
+          <a href="{{url('lang/en')}}" class="dropdown-item {{ App::getLocale() == 'en' ? 'active' : ''}}">
             <img src="{{asset('images/flags/en.png')}}" class="img-flag" alt="" width="32" height="18">
             English
           </a>
-          <a href="{{url('lang/kh')}}" class="dropdown-item">
+          <a href="{{url('lang/kh')}}" class="dropdown-item {{ App::getLocale() == 'kh' ? 'active' : ''}}">
             <img src="{{asset('images/flags/kh.png')}}" class="img-flag" alt="" width="32" height="18">
 
             Khmer
@@ -114,6 +114,9 @@
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
+      <li class="nav-item">
+        <a class="nav-link btn btn-info" href="{{route('frontpage.index')}}" role="button">Home</a>
+      </li>
 
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">

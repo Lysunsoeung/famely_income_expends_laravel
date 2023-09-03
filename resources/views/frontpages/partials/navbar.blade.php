@@ -39,9 +39,16 @@
 
 				</ul>
 
-                <a href="{{ route('login') }}" class="btn btn-outline-primary">{{trans('test.Log in')}}</a>
+                @guest
+                    <a href="{{ route('login') }}" class="btn btn-outline-primary">{{trans('test.Log in')}}</a>
 
-                <a href="{{ route('register') }}" class="btn btn-primary ms-2 ms-lg-3">{{trans('test.Sign up')}}</a>
+                    <a href="{{ route('register') }}" class="btn btn-primary ms-2 ms-lg-3">{{trans('test.Sign up')}}</a>
+                @endguest
+
+                @auth
+                    <a href="{{ route('home') }}" class="btn btn-primary ms-2 ms-lg-3">{{trans('test.Dashboard')}}</a>
+                @endauth
+
 			</div>
 		</div>
 	</nav>
