@@ -72,7 +72,16 @@ return [
 
 
 
-
+    // Onuser chnage profile page
+    'My Account' => 'My Account',
+    'Name' => 'Name',
+    'Username' => 'Username',
+    'Gender' => 'Gender',
+    'Email' => 'Email',
+    'Phone' => 'Phone',
+    'Telephone' => 'Telephone',
+    'Address' => 'Address',
+    'Change Photo' => 'Change Photo',
 
 
 

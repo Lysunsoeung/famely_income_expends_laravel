@@ -2,8 +2,18 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-        <img class="img-circle elevation-2" src="{{ asset(Auth::user()->photo) }}" alt="{{ Auth::user()->name }}">
+            @if(!empty(Auth::user()->photo))
+
+                <img class="img-circle elevation-2" src="{{ asset(Auth::user()->photo) }}" alt="{{ Auth::user()->name }}">
+
+            @else
+
+                <img id="showImage" src="{{ asset('storage/uploads/user.png') }}" width="100" height="auto" alt="Default Photo">
+
+            @endif
+
       </div>
+
       <div class="info">
         <a href="#" class="d-block">{{ Auth::user()->name }}</a>
       </div>
@@ -130,6 +140,20 @@
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ trans('test.Create User') }}</p>
               </a>
+            </li>
+
+            {{-- Team profile --}}
+            <li class="nav-item">
+                <a href="{{ route('users.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ trans('test.View User') }}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('users.create') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ trans('test.Create User') }}</p>
+                </a>
             </li>
 
           </ul>

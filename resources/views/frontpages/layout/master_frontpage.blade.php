@@ -211,7 +211,7 @@
                     <div class="bg-white">50,000</div>
                   </div><br>
 
-                
+
 
                 </div>
               </div>

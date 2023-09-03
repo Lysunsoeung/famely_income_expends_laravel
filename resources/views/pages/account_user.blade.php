@@ -9,7 +9,7 @@
 
             <div class="card">
                 <div class="card-header header-elements-inline">
-                    <h6 class="card-title">My Account</h6>
+                    <h6 class="card-title">{{ trans('test.My Account') }}</h6>
                     {!! Qs::getPanelOptions() !!}
                 </div>
 
@@ -32,7 +32,7 @@
                                             @csrf @method('put')
 
                                             <div class="form-group row">
-                                                <label for="name" class="col-lg-3 col-form-label font-weight-semibold">Name</label>
+                                                <label for="name" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Name') }}</label>
                                                 <div class="col-lg-9">
                                                     <input  id="name" class="form-control" type="text" value="{{ $pro_edit->name }}">
                                                 </div>
@@ -40,7 +40,7 @@
 
                                             @if($pro_edit->username)
                                                 <div class="form-group row">
-                                                    <label for="username" class="col-lg-3 col-form-label font-weight-semibold">Username</label>
+                                                    <label for="username" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Username') }}</label>
                                                     <div class="col-lg-9">
                                                         <input id="username" class="form-control" type="text" value="{{ $pro_edit->username }}">
                                                         @error('username')
@@ -52,7 +52,7 @@
                                             @else
 
                                                 <div class="form-group row">
-                                                    <label for="username" class="col-lg-3 col-form-label font-weight-semibold">Username </label>
+                                                    <label for="username" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Username') }} </label>
                                                     <div class="col-lg-9">
                                                         <input id="username" name="username"  type="text" class="form-control" >
                                                         @error('username')
@@ -63,7 +63,7 @@
                                             @endif
 
                                             <div class="form-group row">
-                                                <label for="gender" class="col-lg-3 col-form-label font-weight-semibold">Gender: <span class="text-danger">*</span></label>
+                                                <label for="gender" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Gender') }} <span class="text-danger">*</span></label>
                                                 <div class="col-lg-9">
                                                     <select class="select form-control" id="gender" name="gender" data-fouc data-placeholder="Choose..">
                                                         <option value=""></option>
@@ -74,7 +74,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="email" class="col-lg-3 col-form-label font-weight-semibold">Email </label>
+                                                <label for="email" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Email') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="email" value="{{ $pro_edit->email }}" name="email"  type="email" class="form-control" >
                                                     @error('email')
@@ -84,28 +84,28 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="phone" class="col-lg-3 col-form-label font-weight-semibold">Phone </label>
+                                                <label for="phone" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Phone') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="phone" value="{{ $pro_edit->phone }}" name="phone"  type="text" class="form-control" >
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="phone2" class="col-lg-3 col-form-label font-weight-semibold">Telephone </label>
+                                                <label for="phone2" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Telephone') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="phone2" value="{{ $pro_edit->phone2 }}" name="phone2"  type="text" class="form-control" >
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="address" class="col-lg-3 col-form-label font-weight-semibold">Address </label>
+                                                <label for="address" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Address') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="address" value="{{ $pro_edit->address }}" name="address"  type="text"  class="form-control" >
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="address" class="col-lg-3 col-form-label font-weight-semibold">Change Photo </label>
+                                                <label for="address" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Change Photo') }} </label>
                                                 <div class="col-lg-9">
                                                     <input  accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc onchange="previewImage(event)">
                                                 </div>
