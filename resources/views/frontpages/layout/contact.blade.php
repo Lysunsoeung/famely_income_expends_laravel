@@ -128,55 +128,26 @@
 						</div>
 						<div class="col-lg-6 mt-5 mt-lg-0">
 							<div class="contact-info">
-								{{-- <div class="block mt-0">
+								<div class="block mt-0">
 									<h4 class="h5">Still Have Questions?</h4>
 									<div class="content">Call Us We Will Be Happy To Help
 										<br> <a href="tel:+3301563965">+855 71 767 98 98</a>
 										<br>Monday - Saturdat
 										<br>7:00AM TO 5:00PM Eastern Time</div>
 								</div>
-								<div class="block mt-4">
-									<h4 class="h5">Regional Polytechnic Institude Techo Sen Siem Reap, Cambodia.</h4>
-									<div class="content"> Nº 6 Street, Phsa Samki.
-										<br>Sime Reap
-										<br>
-								</div> --}}
 
                                 <div class="block mt-4">
 									<h4 class="h5">Address</h4>
 									<div class="content"> Nº 6 Street, Phsa Samki Siem Reap. Cambodia
-										<br>
-										<br>
+
 								    </div>
 							    </div>
-
-                                <div class="block mt-4">
-									<h4 class="h5">Lets Talk</h4>
-									<div class="content"> + <div class="block mt-4">
-									<h4 class="h5">Address</h4>
-									<div class="content"> Nº 6 Street, Phsa Samki Siem Reap. Cambodia
-										<br>
-										<br>
-								    </div>
-							    </div>
-
-										<br>
-										<br>
-								    </div>
-							    </div>
-
 
                                 <div class="block mt-4">
 									<h4 class="h5">General Support</h4>
 									<div class="content"> familyincome@gmail.com
-										<br>
-										<br>
 								    </div>
 							    </div>
-
-
-
-
 
 						    </div>
 					    </div>
