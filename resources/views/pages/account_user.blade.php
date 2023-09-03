@@ -117,7 +117,7 @@
                                             </div>
 
                                             <div class="text-right">
-                                                <button type="submit" class="btn btn-danger">Submit form <i class="icon-paperplane ml-2"></i></button>
+                                                <button type="submit" class="btn btn-danger">{{ trans('test.Submit form') }} <i class="icon-paperplane ml-2"></i></button>
                                             </div>
                                         </form>
                                     </div>
@@ -169,7 +169,7 @@
 
             <div class="card">
                 <div class="card-header header-elements-inline">
-                    <h6 class="card-title">Change Password</h6>
+                    <h6 class="card-title">{{ trans('test.Change Password') }}</h6>
                     {!! Qs::getPanelOptions() !!}
                 </div>
 
@@ -187,7 +187,7 @@
                                             @csrf @method('put')
 
                                             <div class="form-group row">
-                                                <label for="current_password" class="col-lg-3 col-form-label font-weight-semibold">Current Password <span class="text-danger">*</span></label>
+                                                <label for="current_password" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Current Password') }} <span class="text-danger">*</span></label>
                                                 <div class="col-lg-9">
                                                     <input id="current_password" name="current_password"  type="password" class="form-control" >
                                                      @error('current_password')
@@ -197,7 +197,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="password" class="col-lg-3 col-form-label font-weight-semibold">New Password <span class="text-danger">*</span></label>
+                                                <label for="password" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.New Password') }} <span class="text-danger">*</span></label>
                                                 <div class="col-lg-9">
                                                     <input id="password" name="password"  type="password" class="form-control" >
                                                      @error('password')
@@ -207,7 +207,7 @@
                                             </div>
 
                                             <div class="form-group row">
-                                                <label for="password_confirmation" class="col-lg-3 col-form-label font-weight-semibold">Confirm Password <span class="text-danger">*</span></label>
+                                                <label for="password_confirmation" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Confirm Password') }} <span class="text-danger">*</span></label>
                                                 <div class="col-lg-9">
                                                     <input id="password_confirmation" name="password_confirmation"  type="password" class="form-control" >
                                                      @error('password_confirmation')
@@ -217,7 +217,7 @@
                                             </div>
 
                                             <div class="text-right">
-                                                <button type="submit" class="btn btn-danger">Submit form <i class="icon-paperplane ml-2"></i></button>
+                                                <button type="submit" class="btn btn-danger">{{ trans('test.Submit form') }} <i class="icon-paperplane ml-2"></i></button>
                                             </div>
                                         </form>
                                     </div>

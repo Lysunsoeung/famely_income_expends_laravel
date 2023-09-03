@@ -79,4 +79,10 @@ return [
     'Address' => 'អាសយដ្ឋាន',
     'Change Photo' => 'ផ្លាស់ប្តូររូបភាព',
 
+    // Change password
+    'Change Password' => 'ប្ដូរលេខសម្ងាត់',
+    'Current Password' => 'លេខសម្ងាត់ផ្ទាល់',
+    'New Password' => 'ដាក់់លេខសម្ងាត់ថ្មី',
+    'Confirm Password' => 'បញ្ជាក់លេខសម្ងាត់ម្ងងទៀត',
+    'Submit form' => 'បញ្ជូនចូល',
 ];
