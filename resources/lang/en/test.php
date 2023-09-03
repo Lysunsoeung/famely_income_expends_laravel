@@ -83,6 +83,12 @@ return [
     'Address' => 'Address',
     'Change Photo' => 'Change Photo',
 
+    'Change Password' => 'Change Password',
+    'Current Password' => 'Current Password',
+    'New Password' => 'New Password',
+    'Confirm Password' => 'Confirm Password',
+
+    'Submit form' => 'Submit form',
 
 
 
