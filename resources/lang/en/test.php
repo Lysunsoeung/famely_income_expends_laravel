@@ -39,7 +39,7 @@ return [
     'Copyright' => 'Copyright',
     '2023' => '2023',
     'Team:' => 'Team: 01 Laravel Project..',
-    'All rights reserved. ' => 'All rights reserved.',
+    'All rights reserved.' => 'All rights reserved.',
     'Version' => 'Version',
     'Testing' => 'Testing',
 
