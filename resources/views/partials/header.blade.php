@@ -6,7 +6,7 @@
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">{{trans('test.Home')}}</a>
+        <a href="{{route('frontpage.index')}}" class="nav-link">{{trans('test.Home')}}</a>
       </li>
       <li class="nav-item d-none d-sm-inline-block">
         <a href="#" class="nav-link">{{trans('test.Contact')}}</a>
@@ -114,9 +114,9 @@
         </div>
       </li>
       <!-- Notifications Dropdown Menu -->
-      <li class="nav-item">
-        <a class="nav-link btn btn-info" href="{{route('frontpage.index')}}" role="button">Home</a>
-      </li>
+      {{-- <li class="nav-item">
+        <a class="nav-link btn btn-info" href="{{route('frontpage.index')}}" role="button">{{ trans('test.Home') }}</a>
+      </li> --}}
 
       <li class="nav-item">
         <a class="nav-link" data-widget="fullscreen" href="#" role="button">
