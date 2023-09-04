@@ -90,13 +90,26 @@ return [
 
     'Submit form' => 'Submit form',
 
+    // Front_page
+    '100% Secure data' => '100% Secure data',
+    '1 Million+ users' => '1 Million+ users',
+    '100K+ 5-star Reviews' => '100K+ 5-star Reviews',
+    'App of the day' => 'App of the day',
 
+    'Get Know The Basics Simple Pricing And Payments' => 'Get Know The Basics Simple Pricing And Payments',
+    'LAST MONTH' => 'LAST MONTH',
+    'THIS MONTH' => 'THIS MONTH',
+    'FUTURE' => 'FUTURE',
+    'Simple money tracker' => 'Simple money tracker',
+    'It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.' => 'It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.',
+    'The whole picture in one place' => 'The whole picture in one place',
 
-
-
-
-
-
-
+    
+    'Painless budgeting' => 'Painless budgeting',
+    'Download for free' => 'Download for free',
+    'Try on browser' => 'Try on browser',
+'How Much Can I Recive?' => 'How Much Can I Recive?',
+'How Much Does It Costs?' => 'How Much Does It Costs?',
+'How Do I Repay?' => 'How Do I Repay?',
 
 ];
