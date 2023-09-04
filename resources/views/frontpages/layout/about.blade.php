@@ -293,7 +293,7 @@
 					<div class="card-img">
 						<img loading="lazy" decoding="async" src="{{asset("images/frontend")}}/about/team-3.jpg" alt="Leslie Pena" class="rounded w-100" width="300" height="333">
 						<ul class="card-social list-inline">
-							<li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
+							<li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/po.rosel"target="_blank"><i class="fab fa-facebook"></i></a>
 							</li>
 							<li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
 							</li>
