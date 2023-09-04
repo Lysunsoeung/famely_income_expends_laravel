@@ -85,4 +85,23 @@ return [
     'New Password' => 'ដាក់់លេខសម្ងាត់ថ្មី',
     'Confirm Password' => 'បញ្ជាក់លេខសម្ងាត់ម្ងងទៀត',
     'Submit form' => 'បញ្ជូនចូល',
+
+    //Front page
+    '100% Secure data' => 'ទិន្នន័យសុវត្ថិភាព ១០០%',
+    '1 Million+ users' => '១លាន+ អ្នកប្រើប្រាស់',
+    '100K+ 5-star Reviews' => '១០០ពាន់ + ការវាយតម្លៃផ្កាយ៥',
+    'App of the day' => 'កម្មវិធីនៃថ្ងៃនេះ',
+    'Get Know The Basics Simple Pricing And Payments' => 'ស្វែងយល់ពីតម្លៃសាមញ្ញ និងការទូទាត់ជាមូលដ្ឋាន',
+    'The whole picture in one place' => 'រូបភាពទាំងមូលនៅកន្លែងតែមួយ',
+    'LAST MONTH' => 'ខែមុ​ន',
+    'THIS MONTH' => 'ខែនេះ',
+    'FUTURE' => 'ខែអនាគត',
+    'Simple money tracker' => 'កម្មវិធីតាមដានការប្រាក់',
+    'It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.' => 'វាចំណាយពេលប៉ុន្មានវិនាទីដើម្បីកត់ត្រាប្រតិបត្តិការប្រចាំថ្ងៃ។ ដាក់ពួកវាទៅក្នុងប្រភេទច្បាស់លាស់ និងមើលឃើញដូចជា ការចំណាយ៖ អាហារ ការដើរទិញឥវ៉ាន់ ឬចំណូល៖ ប្រាក់ខែ អំណោយ។',
+    'Painless budgeting' => 'ថវិកាគ្មានការខាត់បង់',
+    'Download for free' => 'ទាញយកឥតគិតថ្លៃ',
+    'Try on browser' => 'សាកល្បងក្នុងប្រៅសឺ',
+    'How Much Can I Recive?' => 'តើខ្ញុំអាចទទួលបានប៉ុន្មាន?',
+    'How Much Does It Costs?' => 'តើវាមានតម្លៃប៉ុន្មាន?',
+    'How Do I Repay?' => 'តើខ្ញុំត្រូវសងដោយរបៀបណា?',
 ];
