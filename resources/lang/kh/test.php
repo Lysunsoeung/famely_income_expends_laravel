@@ -113,7 +113,7 @@ return [
     'Who We Are?' => 'យើង​ជា​នរណា?',
     'Once' => 'មួយ',
     'Two' => 'ពីរ',
-    'Three' => 'បី',
+    'Tree' => 'បី',
     'Member of Team' => 'សមាជិកក្រុម',
     'Our Members' => 'សមាជិករបស់យើង',
     'We are members of group one' => 'យើងជាសមាជិកក្រុមទី១',
