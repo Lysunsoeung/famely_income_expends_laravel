@@ -119,7 +119,7 @@ return [
     'Who We Are?' => 'Who We Are?',
     'Once' => 'Once',
     'Two' => 'Two',
-    'Three' => 'Three',
+    'Tree' => 'Tree',
 
     'Member of Team' => 'Member of Team',
     'Our Members' => 'Our Members',
