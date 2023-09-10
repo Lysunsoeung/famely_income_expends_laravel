@@ -104,4 +104,24 @@ return [
     'How Much Can I Recive?' => 'តើខ្ញុំអាចទទួលបានប៉ុន្មាន?',
     'How Much Does It Costs?' => 'តើវាមានតម្លៃប៉ុន្មាន?',
     'How Do I Repay?' => 'តើខ្ញុំត្រូវសងដោយរបៀបណា?',
+
+
+    // create.child
+    'Add new childs' => 'បង្កើតគណនីថ្មីឲ្យកូនរបស់អ្នក',
+    'View Your Child' => 'ចូលមើលគណនីកូនរបស់អ្នក',
+    'Personal data' => 'ព័ត៌មានផ្ទាល់ខ្លួន',
+    'Full Name:' => 'គោត្តនាម:',
+    'Address:' => 'ទីកន្លែង:',
+    'Gender:' => 'ភេទ:',
+    'Male' => 'ភេទប្រុស',
+    'Female' => 'ភេទស្រី',
+    'Phone:' => 'លេខទូរស័ព្ទ:',
+    'Telephone:' => 'លេខទំនាក់ទំនង:',
+    'Parent:' => 'ជ្រើសរើសឪពុកម្ដាយ:',
+    'Email address:' => 'គណនីប្រើប្រាស់:',
+    'Upload Your Child Photo:' => 'បញ្ជូលរូបភាពកូនរបស់អ្នក:',
+    'Accepted Images: jpeg, png. Max file size 2Mb' => 'ប្រភេទរូបគីត្រូវតែ: jpeg, png. ហើយមានទំហំត្រឹមតែ ២មេកាបៃប៉ុណ្ណោះ',
+    'Submit' => 'យល់ព្រម',
+
+
 ];
