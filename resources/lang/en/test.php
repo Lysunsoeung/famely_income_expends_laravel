@@ -104,12 +104,34 @@ return [
     'It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.' => 'It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.',
     'The whole picture in one place' => 'The whole picture in one place',
 
-    
+
     'Painless budgeting' => 'Painless budgeting',
     'Download for free' => 'Download for free',
     'Try on browser' => 'Try on browser',
 'How Much Can I Recive?' => 'How Much Can I Recive?',
 'How Much Does It Costs?' => 'How Much Does It Costs?',
 'How Do I Repay?' => 'How Do I Repay?',
+
+
+
+    // create.child
+    'Add new childs' => 'Add new childs',
+    'View Your Child' => 'View Your Child',
+    'Personal data' => 'Personal data',
+    'Full Name:' => 'Full Name:',
+    'Address:' => 'Address:',
+    'Gender:' => 'Gender:',
+    'Male' => 'Male',
+    'Female' => 'Female',
+    'Phone:' => 'Phone:',
+    'Telephone:' => 'Telephone:',
+    'Parent:' => 'Parent:',
+    'Email address:' => 'Email address:',
+    'Upload Your Child Photo:' => 'Upload Your Child Photo:',
+    'Accepted Images: jpeg, png. Max file size 2Mb' => 'Accepted Images: jpeg, png. Max file size 2Mb',
+    'Submit' => 'Submit',
+
+
+
 
 ];
