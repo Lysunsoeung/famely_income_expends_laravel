@@ -108,11 +108,39 @@ return [
     'Painless budgeting' => 'Painless budgeting',
     'Download for free' => 'Download for free',
     'Try on browser' => 'Try on browser',
-'How Much Can I Recive?' => 'How Much Can I Recive?',
-'How Much Does It Costs?' => 'How Much Does It Costs?',
-'How Do I Repay?' => 'How Do I Repay?',
+    'How Much Can I Recive?' => 'How Much Can I Recive?',
+    'How Much Does It Costs?' => 'How Much Does It Costs?',
+    'How Do I Repay?' => 'How Do I Repay?',
+    // about us
+    'Business Loans' => 'Business Loans',
+    'For Daily Expenses' => 'For Daily Expenses',
+    'About Wallet' => 'About Wallet',
+    'What We Offer?' => 'What We Offer?',
+    'Who We Are?' => 'Who We Are?',
+    'Once' => 'Once',
+    'Two' => 'Two',
+    'Three' => 'Three',
+
+    'Member of Team' => 'Member of Team',
+    'Our Members' => 'Our Members',
+    'We are members of group one' => 'We are members of group one',
+
+    'Quick Decision' => 'Quick Decision',
+    'Submit Your Info' => 'Submit Your Info',
+    'Funds To You' => 'Funds To You',
+    'Privacy Policy' => 'Privacy Policy',
+    'Terms &amp; Conditions' => 'Terms &amp; Conditions',
+    
 
 
+    //Name
+    'Po Rozel' => 'Po Rozel',
+    'Tha Sokcheat' => 'Tha Sokcheat',
+    'Soeung Lysun' => 'Soeung Lysun',
+    'Han Vakhim' => 'Han Vakhim',
+    'Rom Heng' => 'Rom Heng',
+
+    
 
     // create.child
     'Add new childs' => 'Add new childs',

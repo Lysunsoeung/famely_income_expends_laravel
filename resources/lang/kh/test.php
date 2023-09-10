@@ -105,6 +105,32 @@ return [
     'How Much Does It Costs?' => 'តើវាមានតម្លៃប៉ុន្មាន?',
     'How Do I Repay?' => 'តើខ្ញុំត្រូវសងដោយរបៀបណា?',
 
+    // about us
+    'Business Loans' => 'កម្ចីអាជីវកម្ម',
+    'For Daily Expenses' => 'សម្រាប់ការចំណាយប្រចាំថ្ងៃ',
+    'About Wallet' => 'អំពីទឹកប្រាក់ដែរមាន',
+    'What We Offer?' => 'តើយើងផ្តល់ជូនអ្វីខ្លះ?',
+    'Who We Are?' => 'យើង​ជា​នរណា?',
+    'Once' => 'មួយ',
+    'Two' => 'ពីរ',
+    'Three' => 'បី',
+    'Member of Team' => 'សមាជិកក្រុម',
+    'Our Members' => 'សមាជិករបស់យើង',
+    'We are members of group one' => 'យើងជាសមាជិកក្រុមទី១',
+    //Name
+    'Po Rozel' => 'ប៉ូ រ៉ូហ្សែល',
+    'Tha Sokcheat' => 'ថា សុជាតិ',
+    'Soeung Lysun' => 'សឿង លីសាន់',
+    'Han Vakhim' => 'ហាន់ វ៉ាឃីម',
+    'Rom Heng' => 'រុំ ហេន',
+
+    
+    'Quick Decision' => 'ការសម្រេចចិត្តរហ័ស',
+    'Submit Your Info' => 'បញ្ជូនព័ត៌មានរបស់អ្នក',
+    'Funds To You' => 'មូលនិធិសម្រាប់អ្នក',
+    'Privacy Policy' => 'គោលការណ៍​ភាព​ឯកជន',
+    'Terms &amp; Conditions' => 'លក្ខខណ្ឌ',
+
 
     // create.child
     'Add new childs' => 'បង្កើតគណនីថ្មីឲ្យកូនរបស់អ្នក',
