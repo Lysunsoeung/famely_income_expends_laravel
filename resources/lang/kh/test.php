@@ -131,6 +131,19 @@ return [
     'Privacy Policy' => 'គោលការណ៍​ភាព​ឯកជន',
     'Terms &amp; Conditions' => 'លក្ខខណ្ឌ',
 
+    //Contac
+    'Contact Us' => 'ទំនាក់ទំនងយើង',
+    'Contact With us' => 'ទំនាក់ទំនងជាមួយយើង',
+    'lets get connected' => 'ចាប់ផ្ដើមចុះឈ្មោះ',
+    'Still Have Questions?' => 'មានចម្ងល់អាចសួរបាន?',
+    'Get In Touch' => 'សូមចុះឈ្មោះខាងក្រោម',
+    'Call Us We Will Be Happy To Help' => 'រីករាយសម្រាប់ការខលមកសួរសំនួរ',
+    'General Support' => 'ជំនួយទូទៅ',
+    'Send Message' => 'ផ្ញើសារ',
+    'Write Message' => 'សរសេរសារ',
+    'Full Name' => 'គ្គោនាម',
+    'Email address' => 'អ៊ីម៉ែល',
+    'Monday - Saturdat' => 'ថ្ងៃច័ន្ទ - ថ្ងៃសៅរ៍',
 
     // create.child
     'Add new childs' => 'បង្កើតគណនីថ្មីឲ្យកូនរបស់អ្នក',

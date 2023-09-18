@@ -131,7 +131,19 @@ return [
     'Privacy Policy' => 'Privacy Policy',
     'Terms &amp; Conditions' => 'Terms &amp; Conditions',
     
-
+    //Contac
+    'Contact Us' => 'Contact Us',
+    'Contact With us' => 'Contact With us',
+    'lets get connected' => 'lets get connected',
+    'Still Have Questions?' => 'Still Have Questions?',
+    'Get In Touch' => 'Get In Touch',
+    'Call Us We Will Be Happy To Help' => 'Call Us We Will Be Happy To Help',
+    'General Support' => 'General Support',
+    'Send Message' => 'Send Message',
+    'Write Message' => 'Write Message',
+    'Full Name' => 'Full Name',
+    'Email address' => 'Email address',
+    'Monday - Saturdat' => 'Monday - Saturdat',
 
     //Name
     'Po Rozel' => 'Po Rozel',
