@@ -41,7 +41,7 @@
               </div>
             </div>
             <div class="col-lg-6 mb-4 pb-2">
-              <div class="form-group">
+              <div class="form-group">style
                 <label for="loan_email_address" class="form-label">Email address</label>
                 <input type="email" class="form-control shadow-none" id="loan_email_address">
               </div>
@@ -60,11 +60,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize text-primary">Contact Us</h2>
+				<h2 class="mb-3 text-capitalize text-primary">{{ trans('test.Contact Us') }}</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
-					<li class="list-inline-item"><a href="index.html">Home</a>
+					<li class="list-inline-item"><a href="index.html">{{ trans('test.Home') }}</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="contact.html">Contact</a>
+					<li class="list-inline-item">/ &nbsp; <a href="contact.html">{{ trans('test.Contact') }}</a>
 					</li>
 				</ul>
 			</div>
@@ -96,8 +96,8 @@
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-6">
 				<div class="section-title text-center">
-					<p class="text-primary text-uppercase fw-bold mb-3">Contact With us</p>
-					<h1>let&rsquo;s get connected</h1>
+					<p class="text-primary text-uppercase fw-bold mb-3">{{ trans('test.Contact With us') }}</p>
+					<h1>{{ trans('test.lets get connected') }}</h1>
 					{{-- <p>Lorem ipsum dolor sit, consectetur adipiscing . egestas cursus pellentesque dignissim dui, congue etiam</p> --}}
 				</div>
 			</div>
@@ -105,46 +105,46 @@
 				<div class="shadow rounded p-5 bg-white">
 					<div class="row">
 						<div class="col-12 mb-4">
-							<h4>Get In Touch</h4>
+							<h4>{{ trans('test.Get In Touch') }}</h4>
 						</div>
 						<div class="col-lg-6">
 							<div class="contact-form">
 								<form action="#!">
 									<div class="form-group mb-4 pb-2">
-										<label for="exampleFormControlInput1" class="form-label">Full Name</label>
+										<label for="exampleFormControlInput1" class="form-label">{{ trans('test.Full Name') }}</label>
 										<input type="text" class="form-control shadow-none" id="contact_name">
 									</div>
 									<div class="form-group mb-4 pb-2">
-										<label for="exampleFormControlInput1" class="form-label">Email address</label>
+										<label for="exampleFormControlInput1" class="form-label">{{ trans('test.Email address') }}</label>
 										<input type="email" class="form-control shadow-none" id="contact_email">
 									</div>
 									<div class="form-group mb-4 pb-2">
-										<label for="exampleFormControlTextarea1" class="form-label">Write Message</label>
+										<label for="exampleFormControlTextarea1" class="form-label">{{ trans('test.Write Message') }}</label>
 										<textarea class="form-control shadow-none" id="exampleFormControlTextarea1" rows="3"></textarea>
 									</div>
-									<button class="btn btn-primary w-100" type="submit">Send Message</button>
+									<button class="btn btn-primary w-100" type="submit">{{ trans('test.Send Message') }}</button>
 								</form>
 							</div>
 						</div>
 						<div class="col-lg-6 mt-5 mt-lg-0">
 							<div class="contact-info">
 								<div class="block mt-0">
-									<h4 class="h5">Still Have Questions?</h4>
-									<div class="content">Call Us We Will Be Happy To Help
+									<h4 class="h5">{{ trans('test.Still Have Questions?') }}</h4>
+									<div class="content">{{ trans('test.Call Us We Will Be Happy To Help') }}
 										<br> <a href="tel:+3301563965">+855 71 767 98 98</a>
-										<br>Monday - Saturdat
+										<br>{{ trans('test.Monday - Saturdat') }}
 										<br>7:00AM TO 5:00PM Eastern Time</div>
 								</div>
 
                                 <div class="block mt-4">
-									<h4 class="h5">Address</h4>
+									<h4 class="h5">{{ trans('test.Address') }}</h4>
 									<div class="content"> Nº 6 Street, Phsa Samki Siem Reap. Cambodia
 
 								    </div>
 							    </div>
 
                                 <div class="block mt-4">
-									<h4 class="h5">General Support</h4>
+									<h4 class="h5">{{ trans('test.General Support') }}</h4>
 									<div class="content"> familyincome@gmail.com
 								    </div>
 							    </div>

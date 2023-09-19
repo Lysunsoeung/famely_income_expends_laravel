@@ -64,9 +64,9 @@
             <h1 style="font-weight: 500" class="text-center mb-4"> <span class="text-success">{{trans('test.SW')}}</span><br/> {{trans('test.TM')}} <span class="text-success">{{trans('test.PF')}}</span></h1>
             <div class="text-center">
 
-                    <a href="{{ route('login') }}" class="btn btn-outline-primary">Try on browser</a>
+                    <a href="{{ route('login') }}" class="btn btn-outline-primary">{{ trans('test.Try on browser') }}</a>
 
-                    <a href="{{ route('register') }}" class="btn btn-primary ms-2 ms-lg-3">Download for free</a>
+                    <a href="{{ route('register') }}" class="btn btn-primary ms-2 ms-lg-3">{{ trans('test.Download for free') }}</a>
             </div>
             </div>
 
@@ -84,7 +84,7 @@
                 <img class="align-center " src="#" />
 
             </span>
-            <h3 class="mb-3 service-title  fw-normal fs-4">100% Secure data</h3>
+            <h3 class="mb-3 service-title  fw-normal fs-4">{{ trans('test.100% Secure data') }}</h3>
             </div>
         </a>
         </div>
@@ -96,7 +96,7 @@
                 <img src="#" />
 
                 </span>
-                <h3 class="mb-3 service-title  fw-normal fs-4">1 Million+ users</h3>
+                <h3 class="mb-3 service-title  fw-normal fs-4">{{ trans('test.1 Million+ users') }}</h3>
             </div>
             </a>
         </div>
@@ -108,7 +108,7 @@
                 <img src="#" />
 
                 </span>
-                <h3 class="mb-3 service-title  fw-normal fs-4">100K+ 5-star Reviews</h3>
+                <h3 class="mb-3 service-title  fw-normal fs-4">{{ trans('test.100K+ 5-star Reviews') }}</h3>
             </div>
             </a>
         </div>
@@ -120,7 +120,7 @@
                 <img src="#" />
 
                 </span>
-                <h3 class="mb-3 service-title fw-normal fs-4">App of the day</h3>
+                <h3 class="mb-3 service-title fw-normal fs-4">{{ trans('test.App of the day') }}</h3>
             </div>
             </a>
         </div>
@@ -139,9 +139,9 @@
             <div class="col-lg-10 col-md-6 pt-1">
                 <div class="shadow rounded bg-white p-4 mt-4" style="font-seze:12px">
                   <div class="d-flex justify-content-between">
-                    <div class="bg-white">LAST MONTH</div>
-                    <div class="bg-white text-dark fw-bold">THIS MONTH</div>
-                    <div class="bg-white">FUTURE</div>
+                    <div class="bg-white">{{ trans('test.LAST MONTH') }}</div>
+                    <div class="bg-white text-dark fw-bold"></div>{{ trans('test.THIS MONTH') }}
+                    <div class="bg-white"></div>{{ trans('test.FUTURE') }}
 
                   </div><hr>
 
@@ -178,9 +178,9 @@
 
       <div class="col-lg-5 text-center text-lg-end">
         <div class="section-title">
-            <h1 style="text-align:left" class="fw-normal">Simple money tracker</h1>
+            <h1 style="text-align:left" class="fw-normal">{{ trans('test.Simple money tracker') }}</h1>
             <p class="lead mb-0 mt-4">
-              <p style="text-align:left">It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.</p>
+              <p style="text-align:left">{{ trans('test.It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.') }}</p>
           </div>
       </div>
     </div>
@@ -191,7 +191,7 @@
     <div class="row align-items-center" style="justify-content: center;">
         <div class="col-lg-5 text-center text-lg-end">
             <div class="section-title">
-                <h1 style="text-align:left" class="fw-normal">Painless budgeting</h1>
+                <h1 style="text-align:left" class="fw-normal">{{ trans('test.Painless budgeting') }}</h1>
                 <p class="lead mb-0 mt-4">
                   <p style="text-align:left">It takes seconds to record daily transactions. Put them into clear and visualized categories such as Expense: Food, Shopping or Income: Salary, Gift.</p>
               </div>
@@ -234,8 +234,8 @@
                   <table class="table table-borderless text-dark">
                     <thead>
                       <tr class="text-center">
-                        <th>Income</th>
-                        <th>Expenses</th>
+                        <th>{{ trans('test.Income') }}</th>
+                        <th>{{ trans('test.Expense') }}</th>
                       </tr>
                     </thead>
                     <tbody>
@@ -266,7 +266,7 @@
 
       <div class="col-lg-5 text-center text-lg-end">
         <div class="section-title">
-            <h1 style="text-align:left" class="fw-normal">The whole picture in one place</h1>
+            <h1 style="text-align:left" class="fw-normal">{{ trans('test.The whole picture in one place') }}</h1>
             <p class="lead mb-0 mt-4">
               <p style="text-align:left">One report to give a clear view on your spending patterns. Understand where your money comes and goes with easy-to-read graphs.</p>
             </div>
@@ -281,8 +281,8 @@
     <div class="row justify-content-center">
       <div class="col-lg-8 mb-4">
         <div class="section-title text-center">
-          <p class="text-primary text-uppercase fw-bold mb-3">Painless budgeting</p>
-          <h1>Get Know The Basics Simple Pricing And Payments</h1>
+          <h1 class="text-primary text-uppercase fw-bold mb-3">{{ trans('test.Painless budgeting') }}</h1>
+          <h1>{{ trans('test.Get Know The Basics Simple Pricing And Payments') }}</h1>
         </div>
       </div>
       <div class="col-lg-10">
@@ -290,17 +290,17 @@
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark active" id="pills-how-much-can-i-recive-tab"
               data-bs-toggle="pill" href="#pills-how-much-can-i-recive" role="tab"
-              aria-controls="pills-how-much-can-i-recive" aria-selected="true">How Much Can I Recive?</a>
+              aria-controls="pills-how-much-can-i-recive" aria-selected="true">{{ trans('test.How Much Can I Recive?') }}</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-much-does-it-costs-tab"
               data-bs-toggle="pill" href="#pills-how-much-does-it-costs" role="tab"
-              aria-controls="pills-how-much-does-it-costs" aria-selected="true">How Much Does It Costs?</a>
+              aria-controls="pills-how-much-does-it-costs" aria-selected="true">{{ trans('test.How Much Does It Costs?') }}</a>
           </li>
           <li class="nav-item m-2" role="presentation"> <a
               class="nav-link btn btn-outline-primary effect-none text-dark " id="pills-how-do-i-repay-tab"
               data-bs-toggle="pill" href="#pills-how-do-i-repay" role="tab" aria-controls="pills-how-do-i-repay"
-              aria-selected="true">How Do I Repay?</a>
+              aria-selected="true">{{ trans('test.How Do I Repay?') }}</a>
           </li>
         </ul>
         <div class="rounded shadow bg-white p-5 tab-content" id="pills-tabContent">

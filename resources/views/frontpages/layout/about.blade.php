@@ -59,11 +59,11 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-8 mx-auto text-center">
-				<h2 class="mb-3 text-capitalize text-primary">About Us</h2>
+				<h2 class="mb-3 text-capitalize text-primary">{{ trans('test.About') }}</h2>
 				<ul class="list-inline breadcrumbs text-capitalize" style="font-weight:500">
-					<li class="list-inline-item"><a href="index.html">Home</a>
+					<li class="list-inline-item"><a href="index.html">{{ trans('test.Home') }}</a>
 					</li>
-					<li class="list-inline-item">/ &nbsp; <a href="about.html">About</a>
+					<li class="list-inline-item">/ &nbsp; <a href="about.html">{{ trans('test.About') }}</a>
 					</li>
 				</ul>
 			</div>
@@ -77,8 +77,8 @@
 		<div class="row justify-content-center align-items-center">
 			<div class="col-lg-7">
 				<div class="section-title">
-					<p class="text-primary text-uppercase fw-bold mb-3">About Wallet</p>
-					<h2 class="h1 mb-4">Business Loans <br> For Daily Expenses</h2>
+					<p class="text-primary text-uppercase fw-bold mb-3">{{ trans('test.About Wallet') }}</p>
+					<h2 class="h1 mb-4">{{ trans('test.Business Loans') }} <br> {{ trans('test.For Daily Expenses') }}</h2>
 					<div class="content pe-0 pe-lg-5">
                         <p>Text here</p>
 					</div>
@@ -97,7 +97,7 @@
 			<div class="col-lg-5">
 				<div class="section-title">
 					<p class="text-primary text-uppercase fw-bold mb-3"></p>
-					<h2>Who We Are?</h2>
+					<h2>{{ trans('test.Who We Are?') }}</h2>
 				</div>
 				<p class="lead">Important Text.</p>
 				<div class="content">Text Content</div>
@@ -105,14 +105,14 @@
 			<div class="col-lg-5">
 				<div class="section-title">
 					<p class="text-primary text-uppercase fw-bold mb-3"></p>
-					<h2>What We Offer?</h2>
+					<h2>{{ trans('test.What We Offer?') }}</h2>
 				</div>
 				<p class="lead">Text Important</p>
 				<div class="content">
 					<ul>
-						<li>Once</li>
-						<li>Two</li>
-						<li>Three</li>
+						<li>{{ trans('test.Once') }}</li>
+						<li>{{ trans('test.Two') }}</li>
+						<li>{{ trans('test.Tree') }}</li>
 					</ul>
 				</div>
 			</div>
@@ -127,19 +127,19 @@
 			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0 text-center icon-box-item">
 				<div class="icon icon-lg bg-transparent mb-4"><i class="fas fa-mouse-pointer text-primary"></i>
 				</div>
-				<h3>Quick Decision</h3>
+				<h3>{{ trans('test.Quick Decision') }}</h3>
 				<p class="px-lg-5">Begin the process when it is convenient for you</p>
 			</div>
 			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0 text-center icon-box-item">
 				<div class="icon icon-lg bg-transparent mb-4"><i class="fas fa-file-alt text-primary"></i>
 				</div>
-				<h3>Submit Your Info</h3>
+				<h3>{{ trans('test.Submit Your Info') }}</h3>
 				<p class="px-lg-5">Begin the process when it is convenient for you</p>
 			</div>
 			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0 text-center icon-box-item">
 				<div class="icon icon-lg bg-transparent mb-4"><i class="fas fa-briefcase text-primary"></i>
 				</div>
-				<h3>Funds To You</h3>
+				<h3>{{ trans('test.Funds To You') }}</h3>
 				<p class="px-lg-5">Begin the process when it is convenient for you</p>
 			</div>
 		</div>
@@ -243,9 +243,9 @@
 		<div class="row justify-content-center">
 			<div class="col-12">
 				<div class="section-title text-center">
-					<p class="text-primary text-uppercase fw-bold mb-3">Our Members</p>
-					<h1>Member of Team</h1>
-					<p class="mb-0">We are members of group one
+					<p class="text-primary text-uppercase fw-bold mb-3">{{ trans('test.Our Members') }}</p>
+					<h1>{{ trans('test.Member of Team') }}</h1>
+					<p class="mb-0">{{ trans('test.We are members of group one') }}
 				</div>
 			</div>
 		</div>
@@ -264,7 +264,7 @@
 						</ul>
 					</div>
 					<div class="card-body">
-						<h3>Tha Sokcheat</h3>
+						<h3>{{ trans('test.Tha Sokcheat') }}</h3>
 						<p>Year 3 of University</p>
 					</div>
 				</div>
@@ -283,7 +283,7 @@
 						</ul>
 					</div>
 					<div class="card-body">
-						<h3>Soeung Lysun</h3>
+						<h3>{{ trans('test.Soeung Lysun') }}</h3>
 						<p>Year 3 of University</p>
 					</div>
 				</div>
@@ -293,7 +293,7 @@
 					<div class="card-img">
 						<img loading="lazy" decoding="async" src="{{asset("images/frontend")}}/about/team-3.jpg" alt="Leslie Pena" class="rounded w-100" width="300" height="333">
 						<ul class="card-social list-inline">
-							<li class="list-inline-item"><a class="facebook" href="#"><i class="fab fa-facebook"></i></a>
+							<li class="list-inline-item"><a class="facebook" href="https://www.facebook.com/po.rosel"target="_blank"><i class="fab fa-facebook"></i></a>
 							</li>
 							<li class="list-inline-item"><a class="twitter" href="#"><i class="fab fa-twitter"></i></a>
 							</li>
@@ -302,7 +302,7 @@
 						</ul>
 					</div>
 					<div class="card-body">
-						<h3>Po Rozel</h3>
+						<h3>{{ trans('test.Po Rozel') }}</h3>
 						<p>Year 3 University</p>
 					</div>
 				</div>
@@ -321,7 +321,7 @@
 						</ul>
 					</div>
 					<div class="card-body">
-						<h3>Han Vakhim</h3>
+						<h3>{{ trans('test.Han Vakhim') }}</h3>
 						<p>Year 3 of University</p>
 					</div>
 				</div>
@@ -340,7 +340,7 @@
 						</ul>
 					</div>
 					<div class="card-body">
-						<h3>Rom Heng</h3>
+						<h3>{{ trans('test.Rom Heng') }}</tr></h3>
 						<p>Year 3 of University</p>
 					</div>
 				</div>
@@ -360,9 +360,9 @@
 			</div>
 			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
 				<ul class="list-unstyled list-inline mb-0 text-lg-center">
-					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">Privacy Policy</a>
+					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">{{ trans('test.Privacy Policy') }}</a>
 					</li>
-					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
+					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">{{ trans('test.Terms &amp; Conditions') }}</a>
 					</li>
 				</ul>
 			</div>
