@@ -141,24 +141,42 @@
                 <p>{{ trans('test.Create User') }}</p>
               </a>
             </li>
-
-            {{-- Team profile --}}
-            <li class="nav-item">
-                <a href="{{ route('users.index') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>{{ trans('test.View User') }}</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="{{ route('users.create') }}" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>{{ trans('test.Create User') }}</p>
-                </a>
-            </li>
-
           </ul>
         </li>
         @endif
+
+
+         {{-- Members Setting --}}
+
+         @if(Qs::userIsTeamPAT())
+         <li class="nav-item">
+             <a href=" " class="nav-link {{ in_array(Route::currentRouteName(), ['users.create', 'users.show', 'users.edit']) ? 'active' : '' }}">
+
+             <i class="nav-icon fas fa-copy"></i>
+             <p>
+                 {{trans('test.Setting')}}
+
+               <i class="fas fa-angle-left right"></i>
+             </p>
+           </a>
+           <ul class="nav nav-treeview">
+             <li class="nav-item">
+               <a href=" {{ route('members.index') }}" class="nav-link">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>{{ trans('test.View Member') }}</p>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a href=" {{ route('members.create') }}" class="nav-link">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>{{ trans('test.Create Member') }}</p>
+               </a>
+             </li>
+
+           </ul>
+         </li>
+         @endif
+
 
         @if(Qs::userIsTeamPAT())
 

@@ -23,6 +23,7 @@ return [
     'Dashboard' => 'ផ្ទាំងគ្រប់គ្រង',
     'Profile' => 'ប្រវត្តិរូបភាព',
     'Users' => 'អ្នកប្រើប្រាស់',
+    'Setting' => 'ការកំណត់',
     'Child' => 'កូន',
     'Income' => 'ចំណូល',
     'Expense' => 'ចំណាយ',
@@ -48,6 +49,10 @@ return [
     'Create User' => 'បង្កើតអ្នកប្រើប្រាស់',
     'View Income' => 'មើលចំណូល',
     'View Expense' => 'មើលចំណាយ',
+
+    'Create Member' => 'បង្កើតសមាជិកថ្មី',
+    'View Member' => 'មើលសមាជិកទាំងអស់',
+
     'Create Income' => 'បង្កើតចំណូលតាមប្រភេទ',
     'Create Expense' => 'បង្កើតចំណាយតាមប្រភេទ',
     'View Category' => 'មើលប្រភេទចំណូល',
@@ -124,7 +129,7 @@ return [
     'Han Vakhim' => 'ហាន់ វ៉ាឃីម',
     'Rom Heng' => 'រុំ ហេន',
 
-    
+
     'Quick Decision' => 'ការសម្រេចចិត្តរហ័ស',
     'Submit Your Info' => 'បញ្ជូនព័ត៌មានរបស់អ្នក',
     'Funds To You' => 'មូលនិធិសម្រាប់អ្នក',

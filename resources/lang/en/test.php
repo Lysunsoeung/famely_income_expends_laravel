@@ -24,6 +24,7 @@ return [
     'Dashboard' => 'Dashboard',
     'Profile' => 'Profile',
     'Users' => 'Users',
+    'Setting' => 'Setting',
     'Child' => 'Child',
     'Income' => 'Income',
     'Expense' => 'Expense',
@@ -49,6 +50,10 @@ return [
     'Create Child' => 'Create Child',
     'Create User' => 'Create User',
     'View Income' => 'View Income',
+
+    'Create Member' => 'Create Member',
+    'View Member' => 'View Member',
+
     'View Expense' => 'View Expense',
     'Create Income' => 'Create Income',
     'Create Expense' => 'Create Expense',
@@ -130,7 +135,7 @@ return [
     'Funds To You' => 'Funds To You',
     'Privacy Policy' => 'Privacy Policy',
     'Terms &amp; Conditions' => 'Terms &amp; Conditions',
-    
+
     //Contac
     'Contact Us' => 'Contact Us',
     'Contact With us' => 'Contact With us',
@@ -152,7 +157,7 @@ return [
     'Han Vakhim' => 'Han Vakhim',
     'Rom Heng' => 'Rom Heng',
 
-    
+
 
     // create.child
     'Add new childs' => 'Add new childs',
