@@ -2,15 +2,14 @@
     <!-- Sidebar user panel (optional) -->
     <div class="user-panel mt-3 pb-3 mb-3 d-flex">
       <div class="image">
-            @if(!empty(Auth::user()->photo))
+        @if(!empty(Auth::user()->photo) && file_exists(public_path(Auth::user()->photo)))
 
-                <img class="img-circle elevation-2" src="{{ asset(Auth::user()->photo) }}" alt="{{ Auth::user()->name }}">
+        
+          <img src="{{  asset(Auth::user()->photo) }}" alt="" srcset="" width="30" height="auto">
+        @else
+          <img src="{{ asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="30" height="auto">
 
-            @else
-
-                <img id="showImage" src="{{ asset('storage/uploads/user.png') }}" width="100" height="auto" alt="Default Photo">
-
-            @endif
+        @endif
 
       </div>
 
@@ -114,43 +113,96 @@
         {{-- User --}}
 
         @if(Qs::userIsTeamPAT())
-        <li class="nav-item">
-            {{-- <a href="{{ route('users.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.index', 'users.show', 'users.edit']) ? 'active' : '' }}">
-                <i class="icon-users4"></i> <span> Users</span>
-            </a> --}}
+          <li class="nav-item">
+              {{-- <a href="{{ route('users.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.index', 'users.show', 'users.edit']) ? 'active' : '' }}">
+                  <i class="icon-users4"></i> <span> Users</span>
+              </a> --}}
 
-            <a href="{{ route('users.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.create', 'users.show', 'users.edit']) ? 'active' : '' }}">
+              <a href="{{ route('users.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.create', 'users.show', 'users.edit']) ? 'active' : '' }}">
 
-            <i class="nav-icon fas fa-copy"></i>
-            <p>
-                {{trans('test.Users')}}
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    {{trans('test.Users')}}
 
-              <i class="fas fa-angle-left right"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{ route('users.index') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ trans('test.View User') }}</p>
+                  <i class="fas fa-angle-left right"></i>
+                </p>
               </a>
-            </li>
-            <li class="nav-item">
-              <a href="{{ route('users.create') }}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>{{ trans('test.Create User') }}</p>
-              </a>
-            </li>
-          </ul>
-        </li>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ route('users.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ trans('test.View User') }}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ route('users.create') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ trans('test.Create User') }}</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+
+
+            <a href="{{ route('childs.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['childs.create', 'childs.show', 'childs.edit']) ? 'active' : '' }}">
+
+                <i class="nav-icon fas fa-copy"></i>
+                <p>
+                    {{trans('test.Child')}}
+
+
+                <i class="right fas fa-angle-left"></i>
+                </p>
+            </a>
+            <ul class="nav nav-treeview">
+                <li class="nav-item">
+                <a href="{{ route('childs.create') }}" class="nav-link {{ (Route::is('childs.create')) ? 'active' : '' }}">
+                    <i class="far fa-circle nav-icon"></i>
+                    <p>{{ trans('test.Create Child') }}</p>
+                </a>
+                </li>
+
+
+            </ul>
+
+          </li>
+
+          <li class="nav-item">
+              <a href=" " class="nav-link {{ in_array(Route::currentRouteName(), ['members.create', 'members.show', 'members.edit']) ? 'active' : '' }}">
+
+              <i class="nav-icon fas fa-copy"></i>
+              <p>
+                  {{trans('test.Setting')}}
+
+                <i class="fas fa-angle-left right"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href=" {{ route('members.index') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ trans('test.View Member') }}</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href=" {{ route('members.create') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>{{ trans('test.Create Member') }}</p>
+                </a>
+              </li>
+
+            </ul>
+          </li>
         @endif
 
 
          {{-- Members Setting --}}
 
-         @if(Qs::userIsTeamPAT())
+         {{-- @if(Qs::userIsTeamPAT())
          <li class="nav-item">
-             <a href=" " class="nav-link {{ in_array(Route::currentRouteName(), ['users.create', 'users.show', 'users.edit']) ? 'active' : '' }}">
+             <a href=" " class="nav-link {{ in_array(Route::currentRouteName(), ['members.create', 'members.show', 'members.edit']) ? 'active' : '' }}">
 
              <i class="nav-icon fas fa-copy"></i>
              <p>
@@ -175,15 +227,15 @@
 
            </ul>
          </li>
-         @endif
+         @endif --}}
 
 
-        @if(Qs::userIsTeamPAT())
+        {{-- @if(Qs::userIsTeamPAT())
 
             <li class="nav-item">
 
 
-                {{-- <a href="{{ route('childs.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['childs.create', 'childs.show', 'childs.edit']) ? 'active' : '' }}"> --}}
+                <a href="{{ route('childs.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['childs.create', 'childs.show', 'childs.edit']) ? 'active' : '' }}">
                 <a href="#" class="nav-link">
 
                     <i class="nav-icon fas fa-copy"></i>
@@ -207,7 +259,7 @@
 
             </li>
 
-        @endif
+        @endif --}}
 
         {{-- Child --}}
         @if(Qs::userIsTeamPA())

@@ -13,8 +13,10 @@
                 </div>
 
                 <div class="card-body">
-                    <form method="post" enctype="multipart/form-data" class="wizard-form steps-validation ajax-update" action="{{ route('users.update', Qs::hash($user->id)) }}" data-fouc>
-                        @csrf @method('PUT')
+                    <form method="post" enctype="multipart/form-data" action="{{ route('users.update', Qs::hash($user->id)) }}" data-fouc>
+                        @csrf 
+                        @method('PUT')
+
                         <h6>Personal Data</h6>
 
                         <fieldset>
@@ -32,6 +34,7 @@
                                     <div class="form-group">
                                         <label>Full Name: <span class="text-danger">*</span></label>
                                         <input value="{{ $user->name }}"  type="text" name="name" placeholder="Full Name" class="form-control">
+                                        <p>{{ $errors->first('name') }}</p>
                                     </div>
                                 </div>
 
@@ -39,6 +42,7 @@
                                     <div class="form-group">
                                         <label>UserName: <span class="text-danger">*</span></label>
                                         <input value="{{ $user->username }}"  type="text" name="username" placeholder="User Name" class="form-control">
+                                        <p>{{ $errors->first('username') }}</p>
                                     </div>
                                 </div>
 
@@ -46,6 +50,8 @@
                                     <div class="form-group">
                                         <label>Address: <span class="text-danger">*</span></label>
                                         <input value="{{ $user->address }}" class="form-control" placeholder="Address" name="address" type="text" >
+                                        <p>{{ $errors->first('address') }}</p>
+
                                     </div>
                                 </div>
                                 <div class="col-md-3">
@@ -56,6 +62,8 @@
                                             <div class="input-group-append" data-target="#date_of_birth" data-toggle="datetimepicker">
                                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                                             </div>
+                                        <p>{{ $errors->first('dob') }}</p>
+
                                         </div>
                                     </div>
                                 </div>
@@ -66,6 +74,8 @@
                                     <div class="form-group">
                                         <label>Email address: </label>
                                         <input value="{{ $user->email }}" type="email" name="email" class="form-control" placeholder="your@email.com">
+                                        <p>{{ $errors->first('email') }}</p>
+
 
                                     </div>
                                 </div>
@@ -74,6 +84,8 @@
                                     <div class="form-group">
                                         <label>Phone:</label>
                                         <input value="{{ $user->phone }}" type="text" name="phone" class="form-control" placeholder="" >
+                                        <p>{{ $errors->first('phone') }}</p>
+
                                     </div>
                                 </div>
 
@@ -81,21 +93,23 @@
                                     <div class="form-group">
                                         <label>Telephone:</label>
                                         <input value="{{ $user->phone2 }}" type="text" name="phone2" class="form-control" placeholder="" >
+                                        <p>{{ $errors->first('phone2') }}</p>
+
                                     </div>
                                 </div>
 
                             </div>
 
                             <div class="row">
-                                @if(in_array($user->user_type, Qs::getStaff()))
+                                {{-- @if(in_array($user->user_type, Qs::getStaff()))
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label>Date of Birth:</label>
+                                            <label>Create at:</label>
                                             <input autocomplete="off" name="created_at" value="{{ $user->first()->created_at }}" type="text" class="form-control date-pick" placeholder="Select Date...">
 
                                         </div>
                                     </div>
-                                @endif
+                                @endif --}}
 
                                 <div class="col-md-4">
                                     <div class="form-group">
@@ -105,6 +119,8 @@
                                             <option {{ ($user->gender == 'Male') ? 'selected' : '' }} value="Male">Male</option>
                                             <option {{ ($user->gender == 'Female') ? 'selected' : '' }} value="Female">Female</option>
                                         </select>
+                                        <p>{{ $errors->first('gender') }}</p>
+
                                     </div>
                                 </div>
                             </div>
@@ -145,6 +161,8 @@
                                         @endif
                                         {{-- {{ (!empty($user->photo)) ? asset('storage/uploads/' . $userType . '/' . basename($imageName)) : asset('storage/uploads/default-photo.png') }} --}}
                                     </div>
+                                        <p>{{ $errors->first('photo') }}</p>
+
                                 </div>
                             </div>
 

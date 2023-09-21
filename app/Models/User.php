@@ -59,10 +59,10 @@ class User extends Authenticatable
         return $this->hasMany(ChildRecord::class, 'my_parent_id');
     }
 
-    public function staff()
-    {
-        return $this->hasOne(StaffRecord::class);
-    }
+    // public function staff()
+    // {
+    //     return $this->hasOne(StaffRecord::class);
+    // }
 
     public function findByEmail($query, $email)
     {

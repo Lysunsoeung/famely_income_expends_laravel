@@ -169,8 +169,17 @@
                                             @enderror
                                         </div>
                                         <div class="form-group">
+
+                                            @if(!empty($ut->photo) && file_exists(public_path($ut->photo)))
+
+                                                <img id="showImage" src="{{  asset('storage/uploads/'.$ut->photo) }}" alt="" srcset="" width="100" height="auto">
+                                                
+                                            @else
+                                                <img id="showImage" src="{{ asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
+
+                                            @endif
                                            
-                                            <img id="showImage" src="{{ (!empty($ut->photo)) ? asset('storage/uploads/'.$ut->photo) : asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
+                                            {{-- <img id="showImage" src="{{ (!empty($ut->photo)) ? asset('storage/uploads/'.$ut->photo) : asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto"> --}}
                                            
                                         </div>
                                     </div>

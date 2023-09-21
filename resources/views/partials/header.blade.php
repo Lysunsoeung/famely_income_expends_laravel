@@ -62,7 +62,16 @@
 
         <a class="nav-link" data-toggle="dropdown" href="#">
 
-          <img class="img-circle" width="30" height="auto" src="{{ asset(Auth::user()->photo) }}" alt="{{ Auth::user()->name }}">
+          @if(!empty(Auth::user()->photo) && file_exists(public_path(Auth::user()->photo)))
+
+              <img src="{{  asset(Auth::user()->photo) }}" alt="" srcset="" width="30" height="auto">
+              
+          @else
+              <img src="{{ asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="30" height="auto">
+
+          @endif
+
+          {{-- <img class="img-circle" width="30" height="auto" src="{{ asset(Auth::user()->photo) }}" alt="{{ Auth::user()->name }}"> --}}
         </a>
         <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
 

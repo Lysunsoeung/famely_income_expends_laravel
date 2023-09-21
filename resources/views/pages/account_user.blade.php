@@ -35,6 +35,9 @@
                                                 <label for="name" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Name') }}</label>
                                                 <div class="col-lg-9">
                                                     <input  id="name" class="form-control" type="text" value="{{ $pro_edit->name }}">
+                                                    @error('name')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
@@ -44,8 +47,8 @@
                                                     <div class="col-lg-9">
                                                         <input id="username" class="form-control" type="text" value="{{ $pro_edit->username }}">
                                                         @error('username')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                    @enderror
+                                                            <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                 </div>
 
@@ -56,8 +59,8 @@
                                                     <div class="col-lg-9">
                                                         <input id="username" name="username"  type="text" class="form-control" >
                                                         @error('username')
-                                                        <span class="text-danger">{{ $message }}</span>
-                                                    @enderror
+                                                            <span class="text-danger">{{ $message }}</span>
+                                                        @enderror
                                                     </div>
                                                 </div>
                                             @endif
@@ -70,6 +73,9 @@
                                                         <option {{ $pro_edit->gender == 'Male' ? 'selected' : '' }} value="Male">Male</option>
                                                         <option {{ $pro_edit->gender  == 'Female' ? 'selected' : '' }} value="Female">Female</option>
                                                     </select>
+                                                    @error('gender')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
@@ -78,8 +84,8 @@
                                                 <div class="col-lg-9">
                                                     <input id="email" value="{{ $pro_edit->email }}" name="email"  type="email" class="form-control" >
                                                     @error('email')
-                                                    <span class="text-danger">{{ $message }}</span>
-                                                @enderror
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
@@ -87,6 +93,9 @@
                                                 <label for="phone" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Phone') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="phone" value="{{ $pro_edit->phone }}" name="phone"  type="text" class="form-control" >
+                                                     @error('phone')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
@@ -94,6 +103,9 @@
                                                 <label for="phone2" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Telephone') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="phone2" value="{{ $pro_edit->phone2 }}" name="phone2"  type="text" class="form-control" >
+                                                     @error('phone2')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
@@ -101,19 +113,33 @@
                                                 <label for="address" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Address') }} </label>
                                                 <div class="col-lg-9">
                                                     <input id="address" value="{{ $pro_edit->address }}" name="address"  type="text"  class="form-control" >
+                                                    @error('address')
+                                                        <span class="text-danger">{{ $message }}</span>
+                                                    @enderror
                                                 </div>
                                             </div>
 
                                             <div class="form-group row">
                                                 <label for="address" class="col-lg-3 col-form-label font-weight-semibold">{{ trans('test.Change Photo') }} </label>
                                                 <div class="col-lg-9">
-                                                    <input  accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc onchange="previewImage(event)">
+                                                    <input  accept="image/*" type="file" id="photo" name="photo" class="form-input-styled" data-fouc onchange="previewImage(event)">
                                                 </div>
                                                 <div class="form-group">
 
-                                                    <img id="showImage" src="{{ (!empty($pro_edit->photo)) ? Auth::user()->photo : url('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
+                                                    @if(!empty($pro_edit->photo) && file_exists(public_path($pro_edit->photo)))
+
+                                                        <img id="showImage" src="{{  Auth::user()->photo }}" alt="" srcset="" width="100" height="auto">
+                                                        
+                                                    @else
+                                                        <img id="showImage" src="{{ asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
+
+                                                    @endif
+
 
                                                 </div>
+                                                @error('photo')
+                                                    <span class="text-danger">{{ $message }}</span>
+                                                @enderror
                                             </div>
 
                                             <div class="text-right">
