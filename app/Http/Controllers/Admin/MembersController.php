@@ -108,97 +108,55 @@ class MembersController extends Controller
 
         // Validate the request.
         $validate = $request->validate([
-            'photo' => 'required|mimes:png,jpg,jpeg,gif,png|max:5048',
+            'photo' => 'nullable|mimes:png,jpg,jpeg,gif,png|max:5048', // Allow photo to be optional
             'name' => 'required',
             'description' => 'required',
             'facebook' => 'required',
             'instagram' => 'required',
-            'github' => 'required'
+            'github' => 'required',
         ]);
-
 
         // Get the member's ID and name.
         $id = $member->id;
-        // $name = $request->name;
-        // $description = $request->description;
-        // $facebook = $request->facebook;
-        // $instagram = $request->instagram;
-        // $github = $request->github;
+        $name = $request->name;
+        $description = $request->description;
+        $facebook = $request->facebook;
+        $instagram = $request->instagram;
+        $github = $request->github;
 
-        // // Check if the image is uploaded.
-        // if($request->hasFile('photo')){
-        //     // Generate a unique filename for the photo file.
-        //     $fileName = time() . '-' . $request->name . '.' . $request->file('photo')->getClientOriginalExtension();
+        // Initialize the file name to the current member's photo.
+        $fileName = $member->photo;
 
-        //     // Save the photo file to the public/storage/uploads/members directory.
-        //     $request->photo->move(public_path('storage/uploads/members'), $fileName);
-        //     // Storage::disk('public')->put('uploads/members' . $fileName, file_get_contents($fileName));
+        // Check if a new photo is uploaded.
+        if ($request->hasFile('photo')) {
+            // Generate a unique filename for the new photo file.
+            $fileName = time() . '-' . $request->name . '.' . $request->file('photo')->getClientOriginalExtension();
 
+            // Save the new photo file to the public/storage/uploads/members directory.
+            $request->photo->move(public_path('storage/uploads/members'), $fileName);
 
-        //     // Delete the existing photo file, if it exists.
-        //     if (File::exists($request->photo)) {
-        //         File::delete($request->photo);
-        //     }
-
-        //     // Update the member's record in the database.
-        //     $member->update([
-
-        //         'id' => $id,
-        //         'photo' => $fileName,
-        //         'name' => $name,
-        //         'description' => $description,
-        //         'facebook' => $facebook,
-        //         'instagram' => $instagram,
-        //         'github' => $github
-        //     ]);
-        // }else{
-        //     $member->update([
-        //         'name' => $name,
-        //         'description' => $description,
-        //         'facebook' => $facebook,
-        //         'instagram' => $instagram,
-        //         'github' => $github
-        //     ]);
-        // }            
-        
-        // Handel file upload if a new photo is provided
-        if($request->hasFile('photo')){
-
-
-            // Delete the file if existing
-            if(!empty($member->photo) && File::exists(public_path('storage/uploads/members/' . $member->photo))){
-                File::delete(public_path('Storage/uploads/members/' . $member->photo));
+            // Delete the existing photo file, if it exists.
+            if (!empty($member->photo) && File::exists(public_path('storage/uploads/members/' . $member->photo))) {
+                File::delete(public_path('storage/uploads/members/' . $member->photo));
             }
 
             
-            // Generate a unique filename
-            $fileName = time() . '-' . $request->name . '.' . $request->file('photo')->getClientOriginalExtension();
-
-            // Save the file into
-            $request->photo->move(public_path('storage/uploads/members'), $fileName);
-
-            
-
-            // Update new image
-            $member->update([
-                'photo' => $fileName,
-            ]);
-
-            // Update member data
-            $member->update([
-                // 'id' => $id,
-                'name' => $request->name,
-                'description' => $request->description,
-                'facebook' => $request->facebook,
-                'instagram' => $request->instagram,
-                'github' => $request->github,
-            ]);
         }
+
+        // Update the member's record in the database.
+        $member->update([
+            'photo' => $fileName,
+            'name' => $name,
+            'description' => $description,
+            'facebook' => $facebook,
+            'instagram' => $instagram,
+            'github' => $github,
+        ]);
 
         // Return a redirect response with a success message.
         $notification = array(
             'message' => 'Member Update Successfully',
-            'alert-type' => 'info'
+            'alert-type' => 'info',
         );
 
         return back()->with($notification);
