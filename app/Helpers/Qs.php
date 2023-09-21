@@ -46,7 +46,7 @@ class Qs
     // Function to get default user profile
     public static function getDefaultUserImage()
     {
-        return 'backends/images/user/user.png';
+        return 'storage/uploads/default-photo.png';
     }
 
     // Get all user type

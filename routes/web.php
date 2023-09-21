@@ -3,8 +3,8 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Session;
-use App\Http\Controllers\Admin\MemberController;
 use App\Http\Controllers\Admin\ExpenseController;
+use App\Http\Controllers\Admin\MembersController;
 use App\Http\Controllers\Admin\UserRecoredsController;
 use App\Http\Controllers\Frontpage\FrontPageController;
 
@@ -73,7 +73,7 @@ Route::group(['middleware' => 'auth'], function () {
         Route::put('/change_password', [App\Http\Controllers\UserAccountController::class, 'change_pass'])->name('account_user.change_pass');
 
         // Update route
-        Route::put('/', [App\Http\Controllers\UserAccountController::class, 'update_profile'])->name('account_user.update');
+        Route::put('/change_profile', [App\Http\Controllers\UserAccountController::class, 'update_profile'])->name('account_user.update');
 
 
 
@@ -108,8 +108,8 @@ Route::group(['middleware' => 'auth'], function () {
 
 
         Route::put('/update/users/{id}', [App\Http\Controllers\Admin\UserRecoredsController::class, 'update'])->name('users.update');
-        Route::get('/destroy/{id}', [App\Http\Controllers\Admin\UserRecoredsController::class, 'destroy'])->name('users.destroy');
-        // Route::delete('/users/{id}', [App\Http\Controllers\Admin\UserRecoredsController::class, 'destroy'])->name('users.destroy');
+        // Route::get('/destroy/{id}', [App\Http\Controllers\Admin\UserRecoredsController::class, 'destroy'])->name('users.destroy');
+        Route::get('/users/{id}', [App\Http\Controllers\Admin\UserRecoredsController::class, 'destroy'])->name('users.destroy');
 
 
 
@@ -121,18 +121,18 @@ Route::group(['middleware' => 'auth'], function () {
 
         //=========== Member Profile Setting =============//
 
-        Route::get('/view/members/', [MemberController::class, 'mem_index'])->name('members.index');
+        Route::get('/view/members/', [MembersController::class, 'mem_index'])->name('members.index');
 
-        Route::get('/create/members', [MemberController::class, 'mem_create'])->name('members.create');
-        Route::post('/store/members', [MemberController::class, 'mem_store'])->name('members.store');
+        Route::get('/create/members', [MembersController::class, 'mem_create'])->name('members.create');
+        Route::post('/store/members', [MembersController::class, 'mem_store'])->name('members.store');
 
-        Route::get('/show/members/{id}', [MemberController::class, 'mem_show'])->name('members.show');
+        Route::get('/show/members/{id}', [MembersController::class, 'mem_show'])->name('members.show');
 
-        Route::get('/edit/members/{id}', [MemberController::class, 'mem_edit'])->name('members.edit');
-        Route::put('/update/members/{id}', [MemberController::class, 'mem_update'])->name('members.update');
+        Route::get('/edit/members/{id}', [MembersController::class, 'mem_edit'])->name('members.edit');
+        Route::put('/update/members/{id}', [MembersController::class, 'mem_update'])->name('members.update');
 
 
-        Route::get('/destroy/{id}', [MemberController::class, 'mem_destroy'])->name('members.destroy');
+        Route::get('/destroy/{id}', [MembersController::class, 'mem_destroy'])->name('members.destroy');
 
 
 

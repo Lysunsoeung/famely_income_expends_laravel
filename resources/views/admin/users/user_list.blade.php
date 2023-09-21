@@ -48,21 +48,19 @@
                                     @foreach($users as $u)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            {{-- <td>
-                                                @if (!empty($users->photo))
-                                                @php
-                                                    $imageUrl = asset('storage/uploads/' . $userType . '/' . basename($imageName));
-
-                                                    $relativeUrl = str_replace(asset('/'), '', $imageUrl);
-                                                @endphp
+                                            <td>
+                                                @if (!empty($u->photo))
+                                                    @php
+                                                        $imageUrl = asset($u->photo);
+                                                    @endphp
                                                     <img width="50" src="{{ $imageUrl }}" alt="User Photo">
                                                 @else
 
                                                     <img width="50" src="{{ asset('storage/uploads/default-photo.png') }}" alt="Default Photo">
 
                                                 @endif
-                                            </td> --}}
-                                            <td><img class="rounded-circle" style="height: 40px; width: 40px;" src="{{ asset($u->photo) }}" alt="photo"></td>
+                                            </td>
+                                           
                                             <td>{{ $u->name }}</td>
                                             {{-- <td>{{ $u->username }}</td> --}}
                                             <td>{{ $u->phone }}</td>

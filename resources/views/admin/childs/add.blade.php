@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="card-body">
-                    <form id="ajax-reg" method="post" enctype="multipart/form-data" class="wizard-form steps-validation" action="{{ route('childs.store') }}" data-fouc>
+                    <form  method="post" enctype="multipart/form-data" class="wizard-form steps-validation" action="{{ route('childs.store') }}" data-fouc>
                         @csrf
                         @method('put')
                         <h6>{{ trans('test.Personal data') }}</h6>
