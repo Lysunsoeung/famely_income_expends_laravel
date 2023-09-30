@@ -40,6 +40,18 @@ class IncomesController extends Controller
         return view('admin.incomes.index', $data);
     }
 
+    // count amounts of income from database
+    // public function countData() {
+    //     // $counts = DB::table('incomes')->count();
+    //     $counts = Income::count();
+
+    //     if($count > 0) {
+    //         return view('frontpages.layout.master_frontpage', $compact('counts'));
+    //     }else {
+    //         return view('frontpages.layout.master_frontpage', $compact('counts', 'Your income is 0'));
+    //     }
+    // }
+
     /**
      * Show the form for creating a new resource.
      */

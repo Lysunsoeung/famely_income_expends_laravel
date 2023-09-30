@@ -158,27 +158,7 @@
 </section>
 
 
-<footer class="section-sm bg-tertiary">
-	<div class="container">
-		<div class="row align-items-center mt-5 text-center text-md-start">
-			<div class="col-lg-4">
-        <a href="index.html">
-          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('frontend')}}/images/logo." alt="logo">
-        </a>
-			</div>
-			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-				<ul class="list-unstyled list-inline mb-0 text-lg-center">
-					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">Privacy Policy</a>
-					</li>
-					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
-					</li>
-				</ul>
-			</div>
-
-		</div>
-	</div>
-</footer>
-
+@include("frontpages.partials.footer")
 
 
 <!-- # JS Plugins -->

@@ -80,7 +80,7 @@
 					<p class="text-primary text-uppercase fw-bold mb-3">{{ trans('test.About Wallet') }}</p>
 					<h2 class="h1 mb-4">{{ trans('test.Business Loans') }} <br> {{ trans('test.For Daily Expenses') }}</h2>
 					<div class="content pe-0 pe-lg-5">
-                        <p>Text here</p>
+                        <p> Manage all your money more secure and effective.</p>
 					</div>
 				</div>
 			</div>
@@ -99,20 +99,30 @@
 					<p class="text-primary text-uppercase fw-bold mb-3"></p>
 					<h2>{{ trans('test.Who We Are?') }}</h2>
 				</div>
-				<p class="lead">Important Text.</p>
-				<div class="content">Text Content</div>
+
+				<div class="content">We are students of the Regional Polytechnic Institude Techo Sen Siem Reap, 
+                    located in Siem Reap, Cambodia. This year, we are studying as third year students in the second semester, 
+                    which will end this October. </div>
 			</div>
 			<div class="col-lg-5">
 				<div class="section-title">
 					<p class="text-primary text-uppercase fw-bold mb-3"></p>
 					<h2>{{ trans('test.What We Offer?') }}</h2>
 				</div>
-				<p class="lead">Text Important</p>
 				<div class="content">
 					<ul>
-						<li>{{ trans('test.Once') }}</li>
+						{{-- <li>{{ trans('test.Once') }}</li>
 						<li>{{ trans('test.Two') }}</li>
-						<li>{{ trans('test.Tree') }}</li>
+						<li>{{ trans('test.Tree') }}</li> --}}
+                        <li>Frugal Living</li>
+                        <li>Limit Credit Card Use</li>
+                        <li>Calculate all Income</li>
+                        <li>Keep Debt Ratio Healthy at 30%</li>
+                        <li>Prepare Savings Funds, Emergency Funds, and Investments</li>
+                        <li>Use Promos, Discounts, and Cashback When Shopping</li>
+                        <li>Find Additional Income</li>
+                        <li>Perform Periodic Evaluation</li>
+                        <li>Record Expenditure and Income of Financial Posts</li>
 					</ul>
 				</div>
 			</div>
@@ -121,7 +131,7 @@
 
 </section>
 
-<section class="section-sm bg-primary-light">
+{{-- <section class="section-sm bg-primary-light">
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-4 col-md-6 mb-5 mb-lg-0 text-center icon-box-item">
@@ -144,9 +154,7 @@
 			</div>
 		</div>
 	</div>
-</section>
-
-
+</section> --}}
 
 <section class="section teams">
 	<div class="container">
@@ -188,28 +196,8 @@
 </section>
 
 
-<footer class="section-sm bg-tertiary" style="height:100px">
-	<div class="container">
-		<div class="row align-items-center mt-5 text-center text-md-start">
-			<div class="col-lg-4">
-        <a href="index.html">
-          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('frontend')}}/images/logo." alt="logo">
-        </a>
-			</div>
-			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-				<ul class="list-unstyled list-inline mb-0 text-lg-center">
-					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">{{ trans('test.Privacy Policy') }}</a>
-					</li>
-					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">{{ trans('test.Terms &amp; Conditions') }}</a>
-					</li>
-				</ul>
-			</div>
 
-		</div>
-	</div>
-</footer>
-
-
+@include("frontpages.partials.footer")
 
 <!-- # JS Plugins -->
 @include("frontpages.partials.footer-link")

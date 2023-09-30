@@ -24,7 +24,7 @@
                             @method('PUT')
 
                             <fieldset>
-                                
+
                                 <div class="row">
                                     <input type="hidden" class="form-control" name="id" value='{{ $members->id }}'>
 
@@ -114,7 +114,7 @@
 
                                 </div>
 
-                                
+
                                 <button type="submit" class="btn btn-info">Update</button>
 
                             </fieldset>

@@ -4,12 +4,12 @@
 
 <head>
 	<meta charset="utf-8">
-	<title>Wallet - Payday Loan Service Template</title>
+	<title>Family Income Expense</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 	<meta name="description" content="This is meta description">
 	<meta name="author" content="Themefisher">
 	<link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
-	<link rel="icon" href="images/favicon.png" type="image/x-icon">
+	<link rel="icon" href="/logo.png" type="image/x-icon">
 
   <!-- theme meta -->
   <meta name="theme-name" content="wallet" />

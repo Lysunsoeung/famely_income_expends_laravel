@@ -105,7 +105,6 @@ class MembersController extends Controller
 
     public function mem_update(Request $request, Member $member) {
 
-
         // Validate the request.
         $validate = $request->validate([
             'photo' => 'nullable|mimes:png,jpg,jpeg,gif,png|max:5048', // Allow photo to be optional
@@ -140,7 +139,7 @@ class MembersController extends Controller
                 File::delete(public_path('storage/uploads/members/' . $member->photo));
             }
 
-            
+
         }
 
         // Update the member's record in the database.

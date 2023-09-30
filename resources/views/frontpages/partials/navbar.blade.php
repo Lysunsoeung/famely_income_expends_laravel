@@ -1,8 +1,8 @@
   <header class="navigation bg-tertiary">
 	<nav class="navbar navbar-expand-xl navbar-light text-center py-3">
 		<div class="container">
-			<a class="navbar-brand" href="index.html">
-				<img loading="prelaod" decoding="async" class="img-fluid" width="160" src="images/logo.png" alt="Wallet">
+			<a class="navbar-brand" href="{{route('frontpage.index')}}">
+				<img loading="prelaod" decoding="async" class="img-fluid" width="100" src="/logo.png" alt="Wallet">
 			</a>
 			<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span>
 			</button>
@@ -12,7 +12,6 @@
 					</li>
 					<li class="nav-item "> <a class="nav-link" href="{{route('frontpage.about')}}">{{trans('test.About')}}</a>
 					</li>
-
 					</li>
 					<li class="nav-item "> <a class="nav-link" href="{{route('frontpage.contact')}}">{{trans('test.Contact')}}</a>
 					</li>

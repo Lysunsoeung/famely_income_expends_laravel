@@ -202,6 +202,8 @@ Route::group(['middleware' => 'auth'], function () {
 
          // Income route
 
+         Route::get('/view/counts', [App\Http\Controllers\Admin\IncomesController::class, 'countData'])->name('incomes.counts');
+
          Route::get('/view/incomes', [App\Http\Controllers\Admin\IncomesController::class, 'index'])->name('incomes.index');
 
          Route::get('/create/incomes', [App\Http\Controllers\Admin\IncomesController::class, 'create'])->name('incomes.create');

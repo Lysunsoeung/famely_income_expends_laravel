@@ -60,7 +60,7 @@
 
                                                 @endif
                                             </td>
-                                           
+
                                             <td>{{ $u->name }}</td>
                                             {{-- <td>{{ $u->username }}</td> --}}
                                             <td>{{ $u->phone }}</td>
@@ -75,7 +75,7 @@
                                                             <a href="{{ route('users.show', Qs::hash($u->id)) }}" title="View" class="fas fa-view p-1"><i class="fa-eye"></i></a>
                                                             {{--Edit--}}
                                                             <a href="{{ route('users.edit', Qs::hash($u->id)) }}" title="Edit" class="fas fa-edit p-1"><i class="icon-pencil"></i></a>
-                                                        {{-- @if(Qs::userIsAdmin()) --}}
+                                                            {{-- @if(Qs::userIsAdmin()) --}}
 
                                                                 <a id="{{ Qs::hash($u->id) }}" onclick="confirmReset(this.id)" href="{{ route('users.reset_pass', Qs::hash($u->id)) }}" title="Reset Password" class="fas fa-reset p-1"><i class="fa-box"></i></a>
                                                                 <form method="post" id="item-reset-{{ Qs::hash($u->id) }}" action="{{ route('users.reset_pass', Qs::hash($u->id)) }}" class="hidden"> @csrf @method('delete') </form>
@@ -155,7 +155,7 @@
 
             </div>
 
-           
+
 
         </div>
     </div>

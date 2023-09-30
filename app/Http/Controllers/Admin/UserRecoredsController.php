@@ -124,7 +124,7 @@ class UserRecoredsController extends Controller
                 $data['photo'] = 'storage/' . $f['path']; // Directory to save into database
 
             }
-           
+
         } catch (HttpResponseException $req) {
             // Log or handle the exception
             return back()->with('error', 'Failed to upload the file. Please try again.');
@@ -139,7 +139,7 @@ class UserRecoredsController extends Controller
 
         $user = $this->user->create($data); // Create User
 
-       
+
 
         $notification = array(
             'message' => 'User Store Successfully',
@@ -213,7 +213,7 @@ class UserRecoredsController extends Controller
     {
 
         $user_id = Qs::decodeHash($id);
-        
+
 
         $user = $this->user->find($id);
         // $user = User::findOrFail($user_id);
@@ -242,7 +242,7 @@ class UserRecoredsController extends Controller
         ];
 
         $user_is_teamPA = in_array($user_type, Qs::getTeamPA());
-        
+
         // Update the username based on user type
         $data['username'] = ($user_is_teamPA) ? $req->username : $req->username;
 
@@ -250,10 +250,10 @@ class UserRecoredsController extends Controller
         // Update the password if a new password is provided
         if($req->has('password')){
             $data['password'] = Hash::make($req->password);
-        }       
+        }
 
         if($req->hasFile('photo')) {
-        
+
             if($req->hasFile('photo')){
                 // Get the old photo path
                 $oldPhotoPath = public_path($user->photo);
@@ -272,10 +272,10 @@ class UserRecoredsController extends Controller
             $f['path'] = $photo->storeAs(Qs::getUploadPath($user_type), $f['name'], 'public');
             $data['photo'] = 'storage/' . $f['path'];
 
-            
+
 
         }
-        
+
 
         // $user->update($data);   /* UPDATE USER RECORD */
         $this->user->update($id, $data);   /* UPDATE USER RECORD */
@@ -289,7 +289,7 @@ class UserRecoredsController extends Controller
         return back()->with($notification);
 
 
-        
+
     }
 
     /**

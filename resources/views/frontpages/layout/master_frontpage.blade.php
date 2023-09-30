@@ -75,61 +75,61 @@
         </div>
 
     <br><br><br/>
-    <div class="row mt-5 m-5">
+    <div class="row m-5">
 
-        <div class="col-lg-3 col-md-6 service-item">
-        <a class="text-black" href="#">
-            <div class="block"> <span class="colored-box text-center h3 mb-4">
+        <div class="col-lg-3 col-md-6 service-item" style="background-color: rgba(208, 255, 214, 0.227); border-radius:5px">
+        {{-- <a class="text-black" href="#"> --}}
+            <div class="block" > <span style="margin-left:30%;" class="colored-box text-center h3 mb-4">
 
-                <img class="align-center " src="#" />
+                <img  class="align-center" src="/frontend/images/1.svg" />
 
             </span>
-            <h3 class="mb-3 service-title  fw-normal fs-4">{{ trans('test.100% Secure data') }}</h3>
+            <h3 class="mb-3 service-title  fw-normal fs-5">{{ trans('test.100% Secure data') }}</h3>
             </div>
-        </a>
+        {{-- </a> --}}
         </div>
 
-        <div class="col-lg-3 col-md-6 service-item">
-            <a class="text-black" href="#">
-            <div class="block"> <span class="colored-box text-center h3 mb-4">
+        <div class="col-lg-3 col-md-6 service-item" style="background-color: rgba(208, 255, 214, 0.227); border-radius:5px">
+            {{-- <a class="text-black" href="#"> --}}
+            <div class="block"> <span style="margin-left:30%;" class="colored-box text-center h3 mb-4">
 
-                <img src="#" />
+                <img src="/frontend/images/2.svg" />
 
                 </span>
-                <h3 class="mb-3 service-title  fw-normal fs-4">{{ trans('test.1 Million+ users') }}</h3>
+                <h3 class="mb-3 service-title  fw-normal fs-5 text-center">{{ trans('test.1 Million+ users') }}</h3>
             </div>
-            </a>
+            {{-- </a> --}}
         </div>
 
-        <div class="col-lg-3 col-md-6 service-item">
-            <a class="text-black" href="#">
-            <div class="block"> <span class="colored-box text-center h3 mb-4">
+        <div class="col-lg-3 col-md-6 service-item" style="background-color: rgba(208, 255, 214, 0.227); border-radius:5px">
+            {{-- <a class="text-black" href="#"> --}}
+            <div class="block"> <span style="margin-left:30%;" class="colored-box text-center h3 mb-4">
 
-                <img src="#" />
+                <img src="/frontend/images/3.svg" />
 
                 </span>
-                <h3 class="mb-3 service-title  fw-normal fs-4">{{ trans('test.100K+ 5-star Reviews') }}</h3>
+                <h3 class="mb-3 service-title  fw-normal fs-5 text-center">{{ trans('test.100K+ 5-star Reviews') }}</h3>
             </div>
-            </a>
+            {{-- </a> --}}
         </div>
 
-        <div class="col-lg-3 col-md-6 service-item">
-            <a class="text-black" href="#">
-            <div class="block"> <span class="colored-box text-center h3 mb-4">
+        <div class="col-lg-3 col-md-6 service-item" style="background-color: rgba(208, 255, 214, 0.227); border-radius:5px">
+            {{-- <a class="text-black" href="#"> --}}
+            <div class="block"> <span style="margin-left:30%;" class="colored-box text-center h3 mb-4">
 
-                <img src="#" />
+                <img src="/frontend/images/4.svg" />
 
                 </span>
-                <h3 class="mb-3 service-title fw-normal fs-4">{{ trans('test.App of the day') }}</h3>
+                <h3 class="mb-3 service-title fw-normal fs-5 text-center">{{ trans('test.App of the day') }}</h3>
             </div>
-            </a>
+            {{-- </a> --}}
         </div>
 
     </div>
 </section>
 
 
-<section class="about-section section bg-tertiary position-relative overflow-hidden">
+<section style="margin-top:-100px" class="about-section section bg-tertiary position-relative overflow-hidden">
 
   <div class="container" style="margin-bottom:100px">
     <div class="row align-items-center" style="justify-content: center;">
@@ -138,14 +138,21 @@
 
             <div class="col-lg-10 col-md-6 pt-1">
                 <div class="shadow rounded bg-white p-4 mt-4" style="font-seze:12px">
-                  <div class="d-flex justify-content-between">
+                  {{-- <div class="d-flex justify-content-between">
                     <div class="bg-white">{{ trans('test.LAST MONTH') }}</div>
                     <div class="bg-white text-dark fw-bold"></div>{{ trans('test.THIS MONTH') }}
                     <div class="bg-white"></div>{{ trans('test.FUTURE') }}
 
-                  </div><hr>
+                  </div><hr> --}}
 
                   <div class="d-flex justify-content-between">
+                    <div class="bg-white">
+                        <img src="/frontend/images/Transaction.png" />
+                    </div>
+                  </div><br>
+
+
+                  {{-- <div class="d-flex justify-content-between">
                     <div class="bg-white">
                         <img src="#" width="24px" height="24px" />
                         <label for="">Text</label>
@@ -167,7 +174,7 @@
                         <label for="">Text</label>
                     </div>
                     <div class="bg-white">50,000</div>
-                  </div><br>
+                  </div><br> --}}
 
 
                 </div>
@@ -203,12 +210,18 @@
             <div class="col-lg-10 col-md-6 pt-1">
                 <div class="shadow rounded bg-white p-4 mt-4" style="font-seze:12px">
 
-                  <div class="d-flex justify-content-between">
+                  {{-- <div class="d-flex justify-content-between">
                     <div class="bg-white">
                         <img src="#" width="24px" height="24px" />
                         <label for="">Text</label>
                     </div>
                     <div class="bg-white">50,000</div>
+                  </div><br> --}}
+
+                  <div class="d-flex justify-content-between">
+                    <div class="bg-white">
+                        <img src="/frontend/images/budget.png" />
+                    </div>
                   </div><br>
 
 
@@ -231,7 +244,7 @@
             <div class="col-lg-10 col-md-6 pt-1">
                 <div class="shadow rounded bg-white p-4 mt-4" style="font-seze:12px">
 
-                  <table class="table table-borderless text-dark">
+                  {{-- <table class="table table-borderless text-dark">
                     <thead>
                       <tr class="text-center">
                         <th>{{ trans('test.Income') }}</th>
@@ -240,27 +253,30 @@
                     </thead>
                     <tbody>
                       <tr class="text-center" style="font-size: 20px;">
-                        <td class="text-primary">$ John</td>
-                        <td class="text-danger">$ Doe</td>
+                        <td class="text-primary">$ 120,50.00</td>
+                        <td class="text-danger">$ 2000.00</td>
                       </tr>
-
                       <tr class="text-center">
                         <td class="text-primary">
-                            <img hight="40px"; width="40px";  src="" alt="income">
+                            <img hight="200px"; width="65px";  src="/frontend/images/Layer1.png" alt="income">
                         </td>
                         <td class="text-danger">
-                            <img hight="40px"; width="40px";  src="" alt="expense">
+                            <img hight="200px"; width="100px";  src="/frontend/images/Layer2.png" alt="expense">
                         </td>
                       </tr>
 
                     </tbody>
-                  </table>
+                  </table> --}}
+
+                  <div class="d-flex justify-content-between">
+                    <div class="bg-white">
+                        <img src="/frontend/images/report.png" />
+                    </div>
+                  </div><br>
+
 
                 </div>
             </div>
-
-
-
         </div>
       </div>
 
@@ -274,9 +290,9 @@
     </div>
   </div>
 
-</section><br><br>
+</section>
 
-<section class="homepage_tab position-relative">
+<section style="margin-top:-200px" class="homepage_tab position-relative">
   <div class="section container">
     <div class="row justify-content-center">
       <div class="col-lg-8 mb-4">
@@ -311,7 +327,7 @@
                 <div class="content-block">
                   <h3 class="mb-4">How Much Can I Recive?</h3>
                   <div class="content">
-                    <p>Text Description</p>
+                    <p>You can get a lot of advantages. It also allows you to know your income and expenses every day.</p>
                   </div>
                 </div>
               </div>
@@ -330,7 +346,7 @@
                 <div class="content-block">
                   <h3 class="mb-4">How Much Does It Costs?</h3>
                   <div class="content">
-                    <p>Text Description</p>
+                    <p>It's free for you to try here to manage your income and expenses.</p>
                   </div>
                 </div>
               </div>
@@ -348,7 +364,7 @@
                 <div class="content-block">
                   <h3 class="mb-4">How Do I Repay?</h3>
                   <div class="content">
-                    <p>Text Description</p>
+                    <p> Take pictures of your receipts to auto-process and organize them.</p>
                   </div>
                 </div>
               </div>
@@ -364,101 +380,12 @@
     </div>
 
   </div>
-</section>
 
-<footer class="section-sm bg-tertiary">
-	<div class="container">
-<div class="row justify-content-between">
-			<div class="col-lg-2 col-md-4 col-6 mb-4">
-				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Service</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="service-details.html">Personal loans</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Home Equity Loans</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Student Loans</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Mortgage Loans</a>
-						</li>
-						<li class="mb-2"><a href="service-details.html">Payday Loans</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-6 mb-4">
-				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">About</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="#!">Benefits</a>
-						</li>
-						<li class="mb-2"><a href="#!">Careers</a>
-						</li>
-						<li class="mb-2"><a href="#!">Our Story</a>
-						</li>
-						<li class="mb-2"><a href="#!">Team</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-2 col-md-4 col-6 mb-4">
-				<div class="footer-widget">
-					<h5 class="mb-4 text-primary font-secondary">Help</h5>
-					<ul class="list-unstyled">
-						<li class="mb-2"><a href="contact.html">Contact Us</a>
-						</li>
-						<li class="mb-2"><a href="faq.html">FAQs</a>
-						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="col-lg-4 col-md-12 newsletter-form">
-				<div style="background-color: #F4F4F4; padding: 35px;">
-					<h5 class="mb-4 text-primary font-secondary">Subscribe</h5>
-					<div class="pe-0 pe-xl-5">
-						<form action="#!" method="post" name="mc-embedded-subscribe-form" target="_blank">
-							<div class="input-group mb-3">
-								<input type="text" class="form-control shadow-none bg-white border-end-0" placeholder="Email address"> <span class="input-group-text border-0 p-0">
-                                <button class="input-group-text border-0 bg-primary" type="submit" name="subscribe"
-                                aria-label="Subscribe for Newsletter"><i class="fas fa-arrow-right"></i></button>
-                            </span>
-							</div>
-							<div style="position: absolute; left: -5000px;" aria-hidden="true">
-								<input type="text" name="b_463ee871f45d2d93748e77cad_a0a2c6d074" tabindex="-1">
-							</div>
-						</form>
-					</div>
-					<p class="mb-0">Lorem ipsum dolor sit amet, rdghds consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat</p>
-				</div>
-			</div>
-		</div>
-		<div class="row align-items-center mt-5 text-center text-md-start">
-			<div class="col-lg-4">
-        <a href="index.html">
-          <img loading="prelaod" decoding="async" class="img-fluid" width="160" src="{{asset('frontend')}}/images/logo." alt="logo">
-        </a>
-			</div>
-			<div class="col-lg-4 col-md-6 mt-4 mt-lg-0">
-				<ul class="list-unstyled list-inline mb-0 text-lg-center">
-					<li class="list-inline-item me-4"><a class="text-black" href="privacy-policy.html">Privacy Policy</a>
-					</li>
-					<li class="list-inline-item me-4"><a class="text-black" href="terms.html">Terms &amp; Conditions</a>
-					</li>
-				</ul>
-			</div>
-<div class="col-lg-4 col-md-6 text-md-end mt-4 mt-md-0">
-				<ul class="list-unstyled list-inline mb-0 social-icons">
-					<li class="list-inline-item me-3"><a title="Explorer Facebook Profile" class="text-black" href="https://facebook.com/"><i class="fab fa-facebook-f"></i></a>
-					</li>
-					<li class="list-inline-item me-3"><a title="Explorer Twitter Profile" class="text-black" href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
-					</li>
-					<li class="list-inline-item me-3"><a title="Explorer Instagram Profile" class="text-black" href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
-					</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-</footer>
+</section >
+
+{{-- <footer style="height:100px; background-color:bisque;"> --}}
+
+@include("frontpages.partials.footer")
 
 
 <!-- # JS Plugins -->
