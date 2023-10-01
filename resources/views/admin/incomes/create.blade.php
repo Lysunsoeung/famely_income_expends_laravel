@@ -45,7 +45,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Description</label>
                                     <textarea name="description" class="form-control" rows="3" placeholder="Enter ..."></textarea>
@@ -53,10 +53,10 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                   </div>
-                               
+
                             </div>
-                            
-                            <div class="col-md-6">
+
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="income_category_id">Income Category:  <span class="text-danger">*</span></label>
                                     <select class="select form-control select2" id="income_category_id" name="income_category_id"  data-fouc data-placeholder="Choose..">
@@ -68,7 +68,7 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
-                               
+
                             </div>
                             <button type="submit" class="btn btn-primary">Create</button>
                         </form>
@@ -79,7 +79,7 @@
 
             </div>
 
-            
+
 
         </div>
     </div>
@@ -89,6 +89,6 @@
 
 
 
-    
+
 
 @endsection

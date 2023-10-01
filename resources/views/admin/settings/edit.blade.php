@@ -28,7 +28,7 @@
                                 <div class="row">
                                     <input type="hidden" class="form-control" name="id" value='{{ $members->id }}'>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Full Name: <span class="text-danger">*</span></label>
                                             <input value="{{ $members->name }}" type="text" name="name" placeholder="Full Name" class="form-control">
@@ -38,7 +38,7 @@
                                         </div>
                                     </div>
 
-                                    <div class="col-md-4">
+                                    <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Description: <span class="text-danger">*</span></label>
                                             <input value="{{ $members->description }}  " class="form-control" placeholder="Description" name="description" type="text" >
@@ -48,8 +48,43 @@
                                         </div>
                                     </div>
 
+
+                                </div>
+
+                                <div class="row">
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Facebook: <span class="text-danger">*</span></label>
+                                            <input value="{{ $members->facebook }}" type="text" name="facebook" placeholder="Facebook url" class="form-control">
+                                            @error('facebook')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Instagram: <span class="text-danger">*</span></label>
+                                            <input value="{{ $members->instagram }}" type="text" name="instagram" placeholder="Instagram url" class="form-control">
+                                            @error('instagram')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-group">
+                                            <label>Github: <span class="text-danger">*</span></label>
+                                            <input value="{{ $members->github }}" type="text" name="github" placeholder="Github url" class="form-control">
+                                            @error('github')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
                                     {{--Profile--}}
-                                    <div class="col-md-4">
+                                    <div class="col-md-3">
                                         <div class="form-group">
                                             <label class="d-block">Upload Member Photo:</label>
                                             <input value=" " acc ept="image/*" type="file" id="photo" name="photo" class="form-input-styled" data-fouc onchange="previewImage(event)">
@@ -76,40 +111,6 @@
                                             <img id="showImage" src="{{ (!empty($ut->photo)) ? asset('storage/uploads/'.$ut->photo) : asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
 
                                         </div> --}}
-                                    </div>
-
-                                </div>
-
-                                <div class="row">
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Facebook: <span class="text-danger">*</span></label>
-                                            <input value="{{ $members->facebook }}" type="text" name="facebook" placeholder="Facebook url" class="form-control">
-                                            @error('facebook')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Instagram: <span class="text-danger">*</span></label>
-                                            <input value="{{ $members->instagram }}" type="text" name="instagram" placeholder="Instagram url" class="form-control">
-                                            @error('instagram')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
-                                    </div>
-
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Github: <span class="text-danger">*</span></label>
-                                            <input value="{{ $members->github }}" type="text" name="github" placeholder="Github url" class="form-control">
-                                            @error('github')
-                                                <span class="text-danger">{{ $message }}</span>
-                                            @enderror
-                                        </div>
                                     </div>
 
                                 </div>

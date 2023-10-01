@@ -45,7 +45,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Description</label>
                                     <textarea value="{{ $income->description }}" name="description" class="form-control" rows="3" placeholder="Enter ...">{{ $income->description }}</textarea>
@@ -56,7 +56,7 @@
 
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="income_category_id">Income Category: <span class="text-danger">*</span></label>
                                     <select class="select form-control" id="income_category_id" name="income_category_id"  data-fouc data-placeholder="Choose..">

@@ -43,7 +43,7 @@
                                 </div>
                             </div>
 
-                            <div class="col-md-6">
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label>Description</label>
                                     <textarea name="description" class="form-control" rows="3" placeholder="Enter ..."></textarea>
@@ -52,8 +52,8 @@
                                     @enderror
                                 </div>
                             </div>
-                            
-                            <div class="col-md-6">
+
+                            <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="expense_category_id">Expense Category:  <span class="text-danger">*</span></label>
                                     <select class="select form-control select2" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">

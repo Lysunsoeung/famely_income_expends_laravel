@@ -85,6 +85,7 @@ return [
     'Email' => 'Email',
     'Phone' => 'Phone',
     'Telephone' => 'Telephone',
+    'Date of Birth' => 'Date fo Birth',
     'Address' => 'Address',
     'Change Photo' => 'Change Photo',
 

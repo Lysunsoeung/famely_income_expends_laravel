@@ -82,8 +82,8 @@
                             <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>{{ trans('test.Telephone') }}</label>
-                                        <input name="dob" value="{{ old('dob') }}" type="text" class="form-control date-pick" placeholder="Select Date...">
+                                        <label>{{ trans('test.Date of Birth') }}</label>
+                                        <input name="dob" value="{{ old('dob') }}" type="date" class="form-control date-pick" placeholder="Select Date...">
 
                                     </div>
                                 </div>
@@ -104,9 +104,6 @@
                                     </div>
                                 </div>
 
-                            </div>
-                            <div class="row">
-
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="d-block">{{ trans('test.Upload Your Child Photo:') }}</label>
@@ -122,6 +119,7 @@
 
                                     </div>
                                 </div>
+
                             </div>
 
                         </fieldset>
