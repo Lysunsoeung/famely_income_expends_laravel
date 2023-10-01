@@ -100,8 +100,8 @@
 					<h2>{{ trans('test.Who We Are?') }}</h2>
 				</div>
 
-				<div class="content">We are students of the Regional Polytechnic Institude Techo Sen Siem Reap, 
-                    located in Siem Reap, Cambodia. This year, we are studying as third year students in the second semester, 
+				<div class="content">We are students of the Regional Polytechnic Institude Techo Sen Siem Reap,
+                    located in Siem Reap, Cambodia. This year, we are studying as third year students in the second semester,
                     which will end this October. </div>
 			</div>
 			<div class="col-lg-5">
@@ -175,7 +175,7 @@
 					<div class="card-img">
 						<img loading="lazy" decoding="async" src="{{ asset('storage/uploads/members/'.$m->photo) }}" alt="Scarlet Pena" class="rounded w-100" width="300" height="332">
 						<ul class="card-social list-inline">
-							<li class="list-inline-item"><a class="facebook" target="_blank"  href="{{ $m->facebood }}"><i class="fab fa-facebook"></i></a>
+							<li class="list-inline-item"><a class="facebook" target="_blank"  href="{{ $m->facebook }}"><i class="fab fa-facebook"></i></a>
 							</li>
 							<li class="list-inline-item"><a class="twitter" target="_blank"  href="{{ $m->instagram }}"><i class="fab fa-instagram"></i></a>
 							</li>

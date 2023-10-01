@@ -48,11 +48,11 @@
                                                     <img width="50" src="{{ asset('storage/uploads/default-photo.png') }}" alt="Default Photo">
                                                 @endif
                                             </td>
-                                            <td>{{ $m->name }}</td>
-                                            <td>{{ $m->description }}</td>
-                                            <td>{{ $m->facebook }}</td>
-                                            <td>{{ $m->instagram }}</td>
-                                            <td>{{ $m->github }}</td>
+                                            <td class="text-sm" style="word-break: break-word">{{ $m->name }}</td>
+                                            <td class="text-sm" style="word-break: break-word">{{ $m->description }}</td>
+                                            <td class="text-sm" style="word-break: break-word">{{ $m->facebook }}</td>
+                                            <td class="text-sm" style="word-break: break-word">{{ $m->instagram }}</td>
+                                            <td class="text-sm" style="word-break: break-word">{{ $m->github }}</td>
                                             <td class="text-center">
                                                 <div class="list-icons">
                                                     <div class="dropdown">
