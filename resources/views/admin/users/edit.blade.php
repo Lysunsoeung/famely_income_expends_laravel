@@ -149,11 +149,11 @@
                                     </div>
                                     <div class="form-group">
                                         @if (!empty($user->photo))
-                                            @php
+                                            {{-- @php
                                                 $imageUrl = asset('storage/uploads/' . $userType . '/' . basename($imageName));
                                                 $relativeUrl = str_replace(url('/'), '', $imageUrl);
-                                            @endphp
-                                            <img id="showImage" src="{{ $relativeUrl }}" width="100" height="auto" alt="User Photo">
+                                            @endphp --}}
+                                            <img id="showImage" src="{{ asset($imageName) }}" width="100" height="auto" alt="User Photo">
                                         @else
 
                                             <img id="showImage" src="{{ asset('storage/uploads/default-photo.png') }}" width="100" height="auto" alt="Default Photo">
