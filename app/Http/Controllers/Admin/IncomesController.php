@@ -132,7 +132,8 @@ class IncomesController extends Controller
     public function destroy(Income $income)
     {
         // Check if the user that create the income data or is admin then
-        if(Auth::user()->user_type === 'admin' || $income->create_by_id === Auth::id()){
+        // if(Auth::user()->user_type === 'admin' || $income->create_by_id === Auth::id()){
+        if(Auth::user()->user_type === 'admin' || Auth::user()->user_type === 'parent' || Auth::user()->user_type === 'child'){
             $income->delete();
 
 
