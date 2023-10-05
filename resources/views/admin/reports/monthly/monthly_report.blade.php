@@ -146,13 +146,15 @@
                                         <tbody id="incomeTableBody">
                                             @php
                                                 $currencyTotal = 0;
-                                                // Exchange rates
-                                                $exchangeRateKHRtoUSD = 0.00024; // 1 KHR = 0.00024 USD
-                                                $exchangeRateUSDtoKHR = 4119.46; // 1 USD = 4119.46 KHR
 
                                                 // Initialize total amounts for each currency
                                                 $totalAmountsUSD = 0;
                                                 $totalAmountsKHR = 0;
+                                                
+                                                // Exchange rates
+                                                $exchangeRateKHRtoUSD = 0.00024; // 1 KHR = 0.00024 USD
+                                                $exchangeRateUSDtoKHR = 4119.46; // 1 USD = 4119.46 KHR
+
 
                                                 
                                             
@@ -288,12 +290,14 @@
                         </div>
                     </div> --}}
                     <div class="row">
-                        <div class="col-md-6">
-                            <h6>Total Amount in KHR: {{ number_format($totalAmountsKHR, 2) }} KHR</h6>
-                        </div>
-                        <div class="col-md-6">
-                            <h6>Total Amount in USD: {{ number_format($totalAmountsUSD, 2) }} USD</h6>
-                        </div>
+                        @if (isset($totalAmountsKHR) && isset($totalAmountsUSD))
+                            <div class="col-md-6">
+                                <h6>Total Amount in KHR: {{ number_format($totalAmountsKHR, 2) }} KHR</h6>
+                            </div>
+                            <div class="col-md-6">
+                                <h6>Total Amount in USD: {{ number_format($totalAmountsUSD, 2) }} USD</h6>
+                            </div>
+                        @endif
                     </div>
                 {{-- </div> --}}
             
