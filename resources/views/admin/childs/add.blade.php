@@ -19,7 +19,7 @@
                     <form  method="post" enctype="multipart/form-data" class="wizard-form steps-validation" action="{{ route('childs.store') }}" data-fouc>
                         @csrf
                         @method('put')
-                        <h6>{{ trans('test.Personal data') }}</h6>
+                        {{-- <h6>{{ trans('test.Personal data') }}</h6> --}}
 
                         <fieldset>
                             
@@ -44,10 +44,6 @@
                                         @enderror
                                     </div>
                                 </div>
-
-                            </div>
-
-                            <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>{{ trans('test.Email address:') }}</label>
@@ -85,26 +81,6 @@
                                         <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="" >
                                     </div>
                                 </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="d-block">{{ trans('test.Upload Your Child Photo:') }}</label>
-                                        <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc onchange="previewImage(event)">
-                                        <span class="form-text text-muted">{{ trans('test.Accepted Images: jpeg, png. Max file size 2Mb') }}</span>
-                                        @error('photo')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group">
-
-                                        <img id="showImage" src="{{ (!empty($ut->photo)) ? asset('storage/uploads/'.$ut->photo) : asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
-
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>{{ trans('test.Date of Birth') }}</label>
@@ -128,8 +104,28 @@
                                         @enderror
                                     </div>
                                 </div>
+                                
 
-                              
+                            </div>
+
+                            <div class="row">
+                                
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="d-block">{{ trans('test.Upload Your Child Photo:') }}</label>
+                                        <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc onchange="previewImage(event)">
+                                        <span class="form-text text-muted">{{ trans('test.Accepted Images: jpeg, png. Max file size 2Mb') }}</span>
+                                        @error('photo')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                    <div class="form-group">
+
+                                        <img id="showImage" src="{{ (!empty($ut->photo)) ? asset('storage/uploads/'.$ut->photo) : asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="100" height="auto">
+
+                                    </div>
+                                </div>
 
                             </div>
 
