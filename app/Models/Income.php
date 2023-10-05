@@ -12,7 +12,7 @@ class Income extends Model
     protected $table = 'incomes';
 
 
-    protected $fillable = ['entry_date', 'amount', 'income_category_id', 'created_by_id'];
+    protected $fillable = ['entry_date', 'amount','currency_code', 'income_category_id', 'created_by_id'];
 
     public function setIncomeCategoryIdAttribute($input)
     {

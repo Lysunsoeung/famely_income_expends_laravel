@@ -110,104 +110,102 @@
               <!-- /.row -->
 
               <!-- Table row -->
-              <div class="row">
-                <div class="col-6 table-responsive">
-                    <h5>Monthly Income By Date Table:</h5>
-                    @if(isset($noDataMessage))
+                <div class="row">
+                {{-- @if (isset($incomesSummary)) --}}
+                @if(isset($noDataMessage))
+                        <h5>Monthly Income By Date Table:</h5>
                         <table class="table table-striped">
                             <thead>
-                            <tr>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Description</th>
-                            </tr>
-                            </thead>
-                            <tbody id="incomeTableBody">
                                 <tr>
-                                    <td>
-                                        <p>{{ $noDataMessage }}</p>
-
-                                    </td>
+                                    <th>Date</th>
+                                    <th>Description</th>
+                                    <th>Amount</th>
                                 </tr>
-                            </tbody>
-                        </table>
-                    @else
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                            <th>Date</th>
-                            <th>Amount</th>
-                            <th>Description</th>
-                            </tr>
                             </thead>
                             <tbody id="incomeTableBody">
-                                @foreach ($filteredIncomes as $income)
+                                {{-- <tr> --}}
+                                    {{-- <td> --}}
+                                        {{-- </td> --}}
+                                        {{-- </tr> --}}
+                                    </tbody>
+                                </table>
+                                <p>{{ $noDataMessage }}</p>
+                    @else                   
+                        @foreach ($incomesSummary as $currencyCode => $summary )
+                            <div class="col-6 table-responsive">
+                            
+                                    {{-- <h2>{{ $currencyCode }} Total: {{ $summary['total_amount'] }}</h2> --}}
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Date</th>
+                                                <th>Description</th>
+                                                <th>Amount</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="incomeTableBody">
+                                            @php
+                                                $currencyTotal = 0;
+                                                // Exchange rates
+                                                $exchangeRateKHRtoUSD = 0.00024; // 1 KHR = 0.00024 USD
+                                                $exchangeRateUSDtoKHR = 4119.46; // 1 USD = 4119.46 KHR
 
-                                    <tr>
-                                        <td>{{ $income->entry_date }}</td>
-                                        <td>{{ $income->amount }}</td>
-                                        <td>{{ $income->description }}</td>
+                                                // Initialize total amounts for each currency
+                                                $totalAmountsUSD = 0;
+                                                $totalAmountsKHR = 0;
 
-                                    </tr>
+                                                
+                                            
+                                            @endphp
+                                            @foreach ($filteredIncomes->where('currency_code', $currencyCode) as $income)
+                                                @php
+                                                    $currencyTotal += $income->amount;                                               
+                                                @endphp
+                                                <tr>
+                                                    <td>{{ $income->entry_date }}</td>
+                                                    <td>{{ $income->description }}</td>
+                                                    <td>{{ number_format($income->amount, 2) }} {{ $currencyCode }}</td>
 
-                                @endforeach
-                            </tbody>
-                        </table>
+                                                </tr>
+                                            @endforeach
+                                            {{-- <tr>
+                                                <td></td>
+                                                <td></td>
+                                                <td>Total: {{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</td>
+                                            </tr> --}}
+                                        </tbody>
+                                    </table>
+                                    <h6><strong>Total: {{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></h6>
+                                
+                            </div>
+                                @php
+
+                                    // Loop through $incomesSummary to calculate the totals
+                                    foreach ($incomesSummary as $currencyCode => $summary) {
+                                        $totalAmount = $summary['total_amount'];
+
+                                        if ($currencyCode === 'KHR') {
+                                            // Convert KHR to USD and add to the total in USD
+                                            $totalAmountsUSD += $totalAmount * $exchangeRateKHRtoUSD;
+                                        } elseif ($currencyCode === 'USD') {
+                                            // Add the USD amounts to the total in USD
+                                            $totalAmountsUSD += $totalAmount;
+                                        }
+                                    }
+
+                                    // Convert the total amount in USD to KHR
+                                    $totalAmountsKHR = $totalAmountsUSD * $exchangeRateUSDtoKHR;
+                                
+                                @endphp
+                        @endforeach
                     @endif
+
                 </div>
 
-                <div class="col-6 table-responsive">
-                    <h5>Monthly Income Summary Table:</h5>
-                    @if(isset($noDataMessage))
-                        <table class="table table-striped">
-                            <thead>
-                            <tr>
-                            <th>Name</th>
-                            <th>Amount</th>
-                            </tr>
-                            </thead>
-                            <tbody id="incomeTableBody">
-        
-                                    <tr>
-                                        <td><p>{{ $noDataMessage }}</p></td>
-        
-                                    </tr>
-                            </tbody>
-                        </table>
-                    @else
-                        <table class="table table-striped">
-                        <thead>
-                        <tr>
-                            <th>Name</th>
-                            <th>Amount</th>
-                        </tr>
-                        </thead>
-                        <tbody id="incomeTableBody">
-                            @foreach ($incomesSummary as $income)
-    
-                                <tr>
-                                    <td>{{ $income['name'] }}</td>
-                                    <td>{{ $income['amount'] }}</td>
-    
-                                </tr>
-    
-                            @endforeach
-                        </tbody>
-                        </table>
-                    @endif
-                </div>
-                <!-- /.col -->
-              </div>
-              <!-- /.row -->
-
-              <div class="row">
-                <!-- accepted payments column -->
-                <div class="col-6">
-                </div>
-                <!-- /.col -->
-                <div class="col-6">
-                  <div class="table-responsive">
-                    @if(isset($noDataMessage))
+                <div class="row">
+                {{-- @if (isset($incomesSummary)) --}}
+                @if(isset($noDataMessage))
+                    
                         <table class="table">
                             <tbody>
 
@@ -215,23 +213,91 @@
                                     <th>Total Amount:</th>
                                     <td><p>{{ $noDataMessage }}</p></td>
                                 </tr>
-                                </tbody>
-                        </table>
-                    @else
-                        <table class="table">
-                        <tbody>
-
-                            <tr>
-                                <th>Total Amount:</th>
-                                <td>{{ $incomesTotal  }}</td>
-                            </tr>
                             </tbody>
                         </table>
+                    @else
+                        {{-- @foreach ($incomesSummary as $currencyCode => $summary )
+
+                            <div class="col-6 table-responsive">                        
+                                <div class="table-responsive">
+                                        
+                                        <table class="table mt-3">
+                                            <tbody>
+                                                <tr>
+                                                    <th>Total Amount:</th>
+                                                    <td><strong>{{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                            </div>
+                        @endforeach --}}
                     @endif
-                  </div>
+                    
+                {{-- @endif --}}
                 </div>
-                <!-- /.col -->
-              </div>
+
+                {{-- <div class="row"> --}}
+
+                    {{-- @foreach ($incomesSummary as $currencyCode => $summary)
+                        <div class="col-6 table-responsive">
+                            <h5>Monthly Income By Date Table:</h5>
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Description</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="incomeTableBody">
+                                    @php
+                                        $currencyTotal = 0;
+                                    @endphp
+                                    @foreach ($filteredIncomes->where('currency_code', $currencyCode) as $income)
+                                        @php
+                                            $currencyTotal += $income->amount;
+                                        @endphp
+                                        <tr>
+                                            <td>{{ $income->entry_date }}</td>
+                                            <td>{{ $income->description }}</td>
+                                            <td>{{ $income->amount }} {{ $currencyCode }}</td>
+                                        </tr>
+                                    @endforeach
+                                </tbody>
+                            </table>
+                        </div>
+                    @endforeach
+                    
+                
+                    <!-- Display the total amount outside the loop -->
+                    <div class="col-6">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+                                        <th>Total Amount:</th>
+                                        @if(isset($noDataMessage))
+                                            <td><p>{{ $noDataMessage }}</p></td>
+                                        @else
+                                            <td><strong>{{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></td>
+                                        @endif
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div> --}}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h6>Total Amount in KHR: {{ number_format($totalAmountsKHR, 2) }} KHR</h6>
+                        </div>
+                        <div class="col-md-6">
+                            <h6>Total Amount in USD: {{ number_format($totalAmountsUSD, 2) }} USD</h6>
+                        </div>
+                    </div>
+                {{-- </div> --}}
+            
+
               <!-- /.row -->
 
               <!-- this row will not appear when printing -->

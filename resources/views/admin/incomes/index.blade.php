@@ -33,7 +33,7 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $income->income_category->name ?? '' }}</td>
-                            <td>{{ $income->amount }}</td>
+                            <td>{{ $income->amount_with_curency }}</td>
                             <td>{{ $income->description }}</td>
                             <td>{{ $income->entry_date }}</td>
                             <td class="text-center">
