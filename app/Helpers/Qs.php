@@ -116,7 +116,7 @@ class Qs
 
     // All Admin and parent function
     public static function getAP(){
-        return ['admin','parent'];
+        return ['admin','parent','child'];
     }
 
     public static function findMyChildren($parent_id)

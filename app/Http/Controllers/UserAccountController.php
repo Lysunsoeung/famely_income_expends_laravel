@@ -44,7 +44,7 @@ class UserAccountController extends Controller
 
         $user_id = Auth::user()->id;
         $my_pass = Auth::user()->password;
-        $old_pass = $req->current_passwrod;
+        $old_pass = $req->current_password;
         $new_pass = $req->password;
 
         // Check if the password if correct than return the success, if not error
@@ -59,13 +59,19 @@ class UserAccountController extends Controller
             );
 
             return back()->with($notification);
+            // Debugging
+        // dd($old_pass, $my_pass);
+
+        }else{
+            $notificationrest = array(
+                'message' => 'You have fail to change the password!',
+                'alert-type' => 'error'
+            );
+            return back()->with($notificationrest);
+            // dd($old_pass, $my_pass);
         }
 
-        $notificationrest = array(
-            'message' => 'You have fail to change the password!',
-            'alert-type' => 'error'
-        );
-        return back()->with($notificationrest);
+        
 
 
     }
