@@ -58,6 +58,20 @@
 
                             <div class="col-md-4">
                                 <div class="form-group">
+                                    <label for="currency_code">Curreny:  <span class="text-danger">*</span></label>
+                                    <select class="select form-control select2" id="currency_code" name="currency_code"  data-fouc data-placeholder="Choose..">
+                                            <option value="KHR">KHR</option>
+                                            <option value="USD">USD</option>
+                                    </select>
+                                    @error('currency_code')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
                                     <label for="income_category_id">Income Category:  <span class="text-danger">*</span></label>
                                     <select class="select form-control select2" id="income_category_id" name="income_category_id"  data-fouc data-placeholder="Choose..">
                                         @foreach($categories as $category)

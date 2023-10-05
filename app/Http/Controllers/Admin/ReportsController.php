@@ -147,42 +147,50 @@ class ReportsController extends Controller
             ->orderBy('amount', 'desc')
             ->get();
 
+        $incomesSummary = [];
+
+
         // Check filter
         if($filteredIncomes->isEmpty()){
             // No data found, set a message
             $data['noDataMessage'] = "No data found for the selected year and month.";
         }else{
 
-            $incomesTotal = $filteredIncomes->sum('amount');
+            // $incomesTotal = $filteredIncomes->sum('amount');
 
             // Group the filtered incomes by income category
-            $groupedIncoems = $filteredIncomes->groupBy('income_category_id');
+            $groupedIncoems = $filteredIncomes->groupBy('currency_code');
 
-            $incomesSummary = [];
 
-            foreach($groupedIncoems as $incomeCategoryId => $incomes){
-                    $incomeCategory = $incomes->first()->income_category->name;
-                    $incomesSummary[$incomeCategory] = [
-                        'name' => $incomeCategory,
-                        'amount' => $incomes->sum('amount'),
+            foreach($groupedIncoems as $currencyCode => $incomes){
+                    // $incomeCategory = $incomes->first()->income_category->name;
+                    // $incomesSummary[$incomeCategory] = [
+                    //     'name' => $incomeCategory,
+                    //     'amount' => $incomes->sum('amount'),
+                    // ];
+                    $totalAmount = $incomes->sum('amount');
+
+                    $incomesSummary[$currencyCode] = [
+                        'currency_code' => $currencyCode,
+                        'total_amount' => $totalAmount,
                     ];
 
             }
 
             $data = [
-                'incomesTotal' => $incomesTotal,
+                // 'incomesTotal' => $incomesTotal,
                 'selectedMonth' => $month,
                 'months' => $months,
                 'selectedYear' => $year,
                 'years' => $years,
 
                 'filteredIncomes' => $filteredIncomes,
-                'incomesSummary' => $incomesSummary,
+                // 'totalAmountKHR_USD' => $totalAmountsKHR,
 
             ];
 
         }
-
+        $data['incomesSummary'] = $incomesSummary;
 
         return view('admin.reports.monthly.monthly_report',$data);
 

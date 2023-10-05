@@ -47,6 +47,20 @@
 
                             <div class="col-md-4">
                                 <div class="form-group">
+                                    <label for="currency_code">Curreny:  <span class="text-danger">*</span></label>
+                                    <select class="select form-control select2" id="currency_code" name="currency_code"  data-fouc data-placeholder="Choose..">
+                                        <option value="KHR" {{$income->currency_code === 'KHR' ? 'selected':''}}>KHR</option>
+                                        <option value="USD" {{$income->currency_code === 'USD' ? 'selected':''}}>USD</option>
+                                    </select>
+                                    @error('currency_code')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
                                     <label>Description</label>
                                     <textarea value="{{ $income->description }}" name="description" class="form-control" rows="3" placeholder="Enter ...">{{ $income->description }}</textarea>
                                     @error('description')

@@ -32,10 +32,10 @@ class IncomesController extends Controller
         }
 
 
-        // foreach($incomes as $income){
-        //     // Dump the category object for each income
-        //     dump($income->income_category);
-        // }
+        foreach($data['incomes'] as $income){
+            // Concatenate amount and currency_code
+            $income->amount_with_curency = $income->amount . ' '. $income->currency_code;
+        }
 
         return view('admin.incomes.index', $data);
     }
@@ -70,6 +70,7 @@ class IncomesController extends Controller
         $income = new Income();
         $income->entry_date = $req->input('entry_date');
         $income->amount = $req->input('amount');
+        $income->currency_code = $req->input('currency_code');
         $income->description = $req->input('description');
         $income->income_category_id = $req->input('income_category_id');
 
@@ -112,6 +113,7 @@ class IncomesController extends Controller
     {
         $income->entry_date = $req->input('entry_date');
         $income->amount = $req->input('amount');
+        $income->currency_code = $req->input('currency_code');
         $income->description = $req->input('description');
         $income->income_category_id = $req->input('income_category_id');
         $income->save();
