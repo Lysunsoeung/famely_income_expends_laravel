@@ -170,19 +170,8 @@
       </div><!-- /.container-fluid -->
     </section>
     <!-- /.content -->
-  </div>
+</div>
 
-
-
-
-
-
-
-
-
-
-
-<div class="page-body">
 
 
 

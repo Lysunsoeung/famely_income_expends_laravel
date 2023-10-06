@@ -28,8 +28,8 @@
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="entry_date">Entry Date</label>
-                                    <input type="date" name="expense_date" class="form-control">
-                                    @error('expense_date')
+                                    <input type="date" name="entry_date" class="form-control">
+                                    @error('entry_date')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
@@ -40,6 +40,16 @@
                                     <label for="amount">Amount</label>
                                     <input type="number" name="amount" class="form-control" >
                                     @error('amount')
+                                        <span class="text-danger">{{ $message }}</span>
+                                    @enderror
+                                </div>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label>Description</label>
+                                    <textarea name="description" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                                    @error('description')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>

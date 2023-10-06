@@ -25,6 +25,7 @@ class StoreExpense extends FormRequest
         return [
             'entry_date' => 'nullable|date',
             'amount' => 'required|string',
+            'currency_code' => 'required|string|max:3',
             'description' => 'required|string',
             'expense_category_id' => 'required|exists:expense_categories,id',
         ];

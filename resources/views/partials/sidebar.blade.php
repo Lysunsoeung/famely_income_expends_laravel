@@ -428,13 +428,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="{{ route('view.weekly') }}" class="nav-link">
+              <a href="{{ route('show.weekly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ trans('test.Weekly Report') }}</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="{{ route('view.monthly') }}" class="nav-link">
+              <a href="{{ route('show.monthly') }}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>{{ trans('test.Monthly Report') }}</p>
               </a>

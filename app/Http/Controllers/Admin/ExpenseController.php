@@ -35,10 +35,10 @@ class ExpenseController extends Controller
         }
 
 
-        // foreach($incomes as $income){
-        //     // Dump the category object for each income
-        //     dump($income->income_category);
-        // }
+        foreach($data['expenses'] as $expense){
+            // Concatenate amount and currency_code
+            $expense->amount_with_curency = $expense->amount . ' '. $expense->currency_code;
+        }
 
         return view('admin.expenses.index', $data);
     }
@@ -60,6 +60,8 @@ class ExpenseController extends Controller
         $expense = new Expense();
         $expense->entry_date = $req->input('entry_date');
         $expense->amount = $req->input('amount');
+        $expense->currency_code = $req->input('currency_code');
+
         $expense->description = $req->input('description');
         $expense->expense_category_id = $req->input('expense_category_id');
 
@@ -102,6 +104,8 @@ class ExpenseController extends Controller
     {
         $expense->entry_date = $req->input('entry_date');
         $expense->amount = $req->input('amount');
+        $expense->currency_code = $req->input('currency_code');
+
         $expense->description = $req->input('description');
         $expense->expense_category_id = $req->input('expense_category_id');
         $expense->save();
@@ -122,7 +126,8 @@ class ExpenseController extends Controller
     public function destroy(Expense $expense)
     {
         // Check if the user that create the expense data or is admin then
-        if(Auth::user()->user_type === 'admin' || $expense->create_by_id === Auth::id()){
+        // if(Auth::user()->user_type === 'admin' || $expense->create_by_id === Auth::id()){
+        if(Auth::user()->user_type === 'admin' || Auth::user()->user_type === 'parent' || Auth::user()->user_type === 'child'){
             $expense->delete();
 
 
