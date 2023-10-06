@@ -199,7 +199,7 @@ class ReportsController extends Controller
             }
 
             $data = [
-                'incomesTotal' => $incomesTotal,
+                'expensesTotal' => $expensesTotal,
                 // 'weeksInMonth' => $weeksInMonth,
                 'selectedWeek' => $week,
                 'selectedMonth' => $month,
@@ -207,8 +207,8 @@ class ReportsController extends Controller
                 'week' => $week,
                 'selectedYear' => $year,
                 'years' => $years,
-                'filteredIncomes' => $filteredIncomes,
-                'incomesSummary' => $incomesSummary,
+                'filteredExpenses' => $filteredExpenses,
+                'expensesSummary' => $expensesSummary,
 
             ];
         }
