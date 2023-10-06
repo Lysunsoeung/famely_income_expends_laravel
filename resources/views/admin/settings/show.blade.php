@@ -49,19 +49,19 @@
                                                         <td>{{ $members->name }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="font-weight-bold">Name</td>
+                                                        <td class="font-weight-bold">Description</td>
                                                         <td>{{ $members->description }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="font-weight-bold">Name</td>
+                                                        <td class="font-weight-bold">Facebook</td>
                                                         <td>{{ $members->facebook }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="font-weight-bold">Gender</td>
+                                                        <td class="font-weight-bold">Telegram</td>
                                                         <td>{{ $members->instagram }}</td>
                                                     </tr>
                                                     <tr>
-                                                        <td class="font-weight-bold">Address</td>
+                                                        <td class="font-weight-bold">Github</td>
                                                         <td>{{ $members->github }}</td>
                                                     </tr>
 
