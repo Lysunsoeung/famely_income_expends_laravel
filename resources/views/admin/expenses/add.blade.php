@@ -23,6 +23,8 @@
                         <form action="{{ route('expenses.store') }}" method="POST">
                             @csrf
 
+                            <div class="row">
+
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="entry_date">Entry Date</label>
@@ -55,22 +57,8 @@
 
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label for="currency_code">Curreny:  <span class="text-danger">*</span></label>
-                                    <select class="select form-control select2" id="currency_code" name="currency_code"  data-fouc data-placeholder="Choose..">
-                                            <option value="KHR">KHR</option>
-                                            <option value="USD">USD</option>
-                                    </select>
-                                    @error('currency_code')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="form-group">
                                     <label for="expense_category_id">Expense Category:  <span class="text-danger">*</span></label>
-                                    <select class="select form-control select2" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
+                                    <select class="select form-control select3" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
                                         @foreach($expenses as $expense)
                                             <option value="{{ $expense->id }}">{{ $expense->name }}</option>
                                         @endforeach
@@ -79,9 +67,26 @@
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
 
                             </div>
-                            <button type="submit" class="btn btn-primary">Create</button>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea name="description" class="form-control" rows="3" placeholder="Enter ..."></textarea>
+                                        @error('description')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            {{-- <div class="row"> --}}
+                                <button type="submit" class="btn btn-primary">Create</button>
+                            {{-- </div> --}}
                         </form>
 
                     </div>

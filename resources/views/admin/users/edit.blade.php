@@ -14,7 +14,7 @@
 
                 <div class="card-body">
                     <form method="post" enctype="multipart/form-data" action="{{ route('users.update', Qs::hash($user->id)) }}" data-fouc>
-                        @csrf 
+                        @csrf
                         @method('PUT')
 
                         <h6>Personal Data</h6>
@@ -38,22 +38,19 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>UserName: <span class="text-danger">*</span></label>
-                                        <input value="{{ $user->username }}"  type="text" name="username" placeholder="User Name" class="form-control">
-                                        <p>{{ $errors->first('username') }}</p>
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label>Address: <span class="text-danger">*</span></label>
-                                        <input value="{{ $user->address }}" class="form-control" placeholder="Address" name="address" type="text" >
-                                        <p>{{ $errors->first('address') }}</p>
+                                        <label for="gender">Gender: <span class="text-danger">*</span></label>
+                                        <select class="select form-control" id="gender" name="gender"  data-fouc data-placeholder="Choose..">
+                                            <option value=""></option>
+                                            <option {{ ($user->gender == 'Male') ? 'selected' : '' }} value="Male">Male</option>
+                                            <option {{ ($user->gender == 'Female') ? 'selected' : '' }} value="Female">Female</option>
+                                        </select>
+                                        <p>{{ $errors->first('gender') }}</p>
 
                                     </div>
                                 </div>
+
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Date of Birth:</label>
@@ -67,20 +64,38 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-                            <div class="row">
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <label>UserName: <span class="text-danger">*</span></label>
+                                        <input value="{{ $user->username }}"  type="text" name="username" placeholder="User Name" class="form-control">
+                                        <p>{{ $errors->first('username') }}</p>
+                                    </div>
+                                </div>
+
                                 <div class="col-md-4">
                                     <div class="form-group">
                                         <label>Email address: </label>
                                         <input value="{{ $user->email }}" type="email" name="email" class="form-control" placeholder="your@email.com">
                                         <p>{{ $errors->first('email') }}</p>
+                                    </div>
+                                </div>
 
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Address: <span class="text-danger">*</span></label>
+                                        <input value="{{ $user->address }}" class="form-control" placeholder="Address" name="address" type="text" >
+                                        <p>{{ $errors->first('address') }}</p>
 
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Phone:</label>
                                         <input value="{{ $user->phone }}" type="text" name="phone" class="form-control" placeholder="" >
@@ -89,7 +104,7 @@
                                     </div>
                                 </div>
 
-                                <div class="col-md-4">
+                                <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Telephone:</label>
                                         <input value="{{ $user->phone2 }}" type="text" name="phone2" class="form-control" placeholder="" >
@@ -98,46 +113,6 @@
                                     </div>
                                 </div>
 
-                            </div>
-
-                            <div class="row">
-                                {{-- @if(in_array($user->user_type, Qs::getStaff()))
-                                    <div class="col-md-4">
-                                        <div class="form-group">
-                                            <label>Create at:</label>
-                                            <input autocomplete="off" name="created_at" value="{{ $user->first()->created_at }}" type="text" class="form-control date-pick" placeholder="Select Date...">
-
-                                        </div>
-                                    </div>
-                                @endif --}}
-
-                                <div class="col-md-4">
-                                    <div class="form-group">
-                                        <label for="gender">Gender: <span class="text-danger">*</span></label>
-                                        <select class="select form-control" id="gender" name="gender"  data-fouc data-placeholder="Choose..">
-                                            <option value=""></option>
-                                            <option {{ ($user->gender == 'Male') ? 'selected' : '' }} value="Male">Male</option>
-                                            <option {{ ($user->gender == 'Female') ? 'selected' : '' }} value="Female">Female</option>
-                                        </select>
-                                        <p>{{ $errors->first('gender') }}</p>
-
-                                    </div>
-                                </div>
-                            </div>
-
-                            {{-- Passport
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="d-block">Upload Passport Photo:</label>
-                                        <input value="{{ old('photo') }}" accept="image/*" type="file" name="photo" class="form-input-styled" data-fouc>
-                                        <span class="form-text text-muted">Accepted Images: jpeg, png. Max file size 2Mb</span>
-                                    </div>
-                                </div>
-                            </div> --}}
-
-                            <div class="row">
-                                {{--PASSPORT--}}
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="d-block">Upload Photo:</label>
@@ -164,14 +139,14 @@
                                         <p>{{ $errors->first('photo') }}</p>
 
                                 </div>
+
                             </div>
 
+                            {{-- <div class="row"> --}}
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            {{-- </div> --}}
+
                         </fieldset>
-
-
-
-                        <button type="submit" class="btn btn-primary">Update</button>
-
 
                     </form>
                 </div>

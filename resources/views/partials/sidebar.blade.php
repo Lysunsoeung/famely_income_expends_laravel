@@ -4,7 +4,7 @@
       <div class="image">
         @if(!empty(Auth::user()->photo) && file_exists(public_path(Auth::user()->photo)))
 
-        
+
           <img src="{{  asset(Auth::user()->photo) }}" alt="" srcset="" width="30" height="auto">
         @else
           <img src="{{ asset('storage/uploads/default-photo.png') }}" alt="" srcset="" width="30" height="auto">
@@ -103,7 +103,7 @@
 
         <li class="nav-item">
           <a href="{{ route('account_user') }}" class="nav-link {{ (Route::is('account_user')) ? 'active' : '' }}">
-            <i class="nav-icon fas fa-th"></i>
+            <i class="nav-icon fas fa-user"></i>
             <p>
                 {{trans('test.Profile')}}
             </p>
@@ -120,7 +120,7 @@
 
               <a href="{{ route('users.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['users.create', 'users.show', 'users.edit']) ? 'active' : '' }}">
 
-                <i class="nav-icon fas fa-copy"></i>
+                <i class="nav-icon fas fa-users"></i>
                 <p>
                     {{trans('test.Users')}}
 
@@ -144,14 +144,11 @@
           </li>
 
           <li class="nav-item">
-
-
             <a href="{{ route('childs.create') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['childs.create', 'childs.show', 'childs.edit']) ? 'active' : '' }}">
 
-                <i class="nav-icon fas fa-copy"></i>
+                <i class="nav-icon fas fa-user-tag"></i>
                 <p>
                     {{trans('test.Child')}}
-
 
                 <i class="right fas fa-angle-left"></i>
                 </p>
@@ -163,8 +160,6 @@
                     <p>{{ trans('test.Create Child') }}</p>
                 </a>
                 </li>
-
-
             </ul>
 
           </li>
@@ -172,7 +167,7 @@
           <li class="nav-item">
               <a href=" " class="nav-link {{ in_array(Route::currentRouteName(), ['members.create', 'members.show', 'members.edit']) ? 'active' : '' }}">
 
-              <i class="nav-icon fas fa-copy"></i>
+              <i class="nav-icon fa fa-image"></i>
               <p>
                   {{trans('test.Setting')}}
 
@@ -367,7 +362,7 @@
         {{-- Income Category --}}
         <li class="nav-item">
             <a href="{{ route('in_category.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['in_category.index','in_category.create']) ? 'active' : '' }}" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fas fa-th"></i>
               <p>
                 {{trans('test.Income Category')}}
 
@@ -395,7 +390,7 @@
          {{-- Expense Category --}}
         <li class="nav-item">
             <a href="{{ route('ex_category.index') }}" class="nav-link {{ in_array(Route::currentRouteName(), ['ex_category.index','ex_category.create']) ? 'active' : '' }}">
-              <i class="nav-icon fas fa-chart-pie"></i>
+              <i class="nav-icon fas fa-th"></i>
               <p>
                 {{trans('test.Expense Category')}}
 
@@ -424,7 +419,7 @@
         {{-- Report --}}
         <li class="nav-item">
           <a href="#" class="nav-link">
-            <i class="nav-icon fas fa-tree"></i>
+            <i class="nav-icon fas fa-flag"></i>
             <p>
                 {{trans('test.Reports')}}
 

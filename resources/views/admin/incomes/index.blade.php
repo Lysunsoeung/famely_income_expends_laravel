@@ -17,7 +17,7 @@
         <div class="card-body">
             @if(count($incomes) > 0)
 
-                <table class="table table-bordered">
+                <table class="table table-bordered text-center">
                     <thead>
                     <tr>
                         <th>S/N</th>
