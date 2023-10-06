@@ -24,6 +24,8 @@
                         <form action="{{ route('expenses.update',$expense->id) }}" method="POST">
                             @csrf @method('PUT')
 
+                            <div class="row">
+
                             <div class="col-md-4">
                                 <div class="form-group">
                                     <label for="entry_date">Entry Date</label>
@@ -46,33 +48,39 @@
 
                             <div class="col-md-4">
                                 <div class="form-group">
-                                    <label>Description</label>
-                                    <textarea value="{{ $expense->description }}" name="description" class="form-control" rows="3" placeholder="Enter ...">{{ $expense->description }}</textarea>
-                                    @error('description')
-                                        <span class="text-danger">{{ $message }}</span>
-                                    @enderror
-                                  </div>
-
-                            </div>
-
-                            <div class="col-md-4">
-                                <div class="form-group">
                                     <label for="income_category_id">Expense Category: <span class="text-danger">*</span></label>
-                                    <select class="select form-control" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
+                                    <select class="select form-control select3" id="expense_category_id" name="expense_category_id"  data-fouc data-placeholder="Choose..">
                                         @foreach($categories as $category)
                                             <option value="{{ $category->id }}" {{ $category->id === $expense->expense_category_id ? 'selected' : '' }} >{{ $category->name }}</option>
                                                 {{ $category->name }}
                                             </option>
-
                                         @endforeach
                                     </select>
                                     @error('expense_category_id')
                                         <span class="text-danger">{{ $message }}</span>
                                     @enderror
                                 </div>
+                            </div>
 
                             </div>
-                            <button type="submit" class="btn btn-primary">Update</button>
+
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label>Description</label>
+                                        <textarea value="{{ $expense->description }}" name="description" class="form-control" rows="3" placeholder="Enter ...">{{ $expense->description }}</textarea>
+                                        @error('description')
+                                            <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                      </div>
+                                </div>
+                            </div>
+
+
+                            {{-- <div class="row"> --}}
+                                <button type="submit" class="btn btn-primary">Update</button>
+                            {{-- </div> --}}
                         </form>
 
                     </div>

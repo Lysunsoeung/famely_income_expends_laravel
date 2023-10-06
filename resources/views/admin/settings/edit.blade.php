@@ -65,8 +65,8 @@
 
                                     <div class="col-md-3">
                                         <div class="form-group">
-                                            <label>Instagram: <span class="text-danger">*</span></label>
-                                            <input value="{{ $members->instagram }}" type="text" name="instagram" placeholder="Instagram url" class="form-control">
+                                            <label>Telegram: <span class="text-danger">*</span></label>
+                                            <input value="{{ $members->instagram }}" type="text" name="instagram" placeholder="Telegram url" class="form-control">
                                             @error('instagram')
                                                 <span class="text-danger">{{ $message }}</span>
                                             @enderror

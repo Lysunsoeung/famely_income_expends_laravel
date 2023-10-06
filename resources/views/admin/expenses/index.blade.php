@@ -17,7 +17,7 @@
         <div class="card-body">
             @if(count($expenses) > 0)
 
-                <table class="table table-bordered">
+                <table class="table table-bordered text-center">
                     <thead>
                     <tr>
                         <th>S/N</th>
@@ -46,7 +46,7 @@
                                         <a id="delete" onclick="confirmDelete(this.id)"
                                            href="{{ route('expenses.destroy', [$expense->id]) }}"
                                            class="fas fa-delete "><i class="fa-trash"></i></a>
-                                           
+
                                     </div>
                                 </div>
                             </td>

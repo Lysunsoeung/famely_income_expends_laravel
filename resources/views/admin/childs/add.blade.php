@@ -22,8 +22,8 @@
                         {{-- <h6>{{ trans('test.Personal data') }}</h6> --}}
 
                         <fieldset>
-                            
-                                                      
+
+
                             <div class="row">
 
                                 <div class="col-md-3">
@@ -31,24 +31,6 @@
                                         <label>{{ trans('test.Full Name:') }}<span class="text-danger">*</span></label>
                                         <input value="{{ old('name') }}"  type="text" name="name" placeholder="Full Name" class="form-control">
                                         @error('name')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                 <div class="col-md-3">
-                                     <div class="form-group">
-                                        <label>{{ trans('test.Address:') }} <span class="text-danger">*</span></label>
-                                        <input value="{{ old('address') }}" class="form-control" placeholder="Address" name="address" type="text" >
-                                        @error('address')
-                                        <span class="text-danger">{{ $message }}</span>
-                                        @enderror
-                                    </div>
-                                </div>
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>{{ trans('test.Email address:') }}</label>
-                                        <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email Address">
-                                        @error('email')
                                         <span class="text-danger">{{ $message }}</span>
                                         @enderror
                                     </div>
@@ -65,22 +47,6 @@
                                     </div>
                                 </div>
 
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>{{ trans('test.Phone') }}</label>
-                                        <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="" >
-                                    </div>
-                                </div>
-
-                                <div class="col-md-3">
-                                    <div class="form-group">
-                                        <label>{{ trans('test.Telephone:') }}</label>
-                                        <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="" >
-                                    </div>
-                                </div>
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>{{ trans('test.Date of Birth') }}</label>
@@ -88,7 +54,6 @@
 
                                     </div>
                                 </div>
-
 
                                 <div class="col-md-3">
                                     <div class="form-group">
@@ -104,12 +69,49 @@
                                         @enderror
                                     </div>
                                 </div>
-                                
 
                             </div>
 
                             <div class="row">
-                                
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>{{ trans('test.Email address:') }}</label>
+                                        <input type="email" value="{{ old('email') }}" name="email" class="form-control" placeholder="Email Address">
+                                        @error('email')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                 <div class="col-md-3">
+                                     <div class="form-group">
+                                        <label>{{ trans('test.Address:') }} <span class="text-danger">*</span></label>
+                                        <input value="{{ old('address') }}" class="form-control" placeholder="Address" name="address" type="text" >
+                                        @error('address')
+                                        <span class="text-danger">{{ $message }}</span>
+                                        @enderror
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>{{ trans('test.Phone') }}</label>
+                                        <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="" >
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label>{{ trans('test.Telephone:') }}</label>
+                                        <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="" >
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
 
                                 <div class="col-md-6">
                                     <div class="form-group">
