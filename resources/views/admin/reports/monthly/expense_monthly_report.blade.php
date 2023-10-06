@@ -1,6 +1,6 @@
 
 @extends('layouts.master')
-@section('page_title', 'Monthly Report')
+@section('page_title', 'Monthly Expense Report')
 
 @section('content')
 
@@ -75,7 +75,7 @@
                         <div class="row">
                             <div class="col-12">
                             <h4>
-                                <i class="fas fa-globe"></i> Monthly Income Report
+                                <i class="fas fa-globe"></i> Monthly Expense Report
                                 <small class="float-right">Date: {{ now()->format('d/m/Y') }}</small>
                             </h4>
                             </div>
@@ -116,101 +116,101 @@
 
                         <!-- Table row -->
                         <div class="row">
-                            {{-- @if (isset($incomesSummary)) --}}
-                            @if(isset($noDataMessage))
-                                    <h5>Monthly Income By Date Table:</h5>
-                                    <table class="table table-striped">
-                                        <thead>
-                                            <tr>
-                                                <th>Date</th>
-                                                <th>Description</th>
-                                                <th>Amount</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody id="incomeTableBody">
-                                            {{-- <tr> --}}
-                                                {{-- <td> --}}
-                                                    {{-- </td> --}}
-                                                    {{-- </tr> --}}
+                        {{-- @if (isset($expensesSummary)) --}}
+                        @if(isset($noDataMessage))
+                                <h5>Monthly Expense By Date Table:</h5>
+                                <table class="table table-striped">
+                                    <thead>
+                                        <tr>
+                                            <th>Date</th>
+                                            <th>Description</th>
+                                            <th>Amount</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="expenseTableBody">
+                                        {{-- <tr> --}}
+                                            {{-- <td> --}}
+                                                {{-- </td> --}}
+                                                {{-- </tr> --}}
+                                            </tbody>
+                                        </table>
+                                        <p>{{ $noDataMessage }}</p>
+                            @else                   
+                                @foreach ($expensesSummary as $currencyCode => $summary )
+                                    <div class="col-6 table-responsive">
+                                    
+                                            {{-- <h2>{{ $currencyCode }} Total: {{ $summary['total_amount'] }}</h2> --}}
+                                            <table class="table table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Date</th>
+                                                        <th>Description</th>
+                                                        <th>Amount</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="expenseTableBody">
+                                                    @php
+                                                        $currencyTotal = 0;
+
+                                                        // Initialize total amounts for each currency
+                                                        $totalAmountsUSD = 0;
+                                                        $totalAmountsKHR = 0;
+                                                        
+                                                        // Exchange rates
+                                                        $exchangeRateKHRtoUSD = 0.00024; // 1 KHR = 0.00024 USD
+                                                        $exchangeRateUSDtoKHR = 4119.46; // 1 USD = 4119.46 KHR
+
+
+                                                        
+                                                    
+                                                    @endphp
+                                                    @foreach ($filteredExpenses->where('currency_code', $currencyCode) as $expense)
+                                                        @php
+                                                            $currencyTotal += $expense->amount;                                               
+                                                        @endphp
+                                                        <tr>
+                                                            <td>{{ $expense->entry_date }}</td>
+                                                            <td>{{ $expense->description }}</td>
+                                                            <td>{{ number_format($expense->amount, 2) }} {{ $currencyCode }}</td>
+
+                                                        </tr>
+                                                    @endforeach
+                                                    <tr>
+                                                        <td>Total: </td>
+                                                        <td></td>
+                                                        <td><strong>{{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></td>
+                                                    </tr>
                                                 </tbody>
                                             </table>
-                                            <p>{{ $noDataMessage }}</p>
-                            @else                   
-                                    @foreach ($incomesSummary as $currencyCode => $summary )
-                                        <div class="col-6 table-responsive">
+                                            {{-- <h6><strong>Total: {{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></h6> --}}
                                         
-                                                {{-- <h2>{{ $currencyCode }} Total: {{ $summary['total_amount'] }}</h2> --}}
-                                                <table class="table table-striped">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>Date</th>
-                                                            <th>Description</th>
-                                                            <th>Amount</th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody id="incomeTableBody">
-                                                        @php
-                                                            $currencyTotal = 0;
+                                    </div>
+                                        @php
 
-                                                            // Initialize total amounts for each currency
-                                                            $totalAmountsUSD = 0;
-                                                            $totalAmountsKHR = 0;
-                                                            
-                                                            // Exchange rates
-                                                            $exchangeRateKHRtoUSD = 0.00024; // 1 KHR = 0.00024 USD
-                                                            $exchangeRateUSDtoKHR = 4119.46; // 1 USD = 4119.46 KHR
+                                            // Loop through $expensesSummary to calculate the totals
+                                            foreach ($expensesSummary as $currencyCode => $summary) {
+                                                $totalAmount = $summary['total_amount'];
 
-
-                                                            
-                                                        
-                                                        @endphp
-                                                        @foreach ($filteredIncomes->where('currency_code', $currencyCode) as $income)
-                                                            @php
-                                                                $currencyTotal += $income->amount;                                               
-                                                            @endphp
-                                                            <tr>
-                                                                <td>{{ $income->entry_date }}</td>
-                                                                <td>{{ $income->description }}</td>
-                                                                <td>{{ number_format($income->amount, 2) }} {{ $currencyCode }}</td>
-
-                                                            </tr>
-                                                        @endforeach
-                                                        <tr>
-                                                            <td>Total: </td>
-                                                            <td></td>
-                                                            <td><strong>{{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                {{-- <h6><strong>Total: {{ number_format($currencyTotal, 2) }} {{ $currencyCode }}</strong></h6> --}}
-                                            
-                                        </div>
-                                            @php
-
-                                                // Loop through $incomesSummary to calculate the totals
-                                                foreach ($incomesSummary as $currencyCode => $summary) {
-                                                    $totalAmount = $summary['total_amount'];
-
-                                                    if ($currencyCode === 'KHR') {
-                                                        // Convert KHR to USD and add to the total in USD
-                                                        $totalAmountsUSD += $totalAmount * $exchangeRateKHRtoUSD;
-                                                    } elseif ($currencyCode === 'USD') {
-                                                        // Add the USD amounts to the total in USD
-                                                        $totalAmountsUSD += $totalAmount;
-                                                    }
+                                                if ($currencyCode === 'KHR') {
+                                                    // Convert KHR to USD and add to the total in USD
+                                                    $totalAmountsUSD += $totalAmount * $exchangeRateKHRtoUSD;
+                                                } elseif ($currencyCode === 'USD') {
+                                                    // Add the USD amounts to the total in USD
+                                                    $totalAmountsUSD += $totalAmount;
                                                 }
+                                            }
 
-                                                // Convert the total amount in USD to KHR
-                                                $totalAmountsKHR = $totalAmountsUSD * $exchangeRateUSDtoKHR;
-                                            
-                                            @endphp
-                                    @endforeach
+                                            // Convert the total amount in USD to KHR
+                                            $totalAmountsKHR = $totalAmountsUSD * $exchangeRateUSDtoKHR;
+                                        
+                                        @endphp
+                                @endforeach
                             @endif
 
                         </div>
 
                         <div class="row mt-5 text-center">
-                            {{-- @if (isset($incomesSummary)) --}}
+                            {{-- @if (isset($expensesSummary)) --}}
                             @if(isset($noDataMessage))
                                 
                                     <table class="table">
@@ -224,7 +224,7 @@
                                     </table>
                             @else
                             
-                                    {{-- @foreach ($incomesSummary as $currencyCode => $summary )
+                                    {{-- @foreach ($expensesSummary as $currencyCode => $summary )
 
                                         <div class="col-6 table-responsive">                        
                                             <div class="table-responsive">

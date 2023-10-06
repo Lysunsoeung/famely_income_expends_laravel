@@ -257,10 +257,14 @@ Route::group(['middleware' => 'auth'], function () {
 
 
         // Report route
+        Route::get('/show/weekly/report', [App\Http\Controllers\Admin\ReportsController::class, 'view_weekly_index'])->name('show.weekly');
         Route::get('/view/weekly/report', [App\Http\Controllers\Admin\ReportsController::class, 'weekly_index'])->name('view.weekly');
+        Route::get('/get/weekly/expense/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_weekly_expense'])->name('view.weekly.expense');
 
         // Monthly report
+        Route::get('/show/monthly/report', [App\Http\Controllers\Admin\ReportsController::class, 'view_monthly_report'])->name('show.monthly');
         Route::get('/get/monthly/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_monthly'])->name('view.monthly');
+        Route::get('/get/monthly/expense/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_monthly_expense'])->name('view.monthly.expense');
 
         // Yearly report
         Route::get('/get/yearly/report', [App\Http\Controllers\Admin\ReportsController::class, 'get_yearly'])->name('view.yearly');
