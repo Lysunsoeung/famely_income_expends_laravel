@@ -68,7 +68,7 @@
               <div class="inner">
                 {{-- <h3>{{ $users->where('user_type','admin')->count() }}</h3> --}}
                 <h3>@if(!$totalAmountsKHR_ex) {{0}} @else {{ number_format($totalAmountsKHR_ex, 2) }} ៛ @endif</h3>
-                <p>Total Income KHR</p>
+                <p>Total Expense KHR</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
@@ -83,7 +83,7 @@
                 {{-- <h3>@if(!$users) {{0}} @else {{ $users->count() }} @endif</h3> --}}
                 <h3>@if(!$totalAmountsUSD_ex) {{0}} @else {{ number_format($totalAmountsUSD_ex, 2) }} $ @endif</h3>
 
-                <p>Total Income USD</p>
+                <p>Total Expense USD</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person"></i>
